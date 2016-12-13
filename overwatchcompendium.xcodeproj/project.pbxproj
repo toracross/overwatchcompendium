@@ -7,21 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106C9EB81DFDB00300F078C6 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EB71DFDB00300F078C6 /* RoundedCornerButton.swift */; };
+		106C9EBA1DFDB0D000F078C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EB91DFDB0D000F078C6 /* API.swift */; };
+		106C9EBC1DFDB1D000F078C6 /* CustomTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EBB1DFDB1D000F078C6 /* CustomTxtField.swift */; };
+		106C9EBE1DFDC55400F078C6 /* HeroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EBD1DFDC55400F078C6 /* HeroVC.swift */; };
+		106C9EC01DFDC56C00F078C6 /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EBF1DFDC56C00F078C6 /* StatsVC.swift */; };
+		106C9EC21DFDC58200F078C6 /* AchievementsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EC11DFDC58200F078C6 /* AchievementsVC.swift */; };
+		106C9ECC1DFDC67900F078C6 /* AchievementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ECB1DFDC67900F078C6 /* AchievementData.swift */; };
+		106C9ED01DFDC6DE00F078C6 /* QPAverageStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ECF1DFDC6DE00F078C6 /* QPAverageStats.swift */; };
+		106C9ED21DFDC6E600F078C6 /* QPOverallStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED11DFDC6E600F078C6 /* QPOverallStats.swift */; };
+		106C9ED41DFDC6F000F078C6 /* QPGameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED31DFDC6F000F078C6 /* QPGameStats.swift */; };
+		106C9ED61DFDC6FB00F078C6 /* CPAverageStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED51DFDC6FB00F078C6 /* CPAverageStats.swift */; };
+		106C9ED81DFDC70900F078C6 /* CPOverallStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED71DFDC70900F078C6 /* CPOverallStats.swift */; };
+		106C9EDA1DFDC72400F078C6 /* CPGameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED91DFDC72400F078C6 /* CPGameStats.swift */; };
+		106C9EE21DFDE9FB00F078C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EE11DFDE9FB00F078C6 /* Constants.swift */; };
+		106C9EE51DFF128700F078C6 /* false.png in Resources */ = {isa = PBXBuildFile; fileRef = 106C9EE31DFF128700F078C6 /* false.png */; };
+		106C9EE61DFF128700F078C6 /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = 106C9EE41DFF128700F078C6 /* true.png */; };
+		106C9EEB1DFF26F600F078C6 /* OffenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EEA1DFF26F600F078C6 /* OffenseCell.swift */; };
+		106C9EED1DFF26FD00F078C6 /* DefenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EEC1DFF26FD00F078C6 /* DefenseCell.swift */; };
+		106C9EEF1DFF270700F078C6 /* TankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EEE1DFF270700F078C6 /* TankCell.swift */; };
+		106C9EF11DFF271100F078C6 /* SupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF01DFF271100F078C6 /* SupportCell.swift */; };
+		106C9EF31DFF271C00F078C6 /* GeneralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF21DFF271C00F078C6 /* GeneralCell.swift */; };
+		106C9EF51DFF272900F078C6 /* MapsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF41DFF272900F078C6 /* MapsCell.swift */; };
+		106C9EF71DFF273400F078C6 /* SpecialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF61DFF273400F078C6 /* SpecialCell.swift */; };
+		106C9EF91DFF2CED00F078C6 /* OffenseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF81DFF2CED00F078C6 /* OffenseTableView.swift */; };
+		106C9EFB1DFF2D8A00F078C6 /* DefenseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EFA1DFF2D8A00F078C6 /* DefenseTableView.swift */; };
 		10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE86851DFB070100DB6374 /* AppDelegate.swift */; };
-		10CE86881DFB070100DB6374 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE86871DFB070100DB6374 /* ViewController.swift */; };
+		10CE86881DFB070100DB6374 /* SelectDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE86871DFB070100DB6374 /* SelectDataVC.swift */; };
 		10CE868B1DFB070100DB6374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10CE86891DFB070100DB6374 /* Main.storyboard */; };
 		10CE868D1DFB070100DB6374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10CE868C1DFB070100DB6374 /* Assets.xcassets */; };
 		10CE86901DFB070100DB6374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10CE868E1DFB070100DB6374 /* LaunchScreen.storyboard */; };
+		10CE869E1DFB2C0F00DB6374 /* bnt_oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10CE869C1DFB2C0F00DB6374 /* bnt_oblique.ttf */; };
+		10CE869F1DFB2C0F00DB6374 /* bnt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10CE869D1DFB2C0F00DB6374 /* bnt.ttf */; };
+		10CE86A11DFB2D0600DB6374 /* CustomLblTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE86A01DFB2D0600DB6374 /* CustomLblTitle.swift */; };
+		5BC36987D478BA96EE5775A8 /* Pods_overwatchcompendium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106C9EB71DFDB00300F078C6 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
+		106C9EB91DFDB0D000F078C6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		106C9EBB1DFDB1D000F078C6 /* CustomTxtField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTxtField.swift; sourceTree = "<group>"; };
+		106C9EBD1DFDC55400F078C6 /* HeroVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroVC.swift; sourceTree = "<group>"; };
+		106C9EBF1DFDC56C00F078C6 /* StatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
+		106C9EC11DFDC58200F078C6 /* AchievementsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsVC.swift; sourceTree = "<group>"; };
+		106C9ECB1DFDC67900F078C6 /* AchievementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementData.swift; sourceTree = "<group>"; };
+		106C9ECF1DFDC6DE00F078C6 /* QPAverageStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QPAverageStats.swift; sourceTree = "<group>"; };
+		106C9ED11DFDC6E600F078C6 /* QPOverallStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QPOverallStats.swift; sourceTree = "<group>"; };
+		106C9ED31DFDC6F000F078C6 /* QPGameStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QPGameStats.swift; sourceTree = "<group>"; };
+		106C9ED51DFDC6FB00F078C6 /* CPAverageStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPAverageStats.swift; sourceTree = "<group>"; };
+		106C9ED71DFDC70900F078C6 /* CPOverallStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPOverallStats.swift; sourceTree = "<group>"; };
+		106C9ED91DFDC72400F078C6 /* CPGameStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPGameStats.swift; sourceTree = "<group>"; };
+		106C9EE11DFDE9FB00F078C6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		106C9EE31DFF128700F078C6 /* false.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = false.png; sourceTree = "<group>"; };
+		106C9EE41DFF128700F078C6 /* true.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true.png; sourceTree = "<group>"; };
+		106C9EEA1DFF26F600F078C6 /* OffenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffenseCell.swift; sourceTree = "<group>"; };
+		106C9EEC1DFF26FD00F078C6 /* DefenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefenseCell.swift; sourceTree = "<group>"; };
+		106C9EEE1DFF270700F078C6 /* TankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TankCell.swift; sourceTree = "<group>"; };
+		106C9EF01DFF271100F078C6 /* SupportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportCell.swift; sourceTree = "<group>"; };
+		106C9EF21DFF271C00F078C6 /* GeneralCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralCell.swift; sourceTree = "<group>"; };
+		106C9EF41DFF272900F078C6 /* MapsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsCell.swift; sourceTree = "<group>"; };
+		106C9EF61DFF273400F078C6 /* SpecialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialCell.swift; sourceTree = "<group>"; };
+		106C9EF81DFF2CED00F078C6 /* OffenseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffenseTableView.swift; sourceTree = "<group>"; };
+		106C9EFA1DFF2D8A00F078C6 /* DefenseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefenseTableView.swift; sourceTree = "<group>"; };
 		10CE86821DFB070100DB6374 /* overwatchcompendium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = overwatchcompendium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CE86851DFB070100DB6374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10CE86871DFB070100DB6374 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10CE86871DFB070100DB6374 /* SelectDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDataVC.swift; sourceTree = "<group>"; };
 		10CE868A1DFB070100DB6374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10CE868C1DFB070100DB6374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10CE868F1DFB070100DB6374 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10CE86911DFB070100DB6374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10CE869C1DFB2C0F00DB6374 /* bnt_oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bnt_oblique.ttf; sourceTree = "<group>"; };
+		10CE869D1DFB2C0F00DB6374 /* bnt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bnt.ttf; sourceTree = "<group>"; };
+		10CE86A01DFB2D0600DB6374 /* CustomLblTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLblTitle.swift; sourceTree = "<group>"; };
+		257752219083B29BA3762B30 /* Pods-overwatchcompendium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatchcompendium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-overwatchcompendium/Pods-overwatchcompendium.debug.xcconfig"; sourceTree = "<group>"; };
+		2AAC6A17046383804FC359C4 /* Pods-overwatchcompendium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatchcompendium.release.xcconfig"; path = "Pods/Target Support Files/Pods-overwatchcompendium/Pods-overwatchcompendium.release.xcconfig"; sourceTree = "<group>"; };
+		CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatchcompendium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +89,113 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC36987D478BA96EE5775A8 /* Pods_overwatchcompendium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106C9EC31DFDC63400F078C6 /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				106C9EC71DFDC65C00F078C6 /* Playtime */,
+				106C9EC61DFDC65700F078C6 /* Stats */,
+			);
+			name = Heroes;
+			sourceTree = "<group>";
+		};
+		106C9EC41DFDC64600F078C6 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				106C9EC91DFDC66600F078C6 /* Quickplay */,
+				106C9EC81DFDC66000F078C6 /* Competitive */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
+		106C9EC51DFDC64C00F078C6 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				106C9ECB1DFDC67900F078C6 /* AchievementData.swift */,
+			);
+			name = Achievements;
+			sourceTree = "<group>";
+		};
+		106C9EC61DFDC65700F078C6 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
+		106C9EC71DFDC65C00F078C6 /* Playtime */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Playtime;
+			sourceTree = "<group>";
+		};
+		106C9EC81DFDC66000F078C6 /* Competitive */ = {
+			isa = PBXGroup;
+			children = (
+				106C9ED51DFDC6FB00F078C6 /* CPAverageStats.swift */,
+				106C9ED71DFDC70900F078C6 /* CPOverallStats.swift */,
+				106C9ED91DFDC72400F078C6 /* CPGameStats.swift */,
+			);
+			name = Competitive;
+			sourceTree = "<group>";
+		};
+		106C9EC91DFDC66600F078C6 /* Quickplay */ = {
+			isa = PBXGroup;
+			children = (
+				106C9ECF1DFDC6DE00F078C6 /* QPAverageStats.swift */,
+				106C9ED11DFDC6E600F078C6 /* QPOverallStats.swift */,
+				106C9ED31DFDC6F000F078C6 /* QPGameStats.swift */,
+			);
+			name = Quickplay;
+			sourceTree = "<group>";
+		};
+		106C9EE71DFF230900F078C6 /* InitialVC */ = {
+			isa = PBXGroup;
+			children = (
+				10CE86871DFB070100DB6374 /* SelectDataVC.swift */,
+			);
+			name = InitialVC;
+			sourceTree = "<group>";
+		};
+		106C9EE81DFF231F00F078C6 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				106C9EC11DFDC58200F078C6 /* AchievementsVC.swift */,
+				106C9EF81DFF2CED00F078C6 /* OffenseTableView.swift */,
+				106C9EFA1DFF2D8A00F078C6 /* DefenseTableView.swift */,
+				106C9EE91DFF232C00F078C6 /* TableViewCells */,
+			);
+			name = Achievements;
+			sourceTree = "<group>";
+		};
+		106C9EE91DFF232C00F078C6 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				106C9EEA1DFF26F600F078C6 /* OffenseCell.swift */,
+				106C9EEC1DFF26FD00F078C6 /* DefenseCell.swift */,
+				106C9EEE1DFF270700F078C6 /* TankCell.swift */,
+				106C9EF01DFF271100F078C6 /* SupportCell.swift */,
+				106C9EF21DFF271C00F078C6 /* GeneralCell.swift */,
+				106C9EF41DFF272900F078C6 /* MapsCell.swift */,
+				106C9EF61DFF273400F078C6 /* SpecialCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		10CE86791DFB070100DB6374 = {
 			isa = PBXGroup;
 			children = (
 				10CE86841DFB070100DB6374 /* overwatchcompendium */,
 				10CE86831DFB070100DB6374 /* Products */,
+				16EA0D8C1D751A4A1A12BCE8 /* Pods */,
+				189DA59CF5D5A1B763C704F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +210,86 @@
 		10CE86841DFB070100DB6374 /* overwatchcompendium */ = {
 			isa = PBXGroup;
 			children = (
-				10CE86851DFB070100DB6374 /* AppDelegate.swift */,
-				10CE86871DFB070100DB6374 /* ViewController.swift */,
+				10CE869B1DFB2C0200DB6374 /* Utilities */,
+				10CE869A1DFB072A00DB6374 /* Data */,
+				10CE86971DFB071000DB6374 /* Model */,
+				10CE86981DFB071500DB6374 /* View */,
+				10CE86991DFB072600DB6374 /* Controller */,
 				10CE86891DFB070100DB6374 /* Main.storyboard */,
-				10CE868C1DFB070100DB6374 /* Assets.xcassets */,
 				10CE868E1DFB070100DB6374 /* LaunchScreen.storyboard */,
+				10CE86851DFB070100DB6374 /* AppDelegate.swift */,
+				10CE868C1DFB070100DB6374 /* Assets.xcassets */,
+				106C9EE31DFF128700F078C6 /* false.png */,
+				106C9EE41DFF128700F078C6 /* true.png */,
 				10CE86911DFB070100DB6374 /* Info.plist */,
 			);
 			path = overwatchcompendium;
+			sourceTree = "<group>";
+		};
+		10CE86971DFB071000DB6374 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				106C9EC51DFDC64C00F078C6 /* Achievements */,
+				106C9EC41DFDC64600F078C6 /* Stats */,
+				106C9EC31DFDC63400F078C6 /* Heroes */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		10CE86981DFB071500DB6374 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10CE86A01DFB2D0600DB6374 /* CustomLblTitle.swift */,
+				106C9EB71DFDB00300F078C6 /* RoundedCornerButton.swift */,
+				106C9EBB1DFDB1D000F078C6 /* CustomTxtField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		10CE86991DFB072600DB6374 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				106C9EE71DFF230900F078C6 /* InitialVC */,
+				106C9EBD1DFDC55400F078C6 /* HeroVC.swift */,
+				106C9EBF1DFDC56C00F078C6 /* StatsVC.swift */,
+				106C9EE81DFF231F00F078C6 /* Achievements */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		10CE869A1DFB072A00DB6374 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				106C9EE11DFDE9FB00F078C6 /* Constants.swift */,
+				106C9EB91DFDB0D000F078C6 /* API.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		10CE869B1DFB2C0200DB6374 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				10CE869C1DFB2C0F00DB6374 /* bnt_oblique.ttf */,
+				10CE869D1DFB2C0F00DB6374 /* bnt.ttf */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		16EA0D8C1D751A4A1A12BCE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				257752219083B29BA3762B30 /* Pods-overwatchcompendium.debug.xcconfig */,
+				2AAC6A17046383804FC359C4 /* Pods-overwatchcompendium.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		189DA59CF5D5A1B763C704F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +299,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10CE86941DFB070100DB6374 /* Build configuration list for PBXNativeTarget "overwatchcompendium" */;
 			buildPhases = (
+				125696F153406AABD3B7403E /* [CP] Check Pods Manifest.lock */,
 				10CE867E1DFB070100DB6374 /* Sources */,
 				10CE867F1DFB070100DB6374 /* Frameworks */,
 				10CE86801DFB070100DB6374 /* Resources */,
+				AE5B0283C65CC5BA79AA41A7 /* [CP] Embed Pods Frameworks */,
+				A2CAF72E8443EC9A7A6E2BFE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,20 +356,96 @@
 			buildActionMask = 2147483647;
 			files = (
 				10CE86901DFB070100DB6374 /* LaunchScreen.storyboard in Resources */,
+				106C9EE61DFF128700F078C6 /* true.png in Resources */,
+				10CE869F1DFB2C0F00DB6374 /* bnt.ttf in Resources */,
 				10CE868D1DFB070100DB6374 /* Assets.xcassets in Resources */,
+				106C9EE51DFF128700F078C6 /* false.png in Resources */,
 				10CE868B1DFB070100DB6374 /* Main.storyboard in Resources */,
+				10CE869E1DFB2C0F00DB6374 /* bnt_oblique.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		125696F153406AABD3B7403E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2CAF72E8443EC9A7A6E2BFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-overwatchcompendium/Pods-overwatchcompendium-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE5B0283C65CC5BA79AA41A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-overwatchcompendium/Pods-overwatchcompendium-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		10CE867E1DFB070100DB6374 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10CE86881DFB070100DB6374 /* ViewController.swift in Sources */,
+				106C9EF31DFF271C00F078C6 /* GeneralCell.swift in Sources */,
+				106C9ED21DFDC6E600F078C6 /* QPOverallStats.swift in Sources */,
+				106C9EC01DFDC56C00F078C6 /* StatsVC.swift in Sources */,
+				106C9ED81DFDC70900F078C6 /* CPOverallStats.swift in Sources */,
+				106C9EFB1DFF2D8A00F078C6 /* DefenseTableView.swift in Sources */,
+				10CE86A11DFB2D0600DB6374 /* CustomLblTitle.swift in Sources */,
+				106C9ED01DFDC6DE00F078C6 /* QPAverageStats.swift in Sources */,
+				106C9EF91DFF2CED00F078C6 /* OffenseTableView.swift in Sources */,
+				10CE86881DFB070100DB6374 /* SelectDataVC.swift in Sources */,
+				106C9EBC1DFDB1D000F078C6 /* CustomTxtField.swift in Sources */,
+				106C9EBA1DFDB0D000F078C6 /* API.swift in Sources */,
+				106C9EDA1DFDC72400F078C6 /* CPGameStats.swift in Sources */,
+				106C9EB81DFDB00300F078C6 /* RoundedCornerButton.swift in Sources */,
+				106C9ED41DFDC6F000F078C6 /* QPGameStats.swift in Sources */,
+				106C9EEF1DFF270700F078C6 /* TankCell.swift in Sources */,
+				106C9EF71DFF273400F078C6 /* SpecialCell.swift in Sources */,
+				106C9EC21DFDC58200F078C6 /* AchievementsVC.swift in Sources */,
+				106C9EED1DFF26FD00F078C6 /* DefenseCell.swift in Sources */,
+				106C9EEB1DFF26F600F078C6 /* OffenseCell.swift in Sources */,
+				106C9ED61DFDC6FB00F078C6 /* CPAverageStats.swift in Sources */,
 				10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */,
+				106C9EBE1DFDC55400F078C6 /* HeroVC.swift in Sources */,
+				106C9EF51DFF272900F078C6 /* MapsCell.swift in Sources */,
+				106C9ECC1DFDC67900F078C6 /* AchievementData.swift in Sources */,
+				106C9EE21DFDE9FB00F078C6 /* Constants.swift in Sources */,
+				106C9EF11DFF271100F078C6 /* SupportCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +564,12 @@
 		};
 		10CE86951DFB070100DB6374 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 257752219083B29BA3762B30 /* Pods-overwatchcompendium.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NG6UM76K5M;
 				INFOPLIST_FILE = overwatchcompendium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toracross.overwatchcompendium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,10 +579,12 @@
 		};
 		10CE86961DFB070100DB6374 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AAC6A17046383804FC359C4 /* Pods-overwatchcompendium.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NG6UM76K5M;
 				INFOPLIST_FILE = overwatchcompendium/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.toracross.overwatchcompendium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +611,7 @@
 				10CE86961DFB070100DB6374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
