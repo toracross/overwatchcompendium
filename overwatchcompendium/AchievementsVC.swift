@@ -9,30 +9,79 @@
 import UIKit
 import Alamofire
 
-class AchievementsVC: UIViewController {
+class AchievementsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    //API URL
+    let url = UserDefaults.standard.string(forKey: "playerAchievements")
+    
     //Variables
     weak var timer: Timer?
     
-    
     //Outlets
     @IBOutlet weak var dynamicBG: UIImageView!
-    
-    //TableViews
-    @IBOutlet weak var offenseTableView: UITableView!
-    @IBOutlet weak var defenseTableView: UITableView!
-    @IBOutlet weak var tankTableView: UITableView!
-    @IBOutlet weak var supportTableView: UITableView!
-    @IBOutlet weak var generalTableView: UITableView!
-    @IBOutlet weak var mapsTableView: UITableView!
-    @IBOutlet weak var specialTableView: UITableView!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
         repeatBackground()
     }
+    
 
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchCell", for: indexPath) as? AchievementCell {
+            //code goes here
+            
+            return cell
+        } else {
+            return AchievementCell()
+        }
+        
+    }
+    
+    func downloadAchievementData(completed: @escaping DownloadComplete) {
+        Alamofire.request("").responseJSON { response in
+            let data = response.result
+            //print(data) - works
+            
+            if let JSON = data.value as? Dictionary<String, AnyObject> {
+                //print(JSON) - works
+                if let achievement = JSON["achievements"] as? [[String: AnyObject]] {
+                    //print(achievement) //- works
+                    
+                    for items in achievement {
+                        if let name = items["name"] as? String {
+                            //self.names.append(name)
+                        }
+                        if let description = items["description"] as? String {
+                           //self.descriptions.append(description)
+                        }
+                        if let finished = items["finished"] as? Bool {
+                            //self.finished.append(finished)
+                        }
+                        
+                    }
+                    /*
+                    print(self.names)
+                    print(self.descriptions)
+                    print(self.finished)
+                    */
+                    
+                }
+            }
+            
+            
+        }
+        completed()
+    }
+
+    
+    
     //Visual
     func repeatBackground() {
         

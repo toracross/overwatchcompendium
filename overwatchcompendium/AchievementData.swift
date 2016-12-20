@@ -13,16 +13,34 @@ import Alamofire
 
 class AchievementData {
     
-    private var _achievementTitle: String!
+    private var _achName: String!
+    private var _achDescription: String!
+    private var _achFinished: Bool!
     
-    var achievementTitle: String {
-        get {
-            if _achievementTitle == nil {
-                _achievementTitle = ""
-            }
-            return _achievementTitle
+    var achName: String {
+        if _achName == nil {
+            _achName = ""
         }
+        return _achName
     }
+    
+    var achDescription: String {
+        if _achDescription == nil {
+            _achDescription = ""
+        }
+        return _achDescription
+    }
+    
+    var achFinished: Bool {
+        if _achFinished == nil {
+            _achFinished = false
+        }
+        return _achFinished
+    }
+    
+    //Achievement Parsing
+    
+    
     
     
 }

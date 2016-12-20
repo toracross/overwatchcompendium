@@ -10,14 +10,21 @@ import UIKit
 
 class HeroVC: UIViewController {
     
+    //API URL
+    let urlQP = UserDefaults.standard.string(forKey: "playerHeroesQP")
+    let urlCP = UserDefaults.standard.string(forKey: "playerHeroesCP")
+    
     weak var timer: Timer?
     
     @IBOutlet weak var dynamicBG: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        repeatBackground()
     }
+
     
     //Visual
     func repeatBackground() {

@@ -10,6 +10,10 @@ import UIKit
 
 class StatsVC: UIViewController {
 
+    //API URL
+    let urlQP = UserDefaults.standard.string(forKey: "playerStatsQP")
+    let urlCP = UserDefaults.standard.string(forKey: "playerStatsCP")
+    
     //Variables
     weak var timer: Timer?
     
@@ -19,12 +23,11 @@ class StatsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         repeatBackground()
     }
+
 
     
     //Visual

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A7F4A2AAC0D9D45267D3E55D3D571672"
-               BuildableName = "Pods_overwatchcompendium.framework"
-               BlueprintName = "Pods-overwatchcompendium"
+               BlueprintIdentifier = "9EFE4C70245EE2857D336B8B9FA4E825"
+               BuildableName = "AlamofireImage.framework"
+               BlueprintName = "AlamofireImage"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A7F4A2AAC0D9D45267D3E55D3D571672"
-            BuildableName = "Pods_overwatchcompendium.framework"
-            BlueprintName = "Pods-overwatchcompendium"
+            BlueprintIdentifier = "9EFE4C70245EE2857D336B8B9FA4E825"
+            BuildableName = "AlamofireImage.framework"
+            BlueprintName = "AlamofireImage"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

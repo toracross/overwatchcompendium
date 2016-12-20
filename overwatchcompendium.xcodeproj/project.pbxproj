@@ -14,24 +14,13 @@
 		106C9EC01DFDC56C00F078C6 /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EBF1DFDC56C00F078C6 /* StatsVC.swift */; };
 		106C9EC21DFDC58200F078C6 /* AchievementsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EC11DFDC58200F078C6 /* AchievementsVC.swift */; };
 		106C9ECC1DFDC67900F078C6 /* AchievementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ECB1DFDC67900F078C6 /* AchievementData.swift */; };
-		106C9ED01DFDC6DE00F078C6 /* QPAverageStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ECF1DFDC6DE00F078C6 /* QPAverageStats.swift */; };
-		106C9ED21DFDC6E600F078C6 /* QPOverallStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED11DFDC6E600F078C6 /* QPOverallStats.swift */; };
-		106C9ED41DFDC6F000F078C6 /* QPGameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED31DFDC6F000F078C6 /* QPGameStats.swift */; };
-		106C9ED61DFDC6FB00F078C6 /* CPAverageStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED51DFDC6FB00F078C6 /* CPAverageStats.swift */; };
-		106C9ED81DFDC70900F078C6 /* CPOverallStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED71DFDC70900F078C6 /* CPOverallStats.swift */; };
-		106C9EDA1DFDC72400F078C6 /* CPGameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ED91DFDC72400F078C6 /* CPGameStats.swift */; };
 		106C9EE21DFDE9FB00F078C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EE11DFDE9FB00F078C6 /* Constants.swift */; };
-		106C9EE51DFF128700F078C6 /* false.png in Resources */ = {isa = PBXBuildFile; fileRef = 106C9EE31DFF128700F078C6 /* false.png */; };
 		106C9EE61DFF128700F078C6 /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = 106C9EE41DFF128700F078C6 /* true.png */; };
-		106C9EEB1DFF26F600F078C6 /* OffenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EEA1DFF26F600F078C6 /* OffenseCell.swift */; };
-		106C9EED1DFF26FD00F078C6 /* DefenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EEC1DFF26FD00F078C6 /* DefenseCell.swift */; };
-		106C9EEF1DFF270700F078C6 /* TankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EEE1DFF270700F078C6 /* TankCell.swift */; };
-		106C9EF11DFF271100F078C6 /* SupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF01DFF271100F078C6 /* SupportCell.swift */; };
-		106C9EF31DFF271C00F078C6 /* GeneralCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF21DFF271C00F078C6 /* GeneralCell.swift */; };
-		106C9EF51DFF272900F078C6 /* MapsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF41DFF272900F078C6 /* MapsCell.swift */; };
-		106C9EF71DFF273400F078C6 /* SpecialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF61DFF273400F078C6 /* SpecialCell.swift */; };
-		106C9EF91DFF2CED00F078C6 /* OffenseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EF81DFF2CED00F078C6 /* OffenseTableView.swift */; };
-		106C9EFB1DFF2D8A00F078C6 /* DefenseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EFA1DFF2D8A00F078C6 /* DefenseTableView.swift */; };
+		108ADD471E038843007C7878 /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD461E038843007C7878 /* PlayerData.swift */; };
+		108ADD491E08C8F6007C7878 /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD481E08C8F6007C7878 /* AchievementCell.swift */; };
+		108ADD4B1E08DCDE007C7878 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD4A1E08DCDE007C7878 /* ProfileVC.swift */; };
+		108ADD4D1E09063B007C7878 /* ImageBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD4C1E09063B007C7878 /* ImageBlur.swift */; };
+		108ADD4F1E0999D4007C7878 /* UIViewOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD4E1E0999D4007C7878 /* UIViewOutline.swift */; };
 		10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE86851DFB070100DB6374 /* AppDelegate.swift */; };
 		10CE86881DFB070100DB6374 /* SelectDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE86871DFB070100DB6374 /* SelectDataVC.swift */; };
 		10CE868B1DFB070100DB6374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10CE86891DFB070100DB6374 /* Main.storyboard */; };
@@ -51,24 +40,13 @@
 		106C9EBF1DFDC56C00F078C6 /* StatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
 		106C9EC11DFDC58200F078C6 /* AchievementsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsVC.swift; sourceTree = "<group>"; };
 		106C9ECB1DFDC67900F078C6 /* AchievementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementData.swift; sourceTree = "<group>"; };
-		106C9ECF1DFDC6DE00F078C6 /* QPAverageStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QPAverageStats.swift; sourceTree = "<group>"; };
-		106C9ED11DFDC6E600F078C6 /* QPOverallStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QPOverallStats.swift; sourceTree = "<group>"; };
-		106C9ED31DFDC6F000F078C6 /* QPGameStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QPGameStats.swift; sourceTree = "<group>"; };
-		106C9ED51DFDC6FB00F078C6 /* CPAverageStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPAverageStats.swift; sourceTree = "<group>"; };
-		106C9ED71DFDC70900F078C6 /* CPOverallStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPOverallStats.swift; sourceTree = "<group>"; };
-		106C9ED91DFDC72400F078C6 /* CPGameStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPGameStats.swift; sourceTree = "<group>"; };
 		106C9EE11DFDE9FB00F078C6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		106C9EE31DFF128700F078C6 /* false.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = false.png; sourceTree = "<group>"; };
 		106C9EE41DFF128700F078C6 /* true.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true.png; sourceTree = "<group>"; };
-		106C9EEA1DFF26F600F078C6 /* OffenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffenseCell.swift; sourceTree = "<group>"; };
-		106C9EEC1DFF26FD00F078C6 /* DefenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefenseCell.swift; sourceTree = "<group>"; };
-		106C9EEE1DFF270700F078C6 /* TankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TankCell.swift; sourceTree = "<group>"; };
-		106C9EF01DFF271100F078C6 /* SupportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportCell.swift; sourceTree = "<group>"; };
-		106C9EF21DFF271C00F078C6 /* GeneralCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralCell.swift; sourceTree = "<group>"; };
-		106C9EF41DFF272900F078C6 /* MapsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsCell.swift; sourceTree = "<group>"; };
-		106C9EF61DFF273400F078C6 /* SpecialCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialCell.swift; sourceTree = "<group>"; };
-		106C9EF81DFF2CED00F078C6 /* OffenseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffenseTableView.swift; sourceTree = "<group>"; };
-		106C9EFA1DFF2D8A00F078C6 /* DefenseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefenseTableView.swift; sourceTree = "<group>"; };
+		108ADD461E038843007C7878 /* PlayerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
+		108ADD481E08C8F6007C7878 /* AchievementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
+		108ADD4A1E08DCDE007C7878 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		108ADD4C1E09063B007C7878 /* ImageBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBlur.swift; sourceTree = "<group>"; };
+		108ADD4E1E0999D4007C7878 /* UIViewOutline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewOutline.swift; sourceTree = "<group>"; };
 		10CE86821DFB070100DB6374 /* overwatchcompendium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = overwatchcompendium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CE86851DFB070100DB6374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CE86871DFB070100DB6374 /* SelectDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDataVC.swift; sourceTree = "<group>"; };
@@ -99,8 +77,6 @@
 		106C9EC31DFDC63400F078C6 /* Heroes */ = {
 			isa = PBXGroup;
 			children = (
-				106C9EC71DFDC65C00F078C6 /* Playtime */,
-				106C9EC61DFDC65700F078C6 /* Stats */,
 			);
 			name = Heroes;
 			sourceTree = "<group>";
@@ -108,8 +84,7 @@
 		106C9EC41DFDC64600F078C6 /* Stats */ = {
 			isa = PBXGroup;
 			children = (
-				106C9EC91DFDC66600F078C6 /* Quickplay */,
-				106C9EC81DFDC66000F078C6 /* Competitive */,
+				108ADD461E038843007C7878 /* PlayerData.swift */,
 			);
 			name = Stats;
 			sourceTree = "<group>";
@@ -122,71 +97,13 @@
 			name = Achievements;
 			sourceTree = "<group>";
 		};
-		106C9EC61DFDC65700F078C6 /* Stats */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Stats;
-			sourceTree = "<group>";
-		};
-		106C9EC71DFDC65C00F078C6 /* Playtime */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Playtime;
-			sourceTree = "<group>";
-		};
-		106C9EC81DFDC66000F078C6 /* Competitive */ = {
-			isa = PBXGroup;
-			children = (
-				106C9ED51DFDC6FB00F078C6 /* CPAverageStats.swift */,
-				106C9ED71DFDC70900F078C6 /* CPOverallStats.swift */,
-				106C9ED91DFDC72400F078C6 /* CPGameStats.swift */,
-			);
-			name = Competitive;
-			sourceTree = "<group>";
-		};
-		106C9EC91DFDC66600F078C6 /* Quickplay */ = {
-			isa = PBXGroup;
-			children = (
-				106C9ECF1DFDC6DE00F078C6 /* QPAverageStats.swift */,
-				106C9ED11DFDC6E600F078C6 /* QPOverallStats.swift */,
-				106C9ED31DFDC6F000F078C6 /* QPGameStats.swift */,
-			);
-			name = Quickplay;
-			sourceTree = "<group>";
-		};
-		106C9EE71DFF230900F078C6 /* InitialVC */ = {
-			isa = PBXGroup;
-			children = (
-				10CE86871DFB070100DB6374 /* SelectDataVC.swift */,
-			);
-			name = InitialVC;
-			sourceTree = "<group>";
-		};
 		106C9EE81DFF231F00F078C6 /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
 				106C9EC11DFDC58200F078C6 /* AchievementsVC.swift */,
-				106C9EF81DFF2CED00F078C6 /* OffenseTableView.swift */,
-				106C9EFA1DFF2D8A00F078C6 /* DefenseTableView.swift */,
-				106C9EE91DFF232C00F078C6 /* TableViewCells */,
+				108ADD481E08C8F6007C7878 /* AchievementCell.swift */,
 			);
 			name = Achievements;
-			sourceTree = "<group>";
-		};
-		106C9EE91DFF232C00F078C6 /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				106C9EEA1DFF26F600F078C6 /* OffenseCell.swift */,
-				106C9EEC1DFF26FD00F078C6 /* DefenseCell.swift */,
-				106C9EEE1DFF270700F078C6 /* TankCell.swift */,
-				106C9EF01DFF271100F078C6 /* SupportCell.swift */,
-				106C9EF21DFF271C00F078C6 /* GeneralCell.swift */,
-				106C9EF41DFF272900F078C6 /* MapsCell.swift */,
-				106C9EF61DFF273400F078C6 /* SpecialCell.swift */,
-			);
-			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 		10CE86791DFB070100DB6374 = {
@@ -219,7 +136,6 @@
 				10CE868E1DFB070100DB6374 /* LaunchScreen.storyboard */,
 				10CE86851DFB070100DB6374 /* AppDelegate.swift */,
 				10CE868C1DFB070100DB6374 /* Assets.xcassets */,
-				106C9EE31DFF128700F078C6 /* false.png */,
 				106C9EE41DFF128700F078C6 /* true.png */,
 				10CE86911DFB070100DB6374 /* Info.plist */,
 			);
@@ -229,8 +145,8 @@
 		10CE86971DFB071000DB6374 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				106C9EC51DFDC64C00F078C6 /* Achievements */,
 				106C9EC41DFDC64600F078C6 /* Stats */,
+				106C9EC51DFDC64C00F078C6 /* Achievements */,
 				106C9EC31DFDC63400F078C6 /* Heroes */,
 			);
 			name = Model;
@@ -242,6 +158,8 @@
 				10CE86A01DFB2D0600DB6374 /* CustomLblTitle.swift */,
 				106C9EB71DFDB00300F078C6 /* RoundedCornerButton.swift */,
 				106C9EBB1DFDB1D000F078C6 /* CustomTxtField.swift */,
+				108ADD4C1E09063B007C7878 /* ImageBlur.swift */,
+				108ADD4E1E0999D4007C7878 /* UIViewOutline.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -249,9 +167,10 @@
 		10CE86991DFB072600DB6374 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				106C9EE71DFF230900F078C6 /* InitialVC */,
-				106C9EBD1DFDC55400F078C6 /* HeroVC.swift */,
+				10CE86871DFB070100DB6374 /* SelectDataVC.swift */,
+				108ADD4A1E08DCDE007C7878 /* ProfileVC.swift */,
 				106C9EBF1DFDC56C00F078C6 /* StatsVC.swift */,
+				106C9EBD1DFDC55400F078C6 /* HeroVC.swift */,
 				106C9EE81DFF231F00F078C6 /* Achievements */,
 			);
 			name = Controller;
@@ -359,7 +278,6 @@
 				106C9EE61DFF128700F078C6 /* true.png in Resources */,
 				10CE869F1DFB2C0F00DB6374 /* bnt.ttf in Resources */,
 				10CE868D1DFB070100DB6374 /* Assets.xcassets in Resources */,
-				106C9EE51DFF128700F078C6 /* false.png in Resources */,
 				10CE868B1DFB070100DB6374 /* Main.storyboard in Resources */,
 				10CE869E1DFB2C0F00DB6374 /* bnt_oblique.ttf in Resources */,
 			);
@@ -420,32 +338,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				106C9EF31DFF271C00F078C6 /* GeneralCell.swift in Sources */,
-				106C9ED21DFDC6E600F078C6 /* QPOverallStats.swift in Sources */,
 				106C9EC01DFDC56C00F078C6 /* StatsVC.swift in Sources */,
-				106C9ED81DFDC70900F078C6 /* CPOverallStats.swift in Sources */,
-				106C9EFB1DFF2D8A00F078C6 /* DefenseTableView.swift in Sources */,
 				10CE86A11DFB2D0600DB6374 /* CustomLblTitle.swift in Sources */,
-				106C9ED01DFDC6DE00F078C6 /* QPAverageStats.swift in Sources */,
-				106C9EF91DFF2CED00F078C6 /* OffenseTableView.swift in Sources */,
+				108ADD4B1E08DCDE007C7878 /* ProfileVC.swift in Sources */,
 				10CE86881DFB070100DB6374 /* SelectDataVC.swift in Sources */,
 				106C9EBC1DFDB1D000F078C6 /* CustomTxtField.swift in Sources */,
 				106C9EBA1DFDB0D000F078C6 /* API.swift in Sources */,
-				106C9EDA1DFDC72400F078C6 /* CPGameStats.swift in Sources */,
 				106C9EB81DFDB00300F078C6 /* RoundedCornerButton.swift in Sources */,
-				106C9ED41DFDC6F000F078C6 /* QPGameStats.swift in Sources */,
-				106C9EEF1DFF270700F078C6 /* TankCell.swift in Sources */,
-				106C9EF71DFF273400F078C6 /* SpecialCell.swift in Sources */,
+				108ADD4F1E0999D4007C7878 /* UIViewOutline.swift in Sources */,
+				108ADD471E038843007C7878 /* PlayerData.swift in Sources */,
+				108ADD4D1E09063B007C7878 /* ImageBlur.swift in Sources */,
 				106C9EC21DFDC58200F078C6 /* AchievementsVC.swift in Sources */,
-				106C9EED1DFF26FD00F078C6 /* DefenseCell.swift in Sources */,
-				106C9EEB1DFF26F600F078C6 /* OffenseCell.swift in Sources */,
-				106C9ED61DFDC6FB00F078C6 /* CPAverageStats.swift in Sources */,
 				10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */,
 				106C9EBE1DFDC55400F078C6 /* HeroVC.swift in Sources */,
-				106C9EF51DFF272900F078C6 /* MapsCell.swift in Sources */,
 				106C9ECC1DFDC67900F078C6 /* AchievementData.swift in Sources */,
+				108ADD491E08C8F6007C7878 /* AchievementCell.swift in Sources */,
 				106C9EE21DFDE9FB00F078C6 /* Constants.swift in Sources */,
-				106C9EF11DFF271100F078C6 /* SupportCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +397,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -511,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -538,6 +447,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -554,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -566,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 257752219083B29BA3762B30 /* Pods-overwatchcompendium.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NG6UM76K5M;
 				INFOPLIST_FILE = overwatchcompendium/Info.plist;
@@ -581,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AAC6A17046383804FC359C4 /* Pods-overwatchcompendium.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NG6UM76K5M;
 				INFOPLIST_FILE = overwatchcompendium/Info.plist;
