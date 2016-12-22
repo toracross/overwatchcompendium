@@ -8,14 +8,18 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class ProfileVC: UIViewController {
 
-    //API URL
+    //API URL + Saved Data
     let url = UserDefaults.standard.string(forKey: "playerProfile")
+    let playerPlatformLbl = UserDefaults.standard.string(forKey: "playerPlatform")
+    let playerRegionLbl = UserDefaults.standard.string(forKey: "playerRegion")
     
     //Variables
     weak var timer: Timer?
+    var playerData: PlayerProfileData!
     
     //Outlets
     @IBOutlet weak var dynamicBG: UIImageView!
@@ -24,56 +28,92 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var playerAvatar: UIImageView!
     @IBOutlet weak var playerQPWins: UILabel!
     @IBOutlet weak var playerCPWins: UILabel!
+    @IBOutlet weak var playerQPTime: UILabel!
+    @IBOutlet weak var playerCPTime: UILabel!
+    @IBOutlet weak var playerCPLoss: UILabel!
+    @IBOutlet weak var playerCPTotal: UILabel!
     @IBOutlet weak var playerRank: UILabel!
     @IBOutlet weak var playerRankImg: UIImageView!
     @IBOutlet weak var playerLevel: UILabel!
     @IBOutlet weak var playerLevelImg: UIImageView!
-    @IBOutlet weak var playerStar1: UIImageView!
-    @IBOutlet weak var playerStar2: UIImageView!
-    @IBOutlet weak var playerStar3: UIImageView!
-    
-    
+    @IBOutlet weak var playerStar: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        playerData = PlayerProfileData()        
+        playerData.downloadPlayerStats {
+            self.updateUI()
+        }
         repeatBackground()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        downloadPlayerStats {
-            print("Downloaded Player Stats.")
-        }
-    }
 
     
-    //Parse API Data
-    func downloadPlayerStats(completed: @escaping DownloadComplete) {
-        Alamofire.request(url!).responseJSON { response in
-            let download = response.result
-            if let JSON = download.value as? Dictionary<String, AnyObject> {
-                if let data = JSON["data"] as? Dictionary<String, AnyObject> {
-                    
-                    if let username = data["username"] as? String {
-                        self.playerName.text = username
-                    }
-                    if let level = data["level"] as? Int {
-                        self.playerLevel.text = "\(level)"
-                    }
-                    
-                    if let games = data["games"] as? Dictionary<String, AnyObject> {
-                        if let quickplay = games["quick"] as? Dictionary<String, AnyObject> {
-                            if let wins = quickplay["wins"] as? String {
-                                self.playerQPWins.text = "\(wins) winste"
-                            }
-                        }
-                    }
-                    
-                }
-                
+    func updateUI() {
+        //Stats
+        playerName.text = playerData.playerName
+        playerRegion.text = "\(playerPlatformLbl!) \(playerRegionLbl!)"
+        playerLevel.text = "\(playerData.playerLevel)"
+        
+        //Quickplay
+        playerQPWins.text = "\(playerData.playerQPWins) wins"
+        playerQPTime.text = "Playtime: \(playerData.playerQPTime)"
+        
+        //Competitive
+        playerCPWins.text = "\(playerData.playerCPWins) games won"
+        playerCPLoss.text = "\(playerData.playerCPLoss) games lost"
+        playerCPTotal.text = "\(playerData.playerCPTotal) games played"
+        playerCPTime.text = "Playtime: \(playerData.playerCPTime)"
+        playerRank.text = "Rank: \(playerData.playerRank)"
+        
+        //Images
+        //Level
+        if let levelUrl = URL(string: playerData.playerLevelImg) {
+            do {
+                let levelData = try Data(contentsOf: levelUrl)
+                self.playerLevelImg.image = UIImage(data: levelData)
+            } catch {
+                print("Could not find image file.")
             }
-            
         }
-        completed()
+        
+        //Avatar
+        if let avatarUrl = URL(string: playerData.playerAvatar) {
+            do {
+                let avatarData = try Data(contentsOf: avatarUrl)
+                self.playerAvatar.image = UIImage(data: avatarData)
+            } catch {
+                print("Could not find image file.")
+            }
+        }
+
+        
+        //Rank
+        if let rankUrl = URL(string: playerData.playerRankImg) {
+            do {
+                let rankData = try Data(contentsOf: rankUrl)
+                self.playerRankImg.image = UIImage(data: rankData)
+            } catch {
+                print("Could not find image file.")
+            }
+        }
+
+        
+        //Star - Player may not be lv100+, don't want to crash.
+        if let starUrl = URL(string: playerData.playerStar) {
+            do {
+                let starData = try Data(contentsOf: starUrl)
+                self.playerStar.image = UIImage(data: starData)
+            } catch {
+                print("Could not find image file.")
+            }
+        }
+    }
+    
+    //Return to previous view controller.
+    @IBAction func returnToSearch(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     //Visual
@@ -95,5 +135,4 @@ class ProfileVC: UIViewController {
                           animations: { self.dynamicBG.image = toImage },
                           completion: nil)
     }
-
 }

@@ -13,6 +13,7 @@ class AchievementsVC: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     //API URL
     let url = UserDefaults.standard.string(forKey: "playerAchievements")
+
     
     //Variables
     weak var timer: Timer?
@@ -22,7 +23,6 @@ class AchievementsVC: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 
         repeatBackground()
     }

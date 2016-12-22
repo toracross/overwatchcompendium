@@ -16,19 +16,29 @@ class StatsVC: UIViewController {
     
     //Variables
     weak var timer: Timer?
+    var playerStatsQP: PlayerStatsQP!
     
     //Outlets
     @IBOutlet weak var dynamicBG: UIImageView!
+    @IBOutlet weak var meleeFinalBlows: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        playerStatsQP = PlayerStatsQP()
+        playerStatsQP.downloadPlayerQPStats {
+            print("Data download was...")
+            self.updateUI()
+            
+        }
         repeatBackground()
     }
-
-
+    
+    //Update UI
+    func updateUI() {
+        self.meleeFinalBlows.text = playerStatsQP.meleeFinalBlows
+    }
     
     //Visual
     func repeatBackground() {

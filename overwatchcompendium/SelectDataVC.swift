@@ -8,14 +8,13 @@
 
 import UIKit
 import Alamofire
+import NVActivityIndicatorView
 
-
-class SelectDataVC: UIViewController {
+class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var dynamicBG: UIImageView!
     @IBOutlet weak var battleTxt: UITextField!
-    @IBOutlet weak var tagTxt: UITextField!
     @IBOutlet weak var platformControl: UISegmentedControl!
     @IBOutlet weak var regionControl: UISegmentedControl!
     
@@ -24,11 +23,13 @@ class SelectDataVC: UIViewController {
     var regionTxt = ""
     let defaults = UserDefaults.standard
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        
+        downloadPlayerQPStats {
+            print("Download complete.")
+        }
         repeatBackground()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -36,65 +37,90 @@ class SelectDataVC: UIViewController {
     
     //Grab inputted data, perform download, move to next segue to display downloaded data.
     @IBAction func downloadBtnPushed(_ sender: UIButton) {
+        startAnimating(message:"Loading...")
         
         let name = battleTxt.text
-        let number = tagTxt.text
+    
+            switch platformControl.selectedSegmentIndex {
+            case 0: platformTxt = "pc"
+            case 1: platformTxt = "psn"
+            case 2: platformTxt = "xbl"
+            default:
+                break
+            }
+            
+            switch regionControl.selectedSegmentIndex {
+            case 0: regionTxt = "us"
+            case 1: regionTxt = "eu"
+            default:
+                break
+            }
         
-        if (name!.isEmpty) || (number!.isEmpty) {
-            
-            alertMessage()
-            
-        } else {
-            
-            if platformControl.selectedSegmentIndex == 0 && regionControl.selectedSegmentIndex == 0 {
-                platformTxt = "pc"; regionTxt = "us";
-            }
-            if platformControl.selectedSegmentIndex == 0 && regionControl.selectedSegmentIndex == 1 {
-                platformTxt = "pc"; regionTxt = "eu";
-            }
-            if platformControl.selectedSegmentIndex == 1 && regionControl.selectedSegmentIndex == 0 {
-                platformTxt = "psn"; regionTxt = "us";
-            }
-            if platformControl.selectedSegmentIndex == 1 && regionControl.selectedSegmentIndex == 1 {
-                platformTxt = "psn"; regionTxt = "eu";
-            }
-            if platformControl.selectedSegmentIndex == 2 && regionControl.selectedSegmentIndex == 0 {
-                platformTxt = "xbl"; regionTxt = "us";
-            }
-            if platformControl.selectedSegmentIndex == 2 && regionControl.selectedSegmentIndex == 1 {
-                platformTxt = "xbl"; regionTxt = "eu";
-            }
-            
-        }
+        //Save Platform
+        let playerPlatform = platformTxt
+        let playerRegion = regionTxt
+        defaults.set(playerPlatform, forKey: "playerPlatform")
+        defaults.set(playerRegion, forKey: "playerRegion")
         
         //Save Profile
-        let playerProfile = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)-\(tagTxt.text!)/profile"
+        let playerProfile = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/profile"
         defaults.set(playerProfile, forKey: "playerProfile")
         
         //Save Stats
         //Quickplay
-        let playerStatsQP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)-\(tagTxt.text!)/quickplay/allHeroes"
+        let playerStatsQP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/quickplay/allHeroes"
         defaults.set(playerStatsQP, forKey: "playerStatsQP")
         //Competitive
-        let playerStatsCP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)-\(tagTxt.text!)/competitive/allHeroes"
+        let playerStatsCP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/competitive/allHeroes"
         defaults.set(playerStatsCP, forKey: "playerStatsCP")
         
         //Save Heroes
         //Quickplay
-        let playerHeroesQP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)-\(tagTxt.text!)/quickplay/heroes"
+        let playerHeroesQP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/quickplay/heroes"
         defaults.set(playerHeroesQP, forKey: "playerHeroesQP")
         //Competitive
-        let playerHeroesCP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)-\(tagTxt.text!)/competitive/heroes"
+        let playerHeroesCP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/competitive/heroes"
         defaults.set(playerHeroesCP, forKey: "playerHeroesCP")
 
         //Save Achievements
-        let playerAchievements = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)-\(tagTxt.text!)/achievements"
+        let playerAchievements = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/achievements"
         defaults.set(playerAchievements, forKey: "playerAchievements")
         
-        self.performSegue(withIdentifier: "playerInfo", sender: self)
+        //check URL
+        func checkStatusCode(completed: @escaping DownloadComplete) {
+            let responseCode = 404
+            
+            Alamofire.request(playerProfile).responseJSON { response in
+                let httpResponse = response.result
+                if let errorCode = httpResponse.value as? Dictionary<String, AnyObject> {
+                    if let statusCode = errorCode["statusCode"] as? Int {
+                        print(statusCode)
+                        if statusCode != responseCode {
+                            print("Never called.")
+                        }
+                        else {
+                            self.stopAnimating()
+                            self.alertFailMessage()
+                        }
+                    }
+                }
+                
+                completed()
+            }
+        }
+        
+        checkStatusCode {
+            if name != "" {
+                self.stopAnimating()
+                self.battleTxt.text = ""
+                self.performSegue(withIdentifier: "playerInfo", sender: self)
+            } else {
+                print("Field was left empty.")
+            }
+        }
+        
     }
-    
-    
+
     //Put background on a timer, cycle to next every x seconds.
     func repeatBackground() {
                 
@@ -120,21 +146,37 @@ class SelectDataVC: UIViewController {
         view.endEditing(true)
     }
     
-    func alertMessage() {
-        //Fire an alert indicating the user didn't fill in all fields.
-        let alert = UIAlertController(title: "Battle Tag missing.",
-                                      message: "Either your name or number tag is missing, please fill in that data.",
+    //Alert if status is not SUCCESS.
+    func alertFailMessage() {
+        let alert = UIAlertController(title: "Profile not found.",
+                                      message: "No data was returned for this battle tag, please make sure the player name is valid and try again.",
                                       preferredStyle: UIAlertControllerStyle.alert)
-         
-         alert.addAction(UIAlertAction(title: "OK",
-                                       style: UIAlertActionStyle.default,
-                                       handler: nil))
-         self.present(alert, animated: true, completion: nil)
+        
+        alert.addAction(UIAlertAction(title: "CLOSE", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    let playerQPStatsUrl = "https://api.lootbox.eu/pc/us/TheCais-1295/quickplay/heroes"
+    
+    //TEST DATA
+    func downloadPlayerQPStats(completed: @escaping DownloadComplete) {
+        Alamofire.request(playerQPStatsUrl).responseJSON { response in
+            let errorCode = response.response?.statusCode
+            let download = response.result
+            
+            print(errorCode!)
+            print(download)
+            
+            if let JSON =  download.value as? [Dictionary<String, AnyObject>] {
+                print("Downloading player data.")
+                print("JSON Data is:  \(JSON)")
+                
+                
+            }
+
+            
+            
+        }
+        completed()
     }
 }
-
-
-
-
-
-

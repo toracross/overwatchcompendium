@@ -12,7 +12,9 @@ class RoundedCorner: UIButton {
     
     override func awakeFromNib() {
         
-        self.layer.cornerRadius = 2
+        self.layer.cornerRadius = 5
+        self.layer.shadowOpacity = 2
+        
     }
     
 }

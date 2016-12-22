@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1015BA941E0C384E00F2006F /* UIViewRoundedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BA931E0C384E00F2006F /* UIViewRoundedEdge.swift */; };
+		1015BA971E0C449F00F2006F /* PlayerStatsQP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BA961E0C449F00F2006F /* PlayerStatsQP.swift */; };
+		1015BA991E0C531200F2006F /* PlayerStatsCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BA981E0C531200F2006F /* PlayerStatsCP.swift */; };
 		106C9EB81DFDB00300F078C6 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EB71DFDB00300F078C6 /* RoundedCornerButton.swift */; };
 		106C9EBA1DFDB0D000F078C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EB91DFDB0D000F078C6 /* API.swift */; };
 		106C9EBC1DFDB1D000F078C6 /* CustomTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EBB1DFDB1D000F078C6 /* CustomTxtField.swift */; };
@@ -16,11 +19,12 @@
 		106C9ECC1DFDC67900F078C6 /* AchievementData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9ECB1DFDC67900F078C6 /* AchievementData.swift */; };
 		106C9EE21DFDE9FB00F078C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106C9EE11DFDE9FB00F078C6 /* Constants.swift */; };
 		106C9EE61DFF128700F078C6 /* true.png in Resources */ = {isa = PBXBuildFile; fileRef = 106C9EE41DFF128700F078C6 /* true.png */; };
-		108ADD471E038843007C7878 /* PlayerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD461E038843007C7878 /* PlayerData.swift */; };
+		108ADD471E038843007C7878 /* PlayerProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD461E038843007C7878 /* PlayerProfileData.swift */; };
 		108ADD491E08C8F6007C7878 /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD481E08C8F6007C7878 /* AchievementCell.swift */; };
 		108ADD4B1E08DCDE007C7878 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD4A1E08DCDE007C7878 /* ProfileVC.swift */; };
 		108ADD4D1E09063B007C7878 /* ImageBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD4C1E09063B007C7878 /* ImageBlur.swift */; };
 		108ADD4F1E0999D4007C7878 /* UIViewOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108ADD4E1E0999D4007C7878 /* UIViewOutline.swift */; };
+		108B1A531E0A56680011B43B /* UIImageRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108B1A521E0A56680011B43B /* UIImageRounded.swift */; };
 		10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE86851DFB070100DB6374 /* AppDelegate.swift */; };
 		10CE86881DFB070100DB6374 /* SelectDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE86871DFB070100DB6374 /* SelectDataVC.swift */; };
 		10CE868B1DFB070100DB6374 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10CE86891DFB070100DB6374 /* Main.storyboard */; };
@@ -33,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1015BA931E0C384E00F2006F /* UIViewRoundedEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewRoundedEdge.swift; sourceTree = "<group>"; };
+		1015BA961E0C449F00F2006F /* PlayerStatsQP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerStatsQP.swift; sourceTree = "<group>"; };
+		1015BA981E0C531200F2006F /* PlayerStatsCP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerStatsCP.swift; sourceTree = "<group>"; };
 		106C9EB71DFDB00300F078C6 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		106C9EB91DFDB0D000F078C6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		106C9EBB1DFDB1D000F078C6 /* CustomTxtField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTxtField.swift; sourceTree = "<group>"; };
@@ -42,11 +49,12 @@
 		106C9ECB1DFDC67900F078C6 /* AchievementData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementData.swift; sourceTree = "<group>"; };
 		106C9EE11DFDE9FB00F078C6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		106C9EE41DFF128700F078C6 /* true.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = true.png; sourceTree = "<group>"; };
-		108ADD461E038843007C7878 /* PlayerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerData.swift; sourceTree = "<group>"; };
+		108ADD461E038843007C7878 /* PlayerProfileData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerProfileData.swift; sourceTree = "<group>"; };
 		108ADD481E08C8F6007C7878 /* AchievementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
 		108ADD4A1E08DCDE007C7878 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		108ADD4C1E09063B007C7878 /* ImageBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBlur.swift; sourceTree = "<group>"; };
 		108ADD4E1E0999D4007C7878 /* UIViewOutline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewOutline.swift; sourceTree = "<group>"; };
+		108B1A521E0A56680011B43B /* UIImageRounded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageRounded.swift; sourceTree = "<group>"; };
 		10CE86821DFB070100DB6374 /* overwatchcompendium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = overwatchcompendium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CE86851DFB070100DB6374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10CE86871DFB070100DB6374 /* SelectDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDataVC.swift; sourceTree = "<group>"; };
@@ -74,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1015BA951E0C448D00F2006F /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				1015BA961E0C449F00F2006F /* PlayerStatsQP.swift */,
+				1015BA981E0C531200F2006F /* PlayerStatsCP.swift */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
 		106C9EC31DFDC63400F078C6 /* Heroes */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,12 +98,12 @@
 			name = Heroes;
 			sourceTree = "<group>";
 		};
-		106C9EC41DFDC64600F078C6 /* Stats */ = {
+		106C9EC41DFDC64600F078C6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				108ADD461E038843007C7878 /* PlayerData.swift */,
+				108ADD461E038843007C7878 /* PlayerProfileData.swift */,
 			);
-			name = Stats;
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		106C9EC51DFDC64C00F078C6 /* Achievements */ = {
@@ -100,7 +117,6 @@
 		106C9EE81DFF231F00F078C6 /* Achievements */ = {
 			isa = PBXGroup;
 			children = (
-				106C9EC11DFDC58200F078C6 /* AchievementsVC.swift */,
 				108ADD481E08C8F6007C7878 /* AchievementCell.swift */,
 			);
 			name = Achievements;
@@ -145,9 +161,10 @@
 		10CE86971DFB071000DB6374 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				106C9EC41DFDC64600F078C6 /* Stats */,
-				106C9EC51DFDC64C00F078C6 /* Achievements */,
+				106C9EC41DFDC64600F078C6 /* Profile */,
+				1015BA951E0C448D00F2006F /* Stats */,
 				106C9EC31DFDC63400F078C6 /* Heroes */,
+				106C9EC51DFDC64C00F078C6 /* Achievements */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -160,6 +177,8 @@
 				106C9EBB1DFDB1D000F078C6 /* CustomTxtField.swift */,
 				108ADD4C1E09063B007C7878 /* ImageBlur.swift */,
 				108ADD4E1E0999D4007C7878 /* UIViewOutline.swift */,
+				108B1A521E0A56680011B43B /* UIImageRounded.swift */,
+				1015BA931E0C384E00F2006F /* UIViewRoundedEdge.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -171,6 +190,7 @@
 				108ADD4A1E08DCDE007C7878 /* ProfileVC.swift */,
 				106C9EBF1DFDC56C00F078C6 /* StatsVC.swift */,
 				106C9EBD1DFDC55400F078C6 /* HeroVC.swift */,
+				106C9EC11DFDC58200F078C6 /* AchievementsVC.swift */,
 				106C9EE81DFF231F00F078C6 /* Achievements */,
 			);
 			name = Controller;
@@ -339,19 +359,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				106C9EC01DFDC56C00F078C6 /* StatsVC.swift in Sources */,
+				1015BA991E0C531200F2006F /* PlayerStatsCP.swift in Sources */,
 				10CE86A11DFB2D0600DB6374 /* CustomLblTitle.swift in Sources */,
 				108ADD4B1E08DCDE007C7878 /* ProfileVC.swift in Sources */,
 				10CE86881DFB070100DB6374 /* SelectDataVC.swift in Sources */,
 				106C9EBC1DFDB1D000F078C6 /* CustomTxtField.swift in Sources */,
+				1015BA941E0C384E00F2006F /* UIViewRoundedEdge.swift in Sources */,
+				108B1A531E0A56680011B43B /* UIImageRounded.swift in Sources */,
 				106C9EBA1DFDB0D000F078C6 /* API.swift in Sources */,
 				106C9EB81DFDB00300F078C6 /* RoundedCornerButton.swift in Sources */,
 				108ADD4F1E0999D4007C7878 /* UIViewOutline.swift in Sources */,
-				108ADD471E038843007C7878 /* PlayerData.swift in Sources */,
+				108ADD471E038843007C7878 /* PlayerProfileData.swift in Sources */,
 				108ADD4D1E09063B007C7878 /* ImageBlur.swift in Sources */,
 				106C9EC21DFDC58200F078C6 /* AchievementsVC.swift in Sources */,
 				10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */,
 				106C9EBE1DFDC55400F078C6 /* HeroVC.swift in Sources */,
 				106C9ECC1DFDC67900F078C6 /* AchievementData.swift in Sources */,
+				1015BA971E0C449F00F2006F /* PlayerStatsQP.swift in Sources */,
 				108ADD491E08C8F6007C7878 /* AchievementCell.swift in Sources */,
 				106C9EE21DFDE9FB00F078C6 /* Constants.swift in Sources */,
 			);

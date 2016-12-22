@@ -8,4 +8,5 @@ target 'overwatchcompendium' do
   # Pods for overwatchcompendium
   pod 'Alamofire', '~> 4.0'
   pod 'AlamofireImage', '~> 3.1'
+  pod 'NVActivityIndicatorView'
 end
