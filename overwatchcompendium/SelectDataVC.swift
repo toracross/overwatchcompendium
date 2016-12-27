@@ -26,10 +26,6 @@ class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        downloadPlayerQPStats {
-            print("Download complete.")
-        }
         repeatBackground()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -40,7 +36,7 @@ class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
         startAnimating(message:"Loading...")
         
         let name = battleTxt.text
-    
+        
             switch platformControl.selectedSegmentIndex {
             case 0: platformTxt = "pc"
             case 1: platformTxt = "psn"
@@ -68,10 +64,10 @@ class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
         
         //Save Stats
         //Quickplay
-        let playerStatsQP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/quickplay/allHeroes"
+        let playerStatsQP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/quickplay/allHeroes/"
         defaults.set(playerStatsQP, forKey: "playerStatsQP")
         //Competitive
-        let playerStatsCP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/competitive/allHeroes"
+        let playerStatsCP = "https://api.lootbox.eu/\(platformTxt)/\(regionTxt)/\(battleTxt.text!)/competitive/allHeroes/"
         defaults.set(playerStatsCP, forKey: "playerStatsCP")
         
         //Save Heroes
@@ -156,27 +152,5 @@ class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
         self.present(alert, animated: true, completion: nil)
     }
     
-    let playerQPStatsUrl = "https://api.lootbox.eu/pc/us/TheCais-1295/quickplay/heroes"
-    
-    //TEST DATA
-    func downloadPlayerQPStats(completed: @escaping DownloadComplete) {
-        Alamofire.request(playerQPStatsUrl).responseJSON { response in
-            let errorCode = response.response?.statusCode
-            let download = response.result
-            
-            print(errorCode!)
-            print(download)
-            
-            if let JSON =  download.value as? [Dictionary<String, AnyObject>] {
-                print("Downloading player data.")
-                print("JSON Data is:  \(JSON)")
-                
-                
-            }
 
-            
-            
-        }
-        completed()
-    }
 }

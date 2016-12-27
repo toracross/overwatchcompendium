@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class AchievementsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class AchievementsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //API URL
     let url = UserDefaults.standard.string(forKey: "playerAchievements")
@@ -20,67 +20,66 @@ class AchievementsVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     //Outlets
     @IBOutlet weak var dynamicBG: UIImageView!
+    @IBOutlet weak var finishedLbl: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var heroAchievementData = [PlayerAchievements]()
+    var playerAchievements: PlayerAchievements!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
 
-        repeatBackground()
-    }
-    
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
-    }
-    
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AchCell", for: indexPath) as? AchievementCell {
-            //code goes here
-            
-            return cell
-        } else {
-            return AchievementCell()
+        downloadAchievementData {
+            print("Accessed player Achievement data.")
         }
         
     }
     
+    //Table View
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return heroAchievementData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "achievementCell", for: indexPath) as? AchievementCell {
+            DispatchQueue.main.async {
+                let playerAchievementData = self.heroAchievementData[indexPath.row]
+                cell.configureCell(playerAchievements: playerAchievementData)
+            }
+                return cell
+        } else {
+            return AchievementCell()
+        }
+    }
+    
+    //Parse API Data
+    
+    
     func downloadAchievementData(completed: @escaping DownloadComplete) {
-        Alamofire.request("").responseJSON { response in
+        Alamofire.request(url!).responseJSON { response in
             let data = response.result
-            //print(data) - works
-            
             if let JSON = data.value as? Dictionary<String, AnyObject> {
-                //print(JSON) - works
+                if let finished = JSON["finishedAchievements"] as? String {
+                    self.finishedLbl.text = finished
+                }
                 if let achievement = JSON["achievements"] as? [[String: AnyObject]] {
-                    //print(achievement) //- works
-                    
                     for items in achievement {
-                        if let name = items["name"] as? String {
-                            //self.names.append(name)
-                        }
-                        if let description = items["description"] as? String {
-                           //self.descriptions.append(description)
-                        }
-                        if let finished = items["finished"] as? Bool {
-                            //self.finished.append(finished)
-                        }
-                        
+                        let achievementData = PlayerAchievements(heroAchDict: [items])
+                        self.heroAchievementData.append(achievementData)
                     }
-                    /*
-                    print(self.names)
-                    print(self.descriptions)
-                    print(self.finished)
-                    */
-                    
+                    self.tableView.reloadData()
                 }
             }
-            
-            
         }
         completed()
     }
-
-    
     
     //Visual
     func repeatBackground() {

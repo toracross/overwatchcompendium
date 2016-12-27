@@ -10,8 +10,14 @@ import UIKit
 
 class UIImageRounded: UIImageView {
     
+    let darkYellow = UIColor(red: 187/255.0, green: 131/255.0, blue: 62/255.0, alpha: 1)
+    
     override func awakeFromNib() {
-        self.layer.cornerRadius = 5
+        self.layer.cornerRadius = 1
+        
+        self.layer.borderWidth = 3
+        self.layer.shadowRadius = 1
+        self.layer.borderColor = darkYellow.cgColor
     }
     
 }

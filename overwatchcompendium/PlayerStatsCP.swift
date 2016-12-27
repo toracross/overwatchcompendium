@@ -13,7 +13,6 @@ import Alamofire
 class PlayerStatsCP {
     
     let url = UserDefaults.standard.string(forKey: "playerStatsCP")
-    let testUrl = "https://api.lootbox.eu/pc/us/TheCais-1295/quickplay/allHeroes/"
     
     //Combat
     private var _meleeFinalBlows: String!
@@ -424,18 +423,11 @@ class PlayerStatsCP {
     }
     
     
-    func downloadPlayerQPStats(completed: @escaping DownloadComplete) {
-        Alamofire.request(testUrl).responseJSON { response in
-            let errorCode = response.response?.statusCode
+    func downloadPlayerCPStats(completed: @escaping DownloadComplete) {
+        Alamofire.request(url!).responseJSON { response in
             let download = response.result
-            
-            print(errorCode!)
-            print(download)
-            
+
             if let JSON =  download.value as? Dictionary<String, AnyObject> {
-                print("Downloading player data.")
-                print("JSON Data is:  \(JSON)")
-                
                 //Combat
                 if let meleeFinalBlows = JSON["MeleeFinalBlows"] as? String {
                     self._meleeFinalBlows = meleeFinalBlows

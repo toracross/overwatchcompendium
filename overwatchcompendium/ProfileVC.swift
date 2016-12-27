@@ -40,7 +40,7 @@ class ProfileVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         playerData = PlayerProfileData()        
         playerData.downloadPlayerStats {
             self.updateUI()
@@ -48,7 +48,6 @@ class ProfileVC: UIViewController {
         repeatBackground()
     }
     
-
     
     func updateUI() {
         //Stats

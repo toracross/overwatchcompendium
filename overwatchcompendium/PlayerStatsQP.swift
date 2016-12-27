@@ -5,16 +5,11 @@
 //  Created by Wellison Pereira on 12/22/16.
 //  Copyright © 2016 Wellison Pereira. All rights reserved.
 //
-
 import UIKit
 import Alamofire
 
-
 class PlayerStatsQP {
-    
     let url = UserDefaults.standard.string(forKey: "playerStatsQP")
-    let testUrl = "https://api.lootbox.eu/pc/us/TheCais-1295/quickplay/allHeroes/"
-    
     //Combat
     private var _meleeFinalBlows: String!
     private var _soloKills: String!
@@ -425,16 +420,11 @@ class PlayerStatsQP {
 
     
     func downloadPlayerQPStats(completed: @escaping DownloadComplete) {
-        Alamofire.request(testUrl).responseJSON { response in
-            let errorCode = response.response?.statusCode
+        Alamofire.request(url!).responseJSON { response in
             let download = response.result
-            
-            print(errorCode!)
-            print(download)
             
             if let JSON =  download.value as? Dictionary<String, AnyObject> {
                 print("Downloading player data.")
-                print("JSON Data is:  \(JSON)")
                 
                 //Combat
                 if let meleeFinalBlows = JSON["MeleeFinalBlows"] as? String {
@@ -599,10 +589,8 @@ class PlayerStatsQP {
                     self._offensiveAssistsAverage = offensiveAssistsAverage
                 }
                 
-            
             }
             completed()
         }
-    
     }
 }
