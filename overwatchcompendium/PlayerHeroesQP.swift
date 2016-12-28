@@ -11,6 +11,8 @@ import Alamofire
 
 class PlayerHeroesQP {
     
+    let urlQP = UserDefaults.standard.string(forKey: "playerHeroesQP")
+    
     private var _image: String!
     private var _name: String!
     private var _percentage: Float!

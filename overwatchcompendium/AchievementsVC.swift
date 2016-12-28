@@ -8,15 +8,12 @@
 
 import UIKit
 import Alamofire
+import NVActivityIndicatorView
 
-class AchievementsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AchievementsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NVActivityIndicatorViewable {
 
     //API URL
     let url = UserDefaults.standard.string(forKey: "playerAchievements")
-
-    
-    //Variables
-    weak var timer: Timer?
     
     //Outlets
     @IBOutlet weak var dynamicBG: UIImageView!
@@ -31,7 +28,8 @@ class AchievementsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
-
+        
+        startAnimating(message: "Loading...")
         downloadAchievementData {
             print("Accessed player Achievement data.")
         }
@@ -49,18 +47,13 @@ class AchievementsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "achievementCell", for: indexPath) as? AchievementCell {
-            DispatchQueue.main.async {
-                let playerAchievementData = self.heroAchievementData[indexPath.row]
-                cell.configureCell(playerAchievements: playerAchievementData)
-            }
-                return cell
+            let playerAchievementData = self.heroAchievementData[indexPath.row]
+            cell.configureCell(playerAchievements: playerAchievementData)
+            return cell
         } else {
             return AchievementCell()
         }
     }
-    
-    //Parse API Data
-    
     
     func downloadAchievementData(completed: @escaping DownloadComplete) {
         Alamofire.request(url!).responseJSON { response in
@@ -75,31 +68,10 @@ class AchievementsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                         self.heroAchievementData.append(achievementData)
                     }
                     self.tableView.reloadData()
+                    self.stopAnimating()
                 }
             }
         }
         completed()
     }
-    
-    //Visual
-    func repeatBackground() {
-        
-        timer = Timer.scheduledTimer(withTimeInterval: 6, repeats: true) { [weak self] _ in
-            self?.backgroundTransition()
-        }
-    }
-    
-    //Cycle through saved images for wallpaper.
-    func backgroundTransition() {
-        let rolls = arc4random_uniform(27) + 1
-        let toImage = UIImage(named:"\(rolls)")
-        
-        UIView.transition(with: dynamicBG,
-                          duration: 1.5,
-                          options: [.transitionCrossDissolve],
-                          animations: { self.dynamicBG.image = toImage },
-                          completion: nil)
-    }
-
-
 }

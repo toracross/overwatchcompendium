@@ -18,6 +18,10 @@ class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var platformControl: UISegmentedControl!
     @IBOutlet weak var regionControl: UISegmentedControl!
     
+    //Model Classes
+    var playerStatsQP = PlayerStatsQP()
+    var playerStatsCP = PlayerStatsCP()
+    
     weak var timer: Timer?
     var platformTxt = ""
     var regionTxt = ""
@@ -33,8 +37,8 @@ class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
     
     //Grab inputted data, perform download, move to next segue to display downloaded data.
     @IBAction func downloadBtnPushed(_ sender: UIButton) {
-        startAnimating(message:"Loading...")
         
+        startAnimating(message:"Loading...")
         let name = battleTxt.text
         
             switch platformControl.selectedSegmentIndex {
@@ -88,6 +92,7 @@ class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
             
             Alamofire.request(playerProfile).responseJSON { response in
                 let httpResponse = response.result
+                
                 if let errorCode = httpResponse.value as? Dictionary<String, AnyObject> {
                     if let statusCode = errorCode["statusCode"] as? Int {
                         print(statusCode)
@@ -100,18 +105,24 @@ class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
                         }
                     }
                 }
-                
                 completed()
             }
         }
         
         checkStatusCode {
             if name != "" {
+                //Download literally everything.
+                self.playerStatsQP.downloadPlayerQPStats {
+                    print("Downloaded player quickplay stats.")
+                }
+                self.playerStatsCP.downloadPlayerCPStats {
+                    print("Downloaded player comp stats.")
+                }
                 self.stopAnimating()
-                self.battleTxt.text = ""
                 self.performSegue(withIdentifier: "playerInfo", sender: self)
+                
             } else {
-                print("Field was left empty.")
+                print("No data called.")
             }
         }
         

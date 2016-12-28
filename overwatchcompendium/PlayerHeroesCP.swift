@@ -46,14 +46,15 @@ class PlayerHeroesCP {
     
     init(heroCPDict: [Dictionary<String, AnyObject>]) {
         
-        if let image = heroCPDict[0]["image"] as? String {
+        if let unfixedImg = heroCPDict[0]["image"] as? String {
+            let image = unfixedImg.substring(from: unfixedImg.index(unfixedImg.endIndex, offsetBy: -22))
             self._image = image
-            print(image)
         }
         
-        if let name = heroCPDict[0]["name"] as? String {
+        if let unfixedName = heroCPDict[0]["name"] as? String {
+            let secondName = unfixedName.replacingOccurrences(of: "Torbj&#xF6;rn", with: "Torbjörn")
+            let name = secondName.replacingOccurrences(of: "L&#xFA;cio", with: "Lúcio")
             self._name = name
-            print(name)
         }
         
         if let percentage = heroCPDict[0]["percentage"] as? Float {
@@ -63,7 +64,6 @@ class PlayerHeroesCP {
         
         if let playtime = heroCPDict[0]["playtime"] as? String {
             self._playtime = playtime
-            print(playtime)
         }
         
     }

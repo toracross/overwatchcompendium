@@ -13,18 +13,14 @@ class AchievementCell: UITableViewCell {
     var playerAchievements: PlayerAchievements!
     
     @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var finishedLbl: UILabel!
+    @IBOutlet weak var finishedImg: UIImageView!
     @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var descriptionLbl: UILabel!
     
     func configureCell(playerAchievements: PlayerAchievements) {
         nameLbl.text = playerAchievements.achName
         
-        if playerAchievements.achFinished == true {
-            finishedLbl.text = "Earned: Yes"
-        } else if playerAchievements.achFinished == false {
-            finishedLbl.text = "Earned: No"
-        }
+        finishedImg.image = UIImage(named: "\(playerAchievements.achFinished)")
         
         if let achUrl = URL(string: playerAchievements.achImage) {
             do {

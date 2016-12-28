@@ -61,7 +61,6 @@ class PlayerAchievements {
         if let achName = heroAchDict[0]["name"] as? String {
             let fixedAchName = achName.replacingOccurrences(of: "&apos;", with: "'")
             self._achName = fixedAchName
-            print(achName)
         }
         
         if let achFinished = heroAchDict[0]["finished"] as? Bool {
@@ -77,7 +76,6 @@ class PlayerAchievements {
             let secondAchDescription = firstAchDescription.replacingOccurrences(of: "&#xFA;", with: "ú")
             let thirdAchDescription = secondAchDescription.replacingOccurrences(of: "&#xF6;", with: "ö")
             self._achDescription = thirdAchDescription
-            print(achDescription)
         }
         
     }

@@ -26,6 +26,17 @@ class HeroCell: UITableViewCell {
         configureHeroColor()
     }
     
+    func configureCell(playerHeroesCP: PlayerHeroesCP) {
+        self.heroPercentage.progress = playerHeroesCP.percentage
+        heroName.text = playerHeroesCP.name
+        heroPlaytime.text = playerHeroesCP.playtime
+        heroImg.image = UIImage(named: playerHeroesCP.image)
+        
+        configureHeroColor()
+    }
+    
+    
+    
     func configureHeroColor() {
         if heroName.text != nil {
             let firstHero = heroName.text?.replacingOccurrences(of: "Soldier: 76", with: "Soldier 76")
