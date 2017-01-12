@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 class PlayerStatsQP {
-    let url = UserDefaults.standard.string(forKey: "playerStatsQP")
+    
     //Combat
     private var _meleeFinalBlows: String!
     private var _soloKills: String!
@@ -420,8 +420,10 @@ class PlayerStatsQP {
 
     
     func downloadPlayerQPStats(completed: @escaping DownloadComplete) {
+        let url = UserDefaults.standard.string(forKey: "playerStatsQP")
+        
         Alamofire.request(url!).responseJSON { response in
-            let download = response.result
+            let download = response.result	
             
             if let JSON =  download.value as? Dictionary<String, AnyObject> {
                 print("Downloading player data.")

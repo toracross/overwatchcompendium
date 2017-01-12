@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O0w-Xc-DOn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="bnt.ttf">
+            <string>BigNoodleTitling</string>
+        </array>
+        <array key="bnt_oblique.ttf">
+            <string>BigNoodleTitling-Oblique</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--SelectionVC-->
+        <scene sceneID="I6F-mZ-elm">
+            <objects>
+                <viewController title="SelectionVC" id="O0w-Xc-DOn" customClass="NavigationVC" customModule="overwatchcompendium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tvy-uB-1co"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bac-cF-qUk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bio-wY-sgh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="18" translatesAutoresizingMaskIntoConstraints="NO" id="irW-at-ywV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goM-Za-G9z" userLabel="PlayerView" customClass="UIViewOutline" customModule="overwatchcompendium" customModuleProvider="target">
+                                <rect key="frame" x="16" y="406" width="343" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qer-fI-gav" customClass="UIViewRoundedEdge" customModule="overwatchcompendium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Lookup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFB-hp-1ne">
+                                                <rect key="frame" x="8" y="3" width="120" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="AvL-Xx-ofv"/>
+                                                    <constraint firstAttribute="width" constant="120" id="EyY-2P-cpG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.77647058820000003" green="0.80392156859999997" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="jFB-hp-1ne" firstAttribute="leading" secondItem="qer-fI-gav" secondAttribute="leading" constant="8" id="1g4-qs-gJP"/>
+                                            <constraint firstAttribute="height" constant="30" id="XRU-eb-37n"/>
+                                            <constraint firstItem="jFB-hp-1ne" firstAttribute="top" secondItem="qer-fI-gav" secondAttribute="top" constant="3" id="tAj-Ol-rls"/>
+                                            <constraint firstAttribute="bottom" secondItem="jFB-hp-1ne" secondAttribute="bottom" constant="2" id="yYC-r1-wJc"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Look up player competitive and quickplay data." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGu-gN-iBw">
+                                        <rect key="frame" x="8" y="38" width="327" height="74"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="Xhn-cS-nje"/>
+                                            <constraint firstAttribute="height" constant="74" id="uhn-2n-FM3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="28"/>
+                                        <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="RGu-gN-iBw" firstAttribute="leading" secondItem="goM-Za-G9z" secondAttribute="leading" constant="8" id="51f-PF-nlA"/>
+                                    <constraint firstAttribute="bottom" secondItem="RGu-gN-iBw" secondAttribute="bottom" constant="8" id="5OL-wd-FpD"/>
+                                    <constraint firstAttribute="width" constant="343" id="JfZ-d5-9U8"/>
+                                    <constraint firstAttribute="trailing" secondItem="qer-fI-gav" secondAttribute="trailing" id="KPA-Ng-F0U"/>
+                                    <constraint firstAttribute="trailing" secondItem="RGu-gN-iBw" secondAttribute="trailing" constant="8" id="hbB-iK-ydE"/>
+                                    <constraint firstItem="qer-fI-gav" firstAttribute="top" secondItem="goM-Za-G9z" secondAttribute="top" id="kAI-hW-bzg"/>
+                                    <constraint firstAttribute="height" constant="120" id="oja-tX-Ryf"/>
+                                    <constraint firstItem="qer-fI-gav" firstAttribute="leading" secondItem="goM-Za-G9z" secondAttribute="leading" id="rcS-hY-2TW"/>
+                                    <constraint firstItem="RGu-gN-iBw" firstAttribute="top" secondItem="qer-fI-gav" secondAttribute="bottom" constant="8" id="uFI-8G-ctX"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdh-Cb-Rf1" userLabel="MapsView" customClass="UIViewOutline" customModule="overwatchcompendium" customModuleProvider="target">
+                                <rect key="frame" x="16" y="256" width="343" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtP-yd-HCR" customClass="UIViewRoundedEdge" customModule="overwatchcompendium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gameplay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7s-KI-Qmw">
+                                                <rect key="frame" x="8" y="3" width="90" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="MtH-qs-EQ9"/>
+                                                    <constraint firstAttribute="width" constant="90" id="k4q-Ev-fm3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.77647058820000003" green="0.80392156859999997" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="W7s-KI-Qmw" secondAttribute="bottom" constant="2" id="364-GU-2Ov"/>
+                                            <constraint firstItem="W7s-KI-Qmw" firstAttribute="top" secondItem="qtP-yd-HCR" secondAttribute="top" constant="3" id="GZW-OE-FER"/>
+                                            <constraint firstAttribute="height" constant="30" id="WsW-LC-fIW"/>
+                                            <constraint firstItem="W7s-KI-Qmw" firstAttribute="leading" secondItem="qtP-yd-HCR" secondAttribute="leading" constant="8" id="hOd-f8-ZK2"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map Data and Gameplay Modes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="es1-mX-3ks">
+                                        <rect key="frame" x="8" y="38" width="327" height="74"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="YzN-AI-AJe"/>
+                                            <constraint firstAttribute="height" constant="74" id="bCS-cQ-rQM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="31"/>
+                                        <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="es1-mX-3ks" firstAttribute="leading" secondItem="sdh-Cb-Rf1" secondAttribute="leading" constant="8" id="9Fw-t6-UcB"/>
+                                    <constraint firstAttribute="trailing" secondItem="qtP-yd-HCR" secondAttribute="trailing" id="Bu0-b5-boL"/>
+                                    <constraint firstItem="qtP-yd-HCR" firstAttribute="top" secondItem="sdh-Cb-Rf1" secondAttribute="top" id="EKE-Px-w8m"/>
+                                    <constraint firstAttribute="bottom" secondItem="es1-mX-3ks" secondAttribute="bottom" constant="8" id="Igp-9J-FXT"/>
+                                    <constraint firstAttribute="width" constant="343" id="T7i-gv-TLd"/>
+                                    <constraint firstAttribute="height" constant="120" id="cPI-Mf-T4V"/>
+                                    <constraint firstAttribute="trailing" secondItem="es1-mX-3ks" secondAttribute="trailing" constant="8" id="k0r-xj-Os5"/>
+                                    <constraint firstItem="qtP-yd-HCR" firstAttribute="leading" secondItem="sdh-Cb-Rf1" secondAttribute="leading" id="kjq-Dc-i6g"/>
+                                    <constraint firstItem="es1-mX-3ks" firstAttribute="top" secondItem="qtP-yd-HCR" secondAttribute="bottom" constant="8" id="wiH-xZ-BWU"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9o-8Z-Qek" userLabel="MapsBtn">
+                                <rect key="frame" x="16" y="256" width="343" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="TFi-6e-UnK"/>
+                                    <constraint firstAttribute="height" constant="120" id="wVO-Q8-sER"/>
+                                </constraints>
+                            </button>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3B-nO-hpD" userLabel="HeroView" customClass="UIViewOutline" customModule="overwatchcompendium" customModuleProvider="target">
+                                <rect key="frame" x="16" y="106" width="343" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZn-Sp-Lyb" customClass="UIViewRoundedEdge" customModule="overwatchcompendium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heroes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqi-bB-9zU">
+                                                <rect key="frame" x="8" y="3" width="90" height="25"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="BJG-4X-995"/>
+                                                    <constraint firstAttribute="height" constant="25" id="NPB-on-BWX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.77647058820000003" green="0.80392156859999997" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="uqi-bB-9zU" firstAttribute="top" secondItem="MZn-Sp-Lyb" secondAttribute="top" constant="3" id="0J0-bz-0ZA"/>
+                                            <constraint firstItem="uqi-bB-9zU" firstAttribute="leading" secondItem="MZn-Sp-Lyb" secondAttribute="leading" constant="8" id="Ixu-bW-MKO"/>
+                                            <constraint firstAttribute="height" constant="30" id="KDl-RS-YR0"/>
+                                            <constraint firstAttribute="bottom" secondItem="uqi-bB-9zU" secondAttribute="bottom" constant="2" id="uFo-5p-c1D"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information about                                              the heroes of Overwatch." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bjd-ad-UJo">
+                                        <rect key="frame" x="8" y="38" width="327" height="74"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="74" id="9zN-Eb-8Zx"/>
+                                            <constraint firstAttribute="width" constant="327" id="Vs2-yP-I5P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="29"/>
+                                        <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="bjd-ad-UJo" firstAttribute="leading" secondItem="P3B-nO-hpD" secondAttribute="leading" constant="8" id="4Jw-Qq-GWV"/>
+                                    <constraint firstItem="bjd-ad-UJo" firstAttribute="top" secondItem="MZn-Sp-Lyb" secondAttribute="bottom" constant="8" id="9kj-4k-3oI"/>
+                                    <constraint firstItem="MZn-Sp-Lyb" firstAttribute="top" secondItem="P3B-nO-hpD" secondAttribute="top" id="Efm-NP-kxK"/>
+                                    <constraint firstAttribute="trailing" secondItem="MZn-Sp-Lyb" secondAttribute="trailing" id="KgL-8J-Yst"/>
+                                    <constraint firstAttribute="height" constant="120" id="L8v-UG-NzL"/>
+                                    <constraint firstItem="MZn-Sp-Lyb" firstAttribute="leading" secondItem="P3B-nO-hpD" secondAttribute="leading" id="R8e-HK-6fz"/>
+                                    <constraint firstAttribute="width" constant="343" id="Y3R-m5-yBK"/>
+                                    <constraint firstAttribute="bottom" secondItem="bjd-ad-UJo" secondAttribute="bottom" constant="8" id="fuK-tp-8RE"/>
+                                    <constraint firstAttribute="trailing" secondItem="bjd-ad-UJo" secondAttribute="trailing" constant="8" id="iXA-jD-q5U"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GM-0O-3GN" userLabel="HeroBtn">
+                                <rect key="frame" x="16" y="106" width="343" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="7jU-a0-t5p"/>
+                                    <constraint firstAttribute="width" constant="343" id="WvF-Ny-0y7"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="heroBtnPushed:" destination="O0w-Xc-DOn" eventType="touchUpInside" id="AVu-a6-Hqx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Compendium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QO1-ho-45s" customClass="CustomLblTitle" customModule="overwatchcompendium" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Ui5-xL-xyX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbf-ii-Lqc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="5gp-0u-cXF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bac-cF-qUk" firstAttribute="top" secondItem="irW-at-ywV" secondAttribute="bottom" id="5Fb-AW-m9E"/>
+                            <constraint firstItem="D9o-8Z-Qek" firstAttribute="centerY" secondItem="sdh-Cb-Rf1" secondAttribute="centerY" id="8Vx-16-mZC"/>
+                            <constraint firstItem="Bbf-ii-Lqc" firstAttribute="top" secondItem="Bio-wY-sgh" secondAttribute="top" id="CYB-Tx-xvc"/>
+                            <constraint firstItem="Bbf-ii-Lqc" firstAttribute="leading" secondItem="Bio-wY-sgh" secondAttribute="leading" id="HKw-Aq-664"/>
+                            <constraint firstItem="D9o-8Z-Qek" firstAttribute="centerX" secondItem="sdh-Cb-Rf1" secondAttribute="centerX" id="I3T-cK-nAp"/>
+                            <constraint firstItem="P3B-nO-hpD" firstAttribute="top" secondItem="QO1-ho-45s" secondAttribute="bottom" constant="8" id="JgX-9e-Yj3"/>
+                            <constraint firstItem="sdh-Cb-Rf1" firstAttribute="top" secondItem="P3B-nO-hpD" secondAttribute="bottom" constant="30" id="KXM-69-31r"/>
+                            <constraint firstAttribute="trailing" secondItem="Bbf-ii-Lqc" secondAttribute="trailing" id="Kcn-Jl-KKO"/>
+                            <constraint firstItem="QO1-ho-45s" firstAttribute="trailing" secondItem="Bio-wY-sgh" secondAttribute="trailingMargin" id="LQ1-gL-FYI"/>
+                            <constraint firstItem="goM-Za-G9z" firstAttribute="centerX" secondItem="Bio-wY-sgh" secondAttribute="centerX" id="MSy-hB-Phn"/>
+                            <constraint firstItem="1GM-0O-3GN" firstAttribute="centerX" secondItem="P3B-nO-hpD" secondAttribute="centerX" id="Oah-D4-Suo"/>
+                            <constraint firstItem="QO1-ho-45s" firstAttribute="leading" secondItem="Bio-wY-sgh" secondAttribute="leadingMargin" id="QTG-9F-mtt"/>
+                            <constraint firstItem="P3B-nO-hpD" firstAttribute="centerX" secondItem="Bio-wY-sgh" secondAttribute="centerX" id="Rn4-zV-eiB"/>
+                            <constraint firstItem="QO1-ho-45s" firstAttribute="centerX" secondItem="Bio-wY-sgh" secondAttribute="centerX" id="V21-q5-YdF"/>
+                            <constraint firstItem="1GM-0O-3GN" firstAttribute="centerY" secondItem="P3B-nO-hpD" secondAttribute="centerY" id="VH5-Au-TtV"/>
+                            <constraint firstItem="sdh-Cb-Rf1" firstAttribute="centerX" secondItem="Bio-wY-sgh" secondAttribute="centerX" id="ZDk-hj-GaS"/>
+                            <constraint firstItem="QO1-ho-45s" firstAttribute="top" secondItem="Tvy-uB-1co" secondAttribute="bottom" constant="8" id="g08-Jt-YaQ"/>
+                            <constraint firstItem="irW-at-ywV" firstAttribute="leading" secondItem="Bio-wY-sgh" secondAttribute="leading" id="kmI-y9-UE7"/>
+                            <constraint firstItem="irW-at-ywV" firstAttribute="top" secondItem="Bio-wY-sgh" secondAttribute="top" id="qC1-ht-3av"/>
+                            <constraint firstAttribute="trailing" secondItem="irW-at-ywV" secondAttribute="trailing" id="qtL-s7-XJJ"/>
+                            <constraint firstItem="goM-Za-G9z" firstAttribute="top" secondItem="sdh-Cb-Rf1" secondAttribute="bottom" constant="30" id="t0e-5d-0Md"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dynamicBG" destination="irW-at-ywV" id="OiJ-4F-yxs"/>
+                        <segue destination="rgk-H0-6K2" kind="show" identifier="gameSegue" id="kwh-0e-6kh"/>
+                        <segue destination="j2b-8h-nDR" kind="show" identifier="heroSegue" id="4dQ-Ou-kSo"/>
+                        <segue destination="rGJ-6M-Ayq" kind="show" identifier="playerSegue" id="dev-ea-2b0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yec-h8-ANg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="120.08995502248877"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L4v-Z9-9B4">
+            <objects>
+                <viewController id="rgk-H0-6K2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lIN-IR-ptu"/>
+                        <viewControllerLayoutGuide type="bottom" id="UWk-oN-Udq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rGs-W1-0B2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="27" translatesAutoresizingMaskIntoConstraints="NO" id="XL3-8B-ZXC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcj-T0-lrw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="p2D-6w-OrW"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gameplay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GaC-KS-axf" customClass="CustomLblTitle" customModule="overwatchcompendium" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Sy4-fg-yDb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XL3-8B-ZXC" firstAttribute="top" secondItem="rGs-W1-0B2" secondAttribute="top" id="8DO-QH-Y7f"/>
+                            <constraint firstItem="GaC-KS-axf" firstAttribute="top" secondItem="lIN-IR-ptu" secondAttribute="bottom" constant="8" id="9RY-yr-CHm"/>
+                            <constraint firstAttribute="trailing" secondItem="XL3-8B-ZXC" secondAttribute="trailing" id="E4p-un-zpk"/>
+                            <constraint firstItem="mcj-T0-lrw" firstAttribute="top" secondItem="rGs-W1-0B2" secondAttribute="top" id="II4-jI-d8i"/>
+                            <constraint firstItem="GaC-KS-axf" firstAttribute="trailing" secondItem="rGs-W1-0B2" secondAttribute="trailingMargin" id="M8B-1l-tyv"/>
+                            <constraint firstItem="UWk-oN-Udq" firstAttribute="top" secondItem="XL3-8B-ZXC" secondAttribute="bottom" id="diH-LN-XUw"/>
+                            <constraint firstItem="GaC-KS-axf" firstAttribute="leading" secondItem="rGs-W1-0B2" secondAttribute="leadingMargin" id="rLT-xL-oAZ"/>
+                            <constraint firstItem="XL3-8B-ZXC" firstAttribute="leading" secondItem="rGs-W1-0B2" secondAttribute="leading" id="u6y-P3-dDn"/>
+                            <constraint firstItem="mcj-T0-lrw" firstAttribute="leading" secondItem="rGs-W1-0B2" secondAttribute="leading" id="vNA-8J-mEG"/>
+                            <constraint firstAttribute="trailing" secondItem="mcj-T0-lrw" secondAttribute="trailing" id="xJI-Q7-oFd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTf-Ik-005" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="120"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HQV-rW-0Vq">
+            <objects>
+                <viewController id="rGJ-6M-Ayq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E6f-iv-d4Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="zTg-oX-ybB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P5c-sT-X2e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydc-Ob-zQb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1N-Fc-Rle">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="EL2-3M-van"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Lookup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZ2-aH-gF2" customClass="CustomLblTitle" customModule="overwatchcompendium" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="TsG-dS-p2u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C1N-Fc-Rle" firstAttribute="leading" secondItem="P5c-sT-X2e" secondAttribute="leading" id="0IY-LR-SCb"/>
+                            <constraint firstItem="zTg-oX-ybB" firstAttribute="top" secondItem="ydc-Ob-zQb" secondAttribute="bottom" id="2Z6-OU-iys"/>
+                            <constraint firstItem="ydc-Ob-zQb" firstAttribute="leading" secondItem="P5c-sT-X2e" secondAttribute="leading" id="Aiv-ej-MCH"/>
+                            <constraint firstItem="C1N-Fc-Rle" firstAttribute="top" secondItem="P5c-sT-X2e" secondAttribute="top" id="KCU-JF-5F3"/>
+                            <constraint firstItem="ydc-Ob-zQb" firstAttribute="top" secondItem="P5c-sT-X2e" secondAttribute="top" id="L7k-Q8-6NS"/>
+                            <constraint firstItem="LZ2-aH-gF2" firstAttribute="top" secondItem="E6f-iv-d4Z" secondAttribute="bottom" constant="8" id="Omj-0H-d99"/>
+                            <constraint firstAttribute="trailing" secondItem="ydc-Ob-zQb" secondAttribute="trailing" id="UMN-d9-Nyi"/>
+                            <constraint firstItem="LZ2-aH-gF2" firstAttribute="leading" secondItem="P5c-sT-X2e" secondAttribute="leadingMargin" id="scp-Bf-Su2"/>
+                            <constraint firstItem="LZ2-aH-gF2" firstAttribute="trailing" secondItem="P5c-sT-X2e" secondAttribute="trailingMargin" id="ygE-9Y-yhW"/>
+                            <constraint firstAttribute="trailing" secondItem="C1N-Fc-Rle" secondAttribute="trailing" id="zCj-TJ-n4M"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i70-9y-W1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="889"/>
+        </scene>
+        <!--HeroesVC-->
+        <scene sceneID="W4C-Rx-Km2">
+            <objects>
+                <viewController title="HeroesVC" id="j2b-8h-nDR" customClass="HeroesVC" customModule="overwatchcompendium" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gcH-bT-1wX"/>
+                        <viewControllerLayoutGuide type="bottom" id="2zE-vs-J1A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wsh-aS-9Wh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="k4T-2N-Af2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-Lr-j6W" userLabel="Region Control">
+                                <rect key="frame" x="16" y="106" width="343" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="ALL"/>
+                                    <segment title="OFFENSE"/>
+                                    <segment title="DEFENSE"/>
+                                    <segment title="TANK"/>
+                                    <segment title="SUPPORT"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="roleSegmentSelected:" destination="j2b-8h-nDR" eventType="valueChanged" id="tgE-rT-gtE"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukQ-Ov-P96">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Z7r-D4-FUv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heroes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yls-6I-h2O" customClass="CustomLblTitle" customModule="overwatchcompendium" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="343" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="SIw-ho-fXO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JhB-Lb-Bma">
+                                <rect key="frame" x="16" y="142" width="343" height="447"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="BoT-Eh-4nF"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QB3-8b-spc">
+                                    <size key="itemSize" width="100" height="103"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="heroCell" id="i0H-CY-wIw" customClass="HeroesCell" customModule="overwatchcompendium" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Genji" translatesAutoresizingMaskIntoConstraints="NO" id="txh-n0-jPC" customClass="UIImageRounded" customModule="overwatchcompendium" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="103"/>
+                                                </imageView>
+                                                <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7D-jh-Npa" customClass="UIViewOutline" customModule="overwatchcompendium" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="83" width="100" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cc2-iu-5oo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="20"/>
+                                                            <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="15"/>
+                                                            <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.77647058820000003" green="0.80392156859999997" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Cc2-iu-5oo" firstAttribute="leading" secondItem="i7D-jh-Npa" secondAttribute="leading" id="8sh-DX-EJc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Cc2-iu-5oo" secondAttribute="trailing" id="NDg-6e-Ir7"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Cc2-iu-5oo" secondAttribute="bottom" id="SMc-rT-0bS"/>
+                                                        <constraint firstItem="Cc2-iu-5oo" firstAttribute="top" secondItem="i7D-jh-Npa" secondAttribute="top" id="arM-Rp-w4h"/>
+                                                        <constraint firstAttribute="height" constant="20" id="crp-UG-guK"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="txh-n0-jPC" secondAttribute="bottom" id="5Ii-mc-IRA"/>
+                                            <constraint firstAttribute="trailing" secondItem="i7D-jh-Npa" secondAttribute="trailing" id="6Uw-gm-1os"/>
+                                            <constraint firstItem="txh-n0-jPC" firstAttribute="top" secondItem="i0H-CY-wIw" secondAttribute="top" id="9kh-Fa-YAg"/>
+                                            <constraint firstAttribute="bottom" secondItem="i7D-jh-Npa" secondAttribute="bottom" id="FXa-d3-arE"/>
+                                            <constraint firstItem="i7D-jh-Npa" firstAttribute="leading" secondItem="i0H-CY-wIw" secondAttribute="leading" id="ImQ-3j-QxS"/>
+                                            <constraint firstItem="txh-n0-jPC" firstAttribute="leading" secondItem="i0H-CY-wIw" secondAttribute="leading" id="aq0-HI-6oC"/>
+                                            <constraint firstAttribute="trailing" secondItem="txh-n0-jPC" secondAttribute="trailing" id="dpZ-p2-fDE"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="heroImg" destination="txh-n0-jPC" id="vEg-Jw-uYH"/>
+                                            <outlet property="heroName" destination="Cc2-iu-5oo" id="vcf-Yg-rtL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XW7-75-SZh" customClass="RoundedCorner" customModule="overwatchcompendium" customModuleProvider="target">
+                                <rect key="frame" x="137" y="597" width="100" height="50"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.51372549020000002" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RRN-Sm-9nM"/>
+                                    <constraint firstAttribute="width" constant="100" id="W0t-xQ-ApG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="25"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPushed:" destination="j2b-8h-nDR" eventType="touchUpInside" id="Jix-nf-JLu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XW7-75-SZh" firstAttribute="top" secondItem="JhB-Lb-Bma" secondAttribute="bottom" constant="8" id="25D-qV-ert"/>
+                            <constraint firstItem="2zE-vs-J1A" firstAttribute="top" secondItem="XW7-75-SZh" secondAttribute="bottom" constant="20" id="CJe-OP-e21"/>
+                            <constraint firstItem="yls-6I-h2O" firstAttribute="leading" secondItem="Wsh-aS-9Wh" secondAttribute="leadingMargin" id="Ero-VN-uJB"/>
+                            <constraint firstItem="XW7-75-SZh" firstAttribute="centerX" secondItem="Wsh-aS-9Wh" secondAttribute="centerX" id="Gp3-Bb-AeB"/>
+                            <constraint firstItem="yls-6I-h2O" firstAttribute="top" secondItem="gcH-bT-1wX" secondAttribute="bottom" constant="8" id="NJO-6S-JZC"/>
+                            <constraint firstAttribute="trailing" secondItem="ukQ-Ov-P96" secondAttribute="trailing" id="R0c-4t-f3Y"/>
+                            <constraint firstItem="JhB-Lb-Bma" firstAttribute="top" secondItem="nN6-Lr-j6W" secondAttribute="bottom" constant="8" id="S2O-5Q-Sx0"/>
+                            <constraint firstItem="nN6-Lr-j6W" firstAttribute="top" secondItem="yls-6I-h2O" secondAttribute="bottom" constant="8" id="VEU-Lc-T2P"/>
+                            <constraint firstItem="k4T-2N-Af2" firstAttribute="top" secondItem="Wsh-aS-9Wh" secondAttribute="top" id="X8x-SJ-Y4q"/>
+                            <constraint firstItem="JhB-Lb-Bma" firstAttribute="trailing" secondItem="Wsh-aS-9Wh" secondAttribute="trailingMargin" id="b1u-cW-kcB"/>
+                            <constraint firstItem="k4T-2N-Af2" firstAttribute="leading" secondItem="Wsh-aS-9Wh" secondAttribute="leading" id="e0K-7b-cCR"/>
+                            <constraint firstItem="nN6-Lr-j6W" firstAttribute="trailing" secondItem="Wsh-aS-9Wh" secondAttribute="trailingMargin" id="fMe-ns-lQo"/>
+                            <constraint firstItem="ukQ-Ov-P96" firstAttribute="leading" secondItem="Wsh-aS-9Wh" secondAttribute="leading" id="g8R-ue-6L8"/>
+                            <constraint firstItem="ukQ-Ov-P96" firstAttribute="top" secondItem="Wsh-aS-9Wh" secondAttribute="top" id="j3g-tm-HcE"/>
+                            <constraint firstItem="JhB-Lb-Bma" firstAttribute="leading" secondItem="Wsh-aS-9Wh" secondAttribute="leadingMargin" id="lYJ-7h-PVq"/>
+                            <constraint firstAttribute="trailing" secondItem="k4T-2N-Af2" secondAttribute="trailing" id="mS4-eI-1I6"/>
+                            <constraint firstItem="yls-6I-h2O" firstAttribute="trailing" secondItem="Wsh-aS-9Wh" secondAttribute="trailingMargin" id="rY8-xu-6kz"/>
+                            <constraint firstItem="2zE-vs-J1A" firstAttribute="top" secondItem="k4T-2N-Af2" secondAttribute="bottom" id="sBa-k6-Ega"/>
+                            <constraint firstItem="nN6-Lr-j6W" firstAttribute="leading" secondItem="Wsh-aS-9Wh" secondAttribute="leadingMargin" id="yIg-Yy-MhK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="JhB-Lb-Bma" id="73Z-je-USF"/>
+                        <outlet property="dynamicBG" destination="k4T-2N-Af2" id="MRf-Du-Hjw"/>
+                        <outlet property="roleSegment" destination="nN6-Lr-j6W" id="Ruj-Vr-EYm"/>
+                        <segue destination="kTq-el-SlQ" kind="show" identifier="heroSelected" id="2bl-nr-KPN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggA-zv-FXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104.8" y="-584.25787106446785"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YOH-aP-DGw">
+            <objects>
+                <viewController id="kTq-el-SlQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8xW-rk-pUT"/>
+                        <viewControllerLayoutGuide type="bottom" id="eDU-ny-6qy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="owF-vC-p6A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVr-Vf-c1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962" y="-584"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="17" width="1920" height="1100"/>
+        <image name="18" width="5120" height="3096"/>
+        <image name="22" width="1830" height="1100"/>
+        <image name="27" width="1920" height="1100"/>
+        <image name="Genji" width="112" height="100"/>
+    </resources>
+</document>

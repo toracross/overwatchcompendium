@@ -8,8 +8,8 @@
 
 import Foundation
 
-//API Data here.
+//API Data information.
 
-//API Data is located at https://api.lootbox.eu/documentation - Very useful.
+//API is self hosted on https://toracross.com/api/v3/ - DigitalOcean based host.
 
-
+//All documentation on how to operate the API can be found here: https://owapi.net

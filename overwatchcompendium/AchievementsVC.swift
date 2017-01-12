@@ -45,6 +45,8 @@ class AchievementsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         return heroAchievementData.count
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "achievementCell", for: indexPath) as? AchievementCell {
             let playerAchievementData = self.heroAchievementData[indexPath.row]
