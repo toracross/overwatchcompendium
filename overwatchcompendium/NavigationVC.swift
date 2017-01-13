@@ -13,7 +13,6 @@ class NavigationVC: UIViewController {
 
     @IBOutlet weak var dynamicBG: UIImageView!
     
-    
     weak var timer: Timer?
     
     override func viewDidLoad() {
@@ -26,6 +25,10 @@ class NavigationVC: UIViewController {
         self.performSegue(withIdentifier: "heroSegue", sender: nil)
     }
     
+    
+    @IBAction func playerBtnPushed(_ sender: Any) {
+        self.performSegue(withIdentifier: "playerSearchSegue", sender: nil)
+    }
     
 
     
@@ -48,6 +51,4 @@ class NavigationVC: UIViewController {
                           animations: { self.dynamicBG.image = toImage },
                           completion: nil)
     }
-
-
 }

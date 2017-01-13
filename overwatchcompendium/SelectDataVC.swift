@@ -130,24 +130,7 @@ class SelectDataVC: UIViewController, NVActivityIndicatorViewable {
         }
         
     }
-    
-    func checkTestUrl(completed: @escaping DownloadComplete) {
-        let testUrl = "https://overwatch-api.net/api/v1/map/6"
-        
-        Alamofire.request(testUrl).responseJSON { response in
-            let data = response.result
-            
-            if let JSON = data.value as? Dictionary<String, AnyObject> {
-                print(JSON)
-                if let stages = JSON["stages"] as? [Dictionary<String, AnyObject>] {
-                    print("Stages")
-                    print(stages)
-                }
-            }
-            
-        }
-        completed()
-    }
+
 
     //Put background on a timer, cycle to next every x seconds.
     func repeatBackground() {
