@@ -15,17 +15,12 @@ class HeroesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     @IBOutlet weak var collectionView: UICollectionView!
     
     weak var timer: Timer?
-    
+    let defaults = UserDefaults.standard
     var allHeroNames = ["Genji", "McCree", "Pharah", "Reaper", "Soldier 76", "Sombra", "Tracer", "Bastion", "Hanzo", "Junkrat", "Mei", "Torbjorn", "Widowmaker", "D.Va", "Reinhardt", "Roadhog", "Winston", "Zarya", "Ana", "Lucio", "Mercy", "Symmetra", "Zenyatta"]
-    var allHeroes = 23
     var offenseHeroNames = ["Genji", "McCree", "Pharah", "Reaper", "Soldier 76", "Sombra", "Tracer"]
-    var offenseHeroes = 7
     var defenseHeroNames = ["Bastion", "Hanzo", "Junkrat", "Mei", "Torbjorn", "Widowmaker"]
-    var defenseHeroes = 6
     var tankHeroNames = ["D.Va", "Reinhardt", "Roadhog", "Winston", "Zarya"]
-    var tankHeroes = 5
     var supportHeroNames = ["Ana", "Lucio", "Mercy", "Symmetra", "Zenyatta"]
-    var supportHeroes = 5
     
     
     override func viewDidLoad() {
@@ -48,15 +43,15 @@ class HeroesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch roleSegment.selectedSegmentIndex {
         case 0:
-            return self.allHeroes
+            return self.allHeroNames.count
         case 1:
-            return self.offenseHeroes
+            return self.offenseHeroNames.count
         case 2:
-            return self.defenseHeroes
+            return self.defenseHeroNames.count
         case 3:
-            return self.tankHeroes
+            return self.tankHeroNames.count
         case 4:
-            return self.supportHeroes
+            return self.supportHeroNames.count
         default:
             self.collectionView.reloadData()
             break
@@ -97,8 +92,30 @@ class HeroesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-        performSegue(withIdentifier: "heroSelected", sender: nil)
+        switch roleSegment.selectedSegmentIndex {
+        case 0:
+            let selectedHero = self.allHeroNames[indexPath.item]
+            defaults.set(selectedHero, forKey: "selectedHero")
+            performSegue(withIdentifier: "heroSelected", sender: self)
+        case 1:
+            let selectedHero = self.offenseHeroNames[indexPath.item]
+            defaults.set(selectedHero, forKey: "selectedHero")
+            performSegue(withIdentifier: "heroSelected", sender: self)
+        case 2:
+            let selectedHero = self.defenseHeroNames[indexPath.item]
+            defaults.set(selectedHero, forKey: "selectedHero")
+            performSegue(withIdentifier: "heroSelected", sender: self)
+        case 3:
+            let selectedHero = self.tankHeroNames[indexPath.item]
+            defaults.set(selectedHero, forKey: "selectedHero")
+            performSegue(withIdentifier: "heroSelected", sender: self)
+        case 4:
+            let selectedHero = self.supportHeroNames[indexPath.item]
+            defaults.set(selectedHero, forKey: "selectedHero")
+            performSegue(withIdentifier: "heroSelected", sender: self)
+        default:
+            break
+        }
     }
     
     //Put background on a timer, cycle to next every x seconds.

@@ -42,6 +42,7 @@
 		303568C91E27D9B700170F48 /* HeroesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568C81E27D9B700170F48 /* HeroesVC.swift */; };
 		303568CD1E27DD0B00170F48 /* HeroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568CC1E27DD0B00170F48 /* HeroesCell.swift */; };
 		5BC36987D478BA96EE5775A8 /* Pods_overwatchcompendium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */; };
+		7B77D4941E2860D100C11594 /* HeroDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B77D4931E2860D100C11594 /* HeroDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		303568C61E268D6900170F48 /* NavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
 		303568C81E27D9B700170F48 /* HeroesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesVC.swift; sourceTree = "<group>"; };
 		303568CC1E27DD0B00170F48 /* HeroesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesCell.swift; sourceTree = "<group>"; };
+		7B77D4931E2860D100C11594 /* HeroDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailVC.swift; sourceTree = "<group>"; };
 		CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatchcompendium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -273,6 +275,7 @@
 			children = (
 				303568C61E268D6900170F48 /* NavigationVC.swift */,
 				303568C81E27D9B700170F48 /* HeroesVC.swift */,
+				7B77D4931E2860D100C11594 /* HeroDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */,
 				10B4E8731E0F068000BC3F3E /* HeroCell.swift in Sources */,
 				106C9EBE1DFDC55400F078C6 /* HeroVC.swift in Sources */,
+				7B77D4941E2860D100C11594 /* HeroDetailVC.swift in Sources */,
 				106C9ECC1DFDC67900F078C6 /* PlayerAchievements.swift in Sources */,
 				1015BA971E0C449F00F2006F /* PlayerStatsQP.swift in Sources */,
 				106C9EE21DFDE9FB00F078C6 /* Constants.swift in Sources */,
