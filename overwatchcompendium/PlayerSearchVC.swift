@@ -31,21 +31,14 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
         view.addGestureRecognizer(tap)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        stopAnimating()
+    }
+    
+    
+    
     @IBAction func searchBtnPushed(_ sender: Any) {
         startAnimating(message: "Loading...")
-        
-        let name = battleTagTxt.text
-        
-        switch platformSegment.selectedSegmentIndex {
-        case 0:
-            platformTxt = "pc"
-        case 1:
-            platformTxt = "psn"
-        case 2:
-            platformTxt = "xbl"
-        default:
-            break
-        }
         
         switch regionSegment.selectedSegmentIndex {
         case 0:
@@ -58,17 +51,34 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
             break
         }
         
+        switch platformSegment.selectedSegmentIndex {
+        case 0:
+            platformTxt = "pc"
+        case 1:
+            platformTxt = "psn"
+            regionTxt = "any"
+        case 2:
+            platformTxt = "xbl"
+            regionTxt = "any"
+        default:
+            break
+        }
+        
+        
         //Download URL:
         // https://toracross.com/api/v3/u/\(name)/blob?platform=\(platformTxt)
         
         //Save Player Name
-        defaults.set(name, forKey: "playerName")
-        defaults.set(regionTxt, forKey: "playerRegion")
+        defaults.set(battleTagTxt.text!, forKey: "playerName")
+        defaults.set(regionTxt!, forKey: "playerRegion")
+        defaults.set(platformTxt!, forKey: "playerPlatform")
         
+        //Check player inputted data.
         func checkStatusCode(completed: @escaping DownloadComplete) {
             let responseCode = 404
-            let url = "https://toracross.com/api/v3/u/\(name!)/blob?platform=\(platformTxt!)"
+            let url = "https://toracross.com/api/v3/u/\(battleTagTxt.text!)/blob?platform=\(platformTxt!)"
             print(url)
+            
             Alamofire.request(url).responseJSON { response in
                 let httpResponse = response.result
                 print(httpResponse)
@@ -77,6 +87,8 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
                         print(statusCode)
                         if statusCode != responseCode {
                             print("Not called. Ever.")
+                        } else if statusCode == 429 {
+                            print("Rate limited, slow down.")
                         } else {
                             print("This 404'd.")
                             self.stopAnimating()
@@ -89,9 +101,10 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
         }
         
         checkStatusCode { DownloadComplete in
-            if name != "" {
-                //Download literally everything.
-                
+            if self.battleTagTxt.text != "" {
+                //Wait 4s, perform segue.
+                sleep(4)
+                self.performSegue(withIdentifier: "playerDataSegue", sender: nil)
             } else {
                 print("Name was left blank.")
                 self.alertFailMessage()
@@ -99,6 +112,18 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
+    @IBAction func platformSegControl(_ sender: Any) {
+        switch platformSegment.selectedSegmentIndex {
+        case 0:
+            regionSegment.isHidden = false
+        case 1:
+            regionSegment.isHidden = true
+        case 2:
+            regionSegment.isHidden = true
+        default:
+            break
+        }
+    }
     
 
     //Put background on a timer, cycle to next every x seconds.

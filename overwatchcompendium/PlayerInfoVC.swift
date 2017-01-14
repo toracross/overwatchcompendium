@@ -12,12 +12,22 @@ class PlayerInfoVC: UIViewController {
 
     
     
+    @IBOutlet weak var playerName: CustomLblTitle!
+    
+    var statsModel: PlayerModel!
+    var savedPlayerName = UserDefaults.standard.string(forKey: "playerName")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        playerName.text = savedPlayerName!.replacingOccurrences(of: "-", with: "#")
+        
+        statsModel = PlayerModel()
     }
-
-
+    
+    @IBAction func backBtnPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
 }

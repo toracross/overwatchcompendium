@@ -43,9 +43,7 @@
 		303568CD1E27DD0B00170F48 /* HeroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568CC1E27DD0B00170F48 /* HeroesCell.swift */; };
 		303568D51E29493300170F48 /* PlayerSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568D41E29493300170F48 /* PlayerSearchVC.swift */; };
 		303568D71E294D5400170F48 /* PlayerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568D61E294D5400170F48 /* PlayerInfoVC.swift */; };
-		303568D91E29549800170F48 /* AchievementsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568D81E29549800170F48 /* AchievementsModel.swift */; };
-		303568DB1E2954AC00170F48 /* HeroesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568DA1E2954AC00170F48 /* HeroesModel.swift */; };
-		303568DD1E2954B300170F48 /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568DC1E2954B300170F48 /* StatsModel.swift */; };
+		303568DD1E2954B300170F48 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568DC1E2954B300170F48 /* PlayerModel.swift */; };
 		5BC36987D478BA96EE5775A8 /* Pods_overwatchcompendium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */; };
 		7B77D4941E2860D100C11594 /* HeroDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B77D4931E2860D100C11594 /* HeroDetailVC.swift */; };
 /* End PBXBuildFile section */
@@ -91,9 +89,7 @@
 		303568CC1E27DD0B00170F48 /* HeroesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesCell.swift; sourceTree = "<group>"; };
 		303568D41E29493300170F48 /* PlayerSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerSearchVC.swift; sourceTree = "<group>"; };
 		303568D61E294D5400170F48 /* PlayerInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInfoVC.swift; sourceTree = "<group>"; };
-		303568D81E29549800170F48 /* AchievementsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsModel.swift; sourceTree = "<group>"; };
-		303568DA1E2954AC00170F48 /* HeroesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesModel.swift; sourceTree = "<group>"; };
-		303568DC1E2954B300170F48 /* StatsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
+		303568DC1E2954B300170F48 /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		7B77D4931E2860D100C11594 /* HeroDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailVC.swift; sourceTree = "<group>"; };
 		CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatchcompendium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -302,9 +298,7 @@
 		303568C11E268B1200170F48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				303568D81E29549800170F48 /* AchievementsModel.swift */,
-				303568DA1E2954AC00170F48 /* HeroesModel.swift */,
-				303568DC1E2954B300170F48 /* StatsModel.swift */,
+				303568DC1E2954B300170F48 /* PlayerModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -484,7 +478,6 @@
 				106C9EC01DFDC56C00F078C6 /* StatsVC.swift in Sources */,
 				10B4E87D1E10CF1F00BC3F3E /* AchievementCell.swift in Sources */,
 				10B4E8771E0F4ABE00BC3F3E /* PlayerHeroesQP.swift in Sources */,
-				303568DB1E2954AC00170F48 /* HeroesModel.swift in Sources */,
 				303568CD1E27DD0B00170F48 /* HeroesCell.swift in Sources */,
 				10B4E87B1E0F7DED00BC3F3E /* PlayerHeroesCP.swift in Sources */,
 				1015BA991E0C531200F2006F /* PlayerStatsCP.swift in Sources */,
@@ -506,14 +499,13 @@
 				10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */,
 				10B4E8731E0F068000BC3F3E /* HeroCell.swift in Sources */,
 				106C9EBE1DFDC55400F078C6 /* HeroVC.swift in Sources */,
-				303568D91E29549800170F48 /* AchievementsModel.swift in Sources */,
 				7B77D4941E2860D100C11594 /* HeroDetailVC.swift in Sources */,
 				106C9ECC1DFDC67900F078C6 /* PlayerAchievements.swift in Sources */,
 				1015BA971E0C449F00F2006F /* PlayerStatsQP.swift in Sources */,
 				106C9EE21DFDE9FB00F078C6 /* Constants.swift in Sources */,
 				10B4E8791E0F5C3100BC3F3E /* ColorProgressView.swift in Sources */,
 				303568D71E294D5400170F48 /* PlayerInfoVC.swift in Sources */,
-				303568DD1E2954B300170F48 /* StatsModel.swift in Sources */,
+				303568DD1E2954B300170F48 /* PlayerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

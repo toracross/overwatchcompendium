@@ -18,9 +18,8 @@ class NavigationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         repeatBackground()
-        
     }
-    
+
     @IBAction func heroBtnPushed(_ sender: Any) {
         self.performSegue(withIdentifier: "heroSegue", sender: nil)
     }
@@ -29,8 +28,6 @@ class NavigationVC: UIViewController {
     @IBAction func playerBtnPushed(_ sender: Any) {
         self.performSegue(withIdentifier: "playerSearchSegue", sender: nil)
     }
-    
-
     
     //Put background on a timer, cycle to next every x seconds.
     func repeatBackground() {
