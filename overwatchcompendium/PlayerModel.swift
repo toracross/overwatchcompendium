@@ -110,6 +110,223 @@ class PlayerModel {
         return _winRate
     }
     
+    //Quickplay Average Stats
+    
+    private var _deathsAvgQP: Double!
+    private var _soloKillsAvgQP: Double!
+    private var _eliminationsAvgQP: Double!
+    private var _damageDoneAvgQP: Double!
+    private var _finalBlowsAvgQP: Double!
+    private var _reconAssistsAvgQP: Double!
+    private var _objectiveKillsAvgQP: Double!
+    private var _objectiveTimeAvgQP: Double!
+    private var _defensiveAssistsAvgQP: Double!
+    private var _timeSpentOnFireAvgQP: Double!
+    private var _offensiveAssistsAvgQP: Double!
+    private var _healingDoneAvgQP: Double!
+    private var _meleeFinalBlowsAvgQP: Double!
+    
+    var deathsAvgQP: Double {
+        if _deathsAvgQP == nil {
+            _deathsAvgQP = 0
+        }
+        return _deathsAvgQP
+    }
+    
+    var soloKillsAvgQP: Double {
+        if _soloKillsAvgQP == nil {
+            _soloKillsAvgQP = 0
+        }
+        return _soloKillsAvgQP
+    }
+    
+    var eliminationsAvgQP: Double {
+        if _eliminationsAvgQP == nil {
+            _eliminationsAvgQP = 0
+        }
+        return _eliminationsAvgQP
+    }
+    
+    var damageDoneAvgQP: Double {
+        if _damageDoneAvgQP == nil {
+            _damageDoneAvgQP = 0
+        }
+        return _damageDoneAvgQP
+    }
+    
+    var finalBlowsAvgQP: Double {
+        if _finalBlowsAvgQP == nil {
+            _finalBlowsAvgQP = 0
+        }
+        return _finalBlowsAvgQP
+    }
+    
+    var reconAssistsAvgQP: Double {
+        if _reconAssistsAvgQP == nil {
+            _reconAssistsAvgQP = 0
+        }
+        return _reconAssistsAvgQP
+    }
+    
+    var objectiveKillsAvgQP: Double {
+        if _objectiveKillsAvgQP == nil {
+            _objectiveKillsAvgQP = 0
+        }
+        return _objectiveKillsAvgQP
+    }
+    
+    var objectiveTimeAvgQP: Double {
+        if _objectiveTimeAvgQP == nil {
+            _objectiveTimeAvgQP = 0
+        }
+        return _objectiveTimeAvgQP
+    }
+    
+    var defensiveAssistsAvgQP: Double {
+        if _defensiveAssistsAvgQP == nil {
+            _defensiveAssistsAvgQP = 0
+        }
+        return _defensiveAssistsAvgQP
+    }
+    
+    var timeSpentOnFireAvgQP: Double {
+        if _timeSpentOnFireAvgQP == nil {
+            _timeSpentOnFireAvgQP = 0
+        }
+        return _timeSpentOnFireAvgQP
+    }
+    
+    var offensiveAssistsAvgQP: Double {
+        if _offensiveAssistsAvgQP == nil {
+            _offensiveAssistsAvgQP = 0
+        }
+        return _offensiveAssistsAvgQP
+    }
+    
+    var healingDoneAvgQP: Double {
+        if _healingDoneAvgQP == nil {
+            _healingDoneAvgQP = 0
+        }
+        return _healingDoneAvgQP
+    }
+    
+    var meleeFinalBlowsAvgQP: Double {
+        if _meleeFinalBlowsAvgQP == nil {
+            _meleeFinalBlowsAvgQP = 0
+        }
+        return _meleeFinalBlowsAvgQP
+    }
+    
+    
+    //Competitive Average Stats
+    
+    private var _deathsAvgCP: Double!
+    private var _soloKillsAvgCP: Double!
+    private var _eliminationsAvgCP: Double!
+    private var _damageDoneAvgCP: Double!
+    private var _finalBlowsAvgCP: Double!
+    private var _reconAssistsAvgCP: Double!
+    private var _objectiveKillsAvgCP: Double!
+    private var _objectiveTimeAvgCP: Double!
+    private var _defensiveAssistsAvgCP: Double!
+    private var _timeSpentOnFireAvgCP: Double!
+    private var _offensiveAssistsAvgCP: Double!
+    private var _healingDoneAvgCP: Double!
+    private var _meleeFinalBlowsAvgCP: Double!
+    
+    
+    var deathsAvgCP: Double {
+        if _deathsAvgCP == nil {
+            _deathsAvgCP = 0
+        }
+        return _deathsAvgCP
+    }
+    
+    var soloKillsAvgCP: Double {
+        if _soloKillsAvgCP == nil {
+            _soloKillsAvgCP = 0
+        }
+        return _soloKillsAvgCP
+    }
+    
+    var eliminationsAvgCP: Double {
+        if _eliminationsAvgCP == nil {
+            _eliminationsAvgCP = 0
+        }
+        return _eliminationsAvgCP
+    }
+    
+    var damageDoneAvgCP: Double {
+        if _damageDoneAvgCP == nil {
+            _damageDoneAvgCP = 0
+        }
+        return _damageDoneAvgCP
+    }
+    
+    var finalBlowsAvgCP: Double {
+        if _finalBlowsAvgCP == nil {
+            _finalBlowsAvgCP = 0
+        }
+        return _finalBlowsAvgCP
+    }
+    
+    var reconAssistsAvgCP: Double {
+        if _reconAssistsAvgCP == nil {
+            _reconAssistsAvgCP = 0
+        }
+        return _reconAssistsAvgCP
+    }
+    
+    var objectiveKillsAvgCP: Double {
+        if _objectiveKillsAvgCP == nil {
+            _objectiveKillsAvgCP = 0
+        }
+        return _objectiveKillsAvgCP
+    }
+    
+    var objectiveTimeAvgCP: Double {
+        if _objectiveTimeAvgCP == nil {
+            _objectiveTimeAvgCP = 0
+        }
+        return _objectiveTimeAvgCP
+    }
+    
+    var defensiveAssistsAvgCP: Double {
+        if _defensiveAssistsAvgCP == nil {
+            _defensiveAssistsAvgCP = 0
+        }
+        return _defensiveAssistsAvgCP
+    }
+    
+    var timeSpentOnFireAvgCP: Double {
+        if _timeSpentOnFireAvgCP == nil {
+            _timeSpentOnFireAvgCP = 0
+        }
+        return _timeSpentOnFireAvgCP
+    }
+    
+    var offensiveAssistsAvgCP: Double {
+        if _offensiveAssistsAvgCP == nil {
+            _offensiveAssistsAvgCP = 0
+        }
+        return _offensiveAssistsAvgCP
+    }
+    
+    var healingDoneAvgCP: Double {
+        if _healingDoneAvgCP == nil {
+            _healingDoneAvgCP = 0
+        }
+        return _healingDoneAvgCP
+    }
+    
+    var meleeFinalBlowsAvgCP: Double {
+        if _meleeFinalBlowsAvgCP == nil {
+            _meleeFinalBlowsAvgCP = 0
+        }
+        return _meleeFinalBlowsAvgCP
+    }
+    
+    //Quickplay Game Stats
     
     
     func downloadStatsData(completed: @escaping DownloadComplete) {
@@ -121,11 +338,22 @@ class PlayerModel {
             if let JSON = download.value as? Dictionary<String, AnyObject> {
                 
                 if let region = JSON["\(self.selectedRegion)"] as? Dictionary<String, AnyObject> {
+                    
+                    //Downloading all player achievements.
+                    if let achievements = region["achievements"] as? Dictionary<String, AnyObject> {
+                        
+                    }
+                    
                     //Downloading all player stats.
                     if let stats = region["stats"] as? Dictionary<String, AnyObject> {
                         
+                    }
+                    
+                    //Downloading all player Hero Data
+                    if let heroes = region["heroes"] as? Dictionary<String, AnyObject> {
                         
                     }
+                    
                 }
             }
             completed()
