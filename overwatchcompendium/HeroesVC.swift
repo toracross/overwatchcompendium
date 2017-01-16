@@ -129,7 +129,7 @@ class HeroesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     //Cycle through saved images for wallpaper.
     func backgroundTransition() {
         let rolls = arc4random_uniform(27) + 1
-        let toImage = UIImage(named:"\(rolls)")
+        let toImage = UIImage(named:"wp\(rolls)")
         
         UIView.transition(with: dynamicBG,
                           duration: 1.5,

@@ -16,319 +16,160 @@ class PlayerModel {
     var selectedPlatform = UserDefaults.standard.string(forKey: "playerPlatform")!
     var playerName = UserDefaults.standard.string(forKey: "playerName")!
     
-    //Overall Stats
-    private var _tier: String!
-    private var _level: Int!
-    private var _compRank: Int!
-    private var _prestige: Int!
-    private var _avatar: String!
+    //Achievements
     
-    //Overall Stats - Quickplay
-    private var _winsQP: Int!
+    private var _defense: [String: AnyObject]!
+    private var _general: [String: AnyObject]!
+    private var _maps: [String: AnyObject]!
+    private var _offense: [String: AnyObject]!
+    private var _special: [String: AnyObject]!
+    private var _support: [String: AnyObject]!
+    private var _tank: [String: AnyObject]!
     
-    //Overall Stats - Competitive
-    private var _winsCP: Int!
-    private var _losses: Int!
-    private var _ties: Int!
-    private var _games: Int!
-    private var _winRate: Int!
-    
-    var tier: String {
-        if _tier == nil {
-            _tier = "Empty"
+    var defense: [String: AnyObject] {
+        if _defense == nil {
+            _defense = [:]
         }
-        return _tier
+        return _defense
     }
     
-    var level: Int {
-        if _level == nil {
-            _level = 0
+    var general: [String: AnyObject] {
+        if _general == nil {
+            _general = [:]
         }
-        return _level
+        return _general
     }
     
-    var compRank: Int {
-        if _compRank == nil {
-            _compRank = 0
+    var maps: [String: AnyObject] {
+        if _maps == nil {
+            _maps = [:]
         }
-        return _compRank
+        return _maps
     }
     
-    var prestige: Int {
-        if _prestige == nil {
-            _prestige = 0
+    var offense: [String: AnyObject] {
+        if _offense == nil {
+            _offense = [:]
         }
-        return _prestige
+        return _offense
     }
     
-    var avatar: String {
-        if _avatar == nil {
-            _avatar = "Empty"
+    var special: [String: AnyObject] {
+        if _special == nil {
+            _special = [:]
         }
-        return _avatar
+        return _special
     }
     
-    var winsQP: Int {
-        if _winsQP == nil {
-            _winsQP = 0
+    var support: [String: AnyObject] {
+        if _support == nil {
+            _support = [:]
         }
-        return _winsQP
+        return _support
     }
     
-    var winsCP: Int {
-        if _winsCP == nil {
-            _winsCP = 0
+    var tank: [String: AnyObject] {
+        if _tank == nil {
+            _tank = [:]
         }
-        return _winsCP
+        return _tank
     }
     
-    var losses: Int {
-        if _losses == nil {
-            _losses = 0
+    //Heroes
+    //Playtime
+    private var _playtimeQP: [String: Double]!
+    private var _playtimeCP: [String: Double]!
+    
+    var playtimeQP: [String: Double] {
+        if _playtimeQP == nil {
+            _playtimeQP = [:]
         }
-        return _losses
+        return _playtimeQP
     }
     
-    var ties: Int {
-        if _ties == nil {
-            _ties = 0
+    var playtimeCP: [String: Double] {
+        if _playtimeCP == nil {
+            _playtimeCP = [:]
         }
-        return _ties
+        return _playtimeCP
     }
     
-    var games: Int {
-        if _games == nil {
-            _games = 0
+    //Hero Stats
+    
+    private var _heroQPStats: [String: AnyObject]!
+    private var _heroCPStats: [String: AnyObject]!
+    
+    var heroQPStats: [String: AnyObject] {
+        if _heroQPStats == nil {
+            _heroQPStats = [:]
         }
-        return _games
+        return _heroQPStats
     }
     
-    var winRate: Int {
-        if _winRate == nil {
-            _winRate = 0
+    var heroCPStats: [String : AnyObject] {
+        if _heroCPStats == nil {
+            _heroCPStats = [:]
         }
-        return _winRate
+        return _heroCPStats
     }
     
-    //Quickplay Average Stats
+    //Stats
     
-    private var _deathsAvgQP: Double!
-    private var _soloKillsAvgQP: Double!
-    private var _eliminationsAvgQP: Double!
-    private var _damageDoneAvgQP: Double!
-    private var _finalBlowsAvgQP: Double!
-    private var _reconAssistsAvgQP: Double!
-    private var _objectiveKillsAvgQP: Double!
-    private var _objectiveTimeAvgQP: Double!
-    private var _defensiveAssistsAvgQP: Double!
-    private var _timeSpentOnFireAvgQP: Double!
-    private var _offensiveAssistsAvgQP: Double!
-    private var _healingDoneAvgQP: Double!
-    private var _meleeFinalBlowsAvgQP: Double!
+    //Stats
+    //Quickplay
+    private var _averageStatsQP: [String: Int]!
+    private var _gameStatsQP: [String: AnyObject]!
+    private var _overallStatsQP: [String: AnyObject]!
     
-    var deathsAvgQP: Double {
-        if _deathsAvgQP == nil {
-            _deathsAvgQP = 0
+    //Competitive
+    private var _averageStatsCP: [String: AnyObject]!
+    private var _gameStatsCP: [String: AnyObject]!
+    private var _overallStatsCP: [String: AnyObject]!
+    
+    var averageStatsQP: [String: Int] {
+        if _averageStatsQP == nil {
+            _averageStatsQP = [:]
         }
-        return _deathsAvgQP
+        return _averageStatsQP
     }
     
-    var soloKillsAvgQP: Double {
-        if _soloKillsAvgQP == nil {
-            _soloKillsAvgQP = 0
+    var gameStatsQP: [String: AnyObject] {
+        if _gameStatsQP == nil {
+            _gameStatsQP = [:]
         }
-        return _soloKillsAvgQP
+        return _gameStatsQP
     }
     
-    var eliminationsAvgQP: Double {
-        if _eliminationsAvgQP == nil {
-            _eliminationsAvgQP = 0
+    var overallStatsQP: [String: AnyObject] {
+        if _overallStatsQP == nil {
+            _overallStatsQP = [:]
         }
-        return _eliminationsAvgQP
+        return _overallStatsQP
     }
     
-    var damageDoneAvgQP: Double {
-        if _damageDoneAvgQP == nil {
-            _damageDoneAvgQP = 0
+    var averageStatsCP: [String: AnyObject] {
+        if _averageStatsCP == nil {
+            _averageStatsCP = [:]
         }
-        return _damageDoneAvgQP
+        return _averageStatsCP
     }
     
-    var finalBlowsAvgQP: Double {
-        if _finalBlowsAvgQP == nil {
-            _finalBlowsAvgQP = 0
+    var gameStatsCP: [String: AnyObject] {
+        if _gameStatsCP == nil {
+            _gameStatsCP = [:]
         }
-        return _finalBlowsAvgQP
+        return _gameStatsCP
     }
     
-    var reconAssistsAvgQP: Double {
-        if _reconAssistsAvgQP == nil {
-            _reconAssistsAvgQP = 0
+    var overallStatsCP: [String: AnyObject] {
+        if _overallStatsCP == nil {
+            _overallStatsCP = [:]
         }
-        return _reconAssistsAvgQP
-    }
-    
-    var objectiveKillsAvgQP: Double {
-        if _objectiveKillsAvgQP == nil {
-            _objectiveKillsAvgQP = 0
-        }
-        return _objectiveKillsAvgQP
-    }
-    
-    var objectiveTimeAvgQP: Double {
-        if _objectiveTimeAvgQP == nil {
-            _objectiveTimeAvgQP = 0
-        }
-        return _objectiveTimeAvgQP
-    }
-    
-    var defensiveAssistsAvgQP: Double {
-        if _defensiveAssistsAvgQP == nil {
-            _defensiveAssistsAvgQP = 0
-        }
-        return _defensiveAssistsAvgQP
-    }
-    
-    var timeSpentOnFireAvgQP: Double {
-        if _timeSpentOnFireAvgQP == nil {
-            _timeSpentOnFireAvgQP = 0
-        }
-        return _timeSpentOnFireAvgQP
-    }
-    
-    var offensiveAssistsAvgQP: Double {
-        if _offensiveAssistsAvgQP == nil {
-            _offensiveAssistsAvgQP = 0
-        }
-        return _offensiveAssistsAvgQP
-    }
-    
-    var healingDoneAvgQP: Double {
-        if _healingDoneAvgQP == nil {
-            _healingDoneAvgQP = 0
-        }
-        return _healingDoneAvgQP
-    }
-    
-    var meleeFinalBlowsAvgQP: Double {
-        if _meleeFinalBlowsAvgQP == nil {
-            _meleeFinalBlowsAvgQP = 0
-        }
-        return _meleeFinalBlowsAvgQP
+        return _overallStatsCP
     }
     
     
-    //Competitive Average Stats
-    
-    private var _deathsAvgCP: Double!
-    private var _soloKillsAvgCP: Double!
-    private var _eliminationsAvgCP: Double!
-    private var _damageDoneAvgCP: Double!
-    private var _finalBlowsAvgCP: Double!
-    private var _reconAssistsAvgCP: Double!
-    private var _objectiveKillsAvgCP: Double!
-    private var _objectiveTimeAvgCP: Double!
-    private var _defensiveAssistsAvgCP: Double!
-    private var _timeSpentOnFireAvgCP: Double!
-    private var _offensiveAssistsAvgCP: Double!
-    private var _healingDoneAvgCP: Double!
-    private var _meleeFinalBlowsAvgCP: Double!
-    
-    
-    var deathsAvgCP: Double {
-        if _deathsAvgCP == nil {
-            _deathsAvgCP = 0
-        }
-        return _deathsAvgCP
-    }
-    
-    var soloKillsAvgCP: Double {
-        if _soloKillsAvgCP == nil {
-            _soloKillsAvgCP = 0
-        }
-        return _soloKillsAvgCP
-    }
-    
-    var eliminationsAvgCP: Double {
-        if _eliminationsAvgCP == nil {
-            _eliminationsAvgCP = 0
-        }
-        return _eliminationsAvgCP
-    }
-    
-    var damageDoneAvgCP: Double {
-        if _damageDoneAvgCP == nil {
-            _damageDoneAvgCP = 0
-        }
-        return _damageDoneAvgCP
-    }
-    
-    var finalBlowsAvgCP: Double {
-        if _finalBlowsAvgCP == nil {
-            _finalBlowsAvgCP = 0
-        }
-        return _finalBlowsAvgCP
-    }
-    
-    var reconAssistsAvgCP: Double {
-        if _reconAssistsAvgCP == nil {
-            _reconAssistsAvgCP = 0
-        }
-        return _reconAssistsAvgCP
-    }
-    
-    var objectiveKillsAvgCP: Double {
-        if _objectiveKillsAvgCP == nil {
-            _objectiveKillsAvgCP = 0
-        }
-        return _objectiveKillsAvgCP
-    }
-    
-    var objectiveTimeAvgCP: Double {
-        if _objectiveTimeAvgCP == nil {
-            _objectiveTimeAvgCP = 0
-        }
-        return _objectiveTimeAvgCP
-    }
-    
-    var defensiveAssistsAvgCP: Double {
-        if _defensiveAssistsAvgCP == nil {
-            _defensiveAssistsAvgCP = 0
-        }
-        return _defensiveAssistsAvgCP
-    }
-    
-    var timeSpentOnFireAvgCP: Double {
-        if _timeSpentOnFireAvgCP == nil {
-            _timeSpentOnFireAvgCP = 0
-        }
-        return _timeSpentOnFireAvgCP
-    }
-    
-    var offensiveAssistsAvgCP: Double {
-        if _offensiveAssistsAvgCP == nil {
-            _offensiveAssistsAvgCP = 0
-        }
-        return _offensiveAssistsAvgCP
-    }
-    
-    var healingDoneAvgCP: Double {
-        if _healingDoneAvgCP == nil {
-            _healingDoneAvgCP = 0
-        }
-        return _healingDoneAvgCP
-    }
-    
-    var meleeFinalBlowsAvgCP: Double {
-        if _meleeFinalBlowsAvgCP == nil {
-            _meleeFinalBlowsAvgCP = 0
-        }
-        return _meleeFinalBlowsAvgCP
-    }
-    
-    //Quickplay Game Stats
-    
-    
+    //Download ALL of the data!
     func downloadStatsData(completed: @escaping DownloadComplete) {
         let url = "https://toracross.com/api/v3/u/\(playerName)/blob?platform=\(selectedPlatform)"
         
@@ -341,19 +182,98 @@ class PlayerModel {
                     
                     //Downloading all player achievements.
                     if let achievements = region["achievements"] as? Dictionary<String, AnyObject> {
-                        
-                    }
-                    
-                    //Downloading all player stats.
-                    if let stats = region["stats"] as? Dictionary<String, AnyObject> {
-                        
+                        //Defense
+                        if let defense = achievements["defense"] as? [String: AnyObject] {
+                            self._defense = defense
+                        }
+                        //General
+                        if let general = achievements["general"] as? [String: AnyObject] {
+                            self._general = general
+                        }
+                        //Maps
+                        if let maps = achievements["maps"] as? [String: AnyObject] {
+                            self._maps = maps
+                        }
+                        //Offense
+                        if let offense = achievements["offense"] as? [String: AnyObject] {
+                            self._offense = offense
+                        }
+                        //Special
+                        if let special = achievements["special"] as? [String: AnyObject] {
+                            self._special = special
+                        }
+                        //Support
+                        if let support = achievements["support"] as? [String: AnyObject] {
+                            self._support = support
+                        }
+                        //Tank
+                        if let defense = achievements["defense"] as? [String: AnyObject] {
+                            self._defense = defense
+                        }
                     }
                     
                     //Downloading all player Hero Data
                     if let heroes = region["heroes"] as? Dictionary<String, AnyObject> {
                         
+                        //Playtime
+                        if let playtime = heroes["playtime"] as? Dictionary<String, AnyObject> {
+                            if let quickplay = playtime["quickplay"] as? [String: Double] {
+                                self._playtimeQP = quickplay
+                            }
+                            
+                            if let competitive = playtime["competitive"] as? [String: Double] {
+                                self._playtimeCP = competitive
+                            }
+                        }
+                        
+                        //Stats
+                        if let stats = heroes["stats"] as? Dictionary<String, AnyObject> {
+                            
+                            if let quickplay = stats["quickplay"] as? [String: AnyObject] {
+                                self._heroQPStats = quickplay
+                            }
+                            
+                            if let competitive = stats["competitive"] as? [String: AnyObject] {
+                                self._heroCPStats = competitive
+                            }
+                        }
                     }
                     
+                    //Downloading all player stats.
+                    if let stats = region["stats"] as? Dictionary<String, AnyObject> {
+                        
+                        //Quickplay
+                        if let quickplay = stats["quickplay"] as? Dictionary<String, AnyObject> {
+                            //Overall Stats
+                            if let overallStats = quickplay["overall_stats"] as? Dictionary<String, AnyObject> {
+                                self._overallStatsQP = overallStats
+                            }
+                            //Average Stats
+                            if let averageStats = quickplay["average_stats"] as? Dictionary<String, Int> {
+                                self._averageStatsQP = averageStats
+                            }
+                            //Game Stats
+                            if let gameStats = quickplay["game_stats"] as? Dictionary<String, AnyObject> {
+                                self._gameStatsQP = gameStats
+                            }
+                        }
+                        
+                        //Competitive
+                        if let competitive = stats["competitive"] as? Dictionary<String, AnyObject> {
+                            //Overall Stats
+                            if let overallStats = competitive["overall_stats"] as? Dictionary<String, AnyObject> {
+                                self._overallStatsCP = overallStats
+                            }
+                            //Average Stats
+                            if let averageStats = competitive["average_stats"] as? Dictionary<String, AnyObject> {
+                                self._averageStatsCP = averageStats
+                            }
+                            //Game Stats
+                            if let gameStats = competitive["game_stats"] as? Dictionary<String, AnyObject> {
+                                self._gameStatsCP = gameStats
+                            }
+                        }
+                    }
                 }
             }
             completed()

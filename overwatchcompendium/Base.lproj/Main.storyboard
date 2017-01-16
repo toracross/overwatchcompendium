@@ -300,7 +300,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xx-pw-wqj">
-                                                                <rect key="frame" x="36" y="5" width="47" height="20"/>
+                                                                <rect key="frame" x="36" y="5" width="46.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -532,7 +532,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assists" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpD-4Y-ugG">
-                                                                <rect key="frame" x="36" y="5" width="47" height="20"/>
+                                                                <rect key="frame" x="36" y="5" width="46.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1038,7 +1038,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="match awards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qu-tk-LR1">
-                                                                <rect key="frame" x="36" y="5" width="91" height="20"/>
+                                                                <rect key="frame" x="36" y="5" width="90.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1520,7 +1520,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bV-MI-CGg">
-                                                                <rect key="frame" x="36" y="5" width="50" height="20"/>
+                                                                <rect key="frame" x="36" y="5" width="49.5" height="20"/>
                                                                 <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2364,16 +2364,6 @@
                                             <constraint firstAttribute="height" constant="30" id="xUB-FB-AjX"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="cWl-z6-O4d">
-                                        <rect key="frame" x="81" y="35" width="181" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="0Pg-D9-pBC"/>
-                                            <constraint firstAttribute="width" constant="181" id="t4x-qz-wMQ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="35"/>
-                                        <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUJ-if-fmR">
                                         <rect key="frame" x="280" y="73" width="40" height="20"/>
                                         <constraints>
@@ -2381,7 +2371,7 @@
                                             <constraint firstAttribute="height" constant="20" id="fNd-wh-IMi"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Region" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymy-iR-Sua">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="  Region" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymy-iR-Sua">
                                         <rect key="frame" x="136" y="89" width="70" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="1UB-ru-vof"/>
@@ -2399,7 +2389,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yL-9N-02w">
-                                        <rect key="frame" x="289" y="61" width="20" height="15"/>
+                                        <rect key="frame" x="289.5" y="61" width="20" height="14.5"/>
                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="13"/>
                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2414,14 +2404,11 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="cWl-z6-O4d" firstAttribute="centerX" secondItem="feJ-rD-VxR" secondAttribute="centerX" id="2nl-dz-MCp"/>
                                     <constraint firstItem="7lR-WR-4YW" firstAttribute="leading" secondItem="feJ-rD-VxR" secondAttribute="leading" id="2tN-2N-xLT"/>
-                                    <constraint firstItem="ymy-iR-Sua" firstAttribute="top" secondItem="cWl-z6-O4d" secondAttribute="bottom" constant="4" id="9Kj-Qv-YWb"/>
                                     <constraint firstAttribute="trailing" secondItem="nUJ-if-fmR" secondAttribute="trailing" constant="23" id="Jvb-H4-6ey"/>
                                     <constraint firstItem="6yL-9N-02w" firstAttribute="centerY" secondItem="jc8-gy-m3b" secondAttribute="centerY" id="PEp-RK-S5j"/>
                                     <constraint firstAttribute="height" constant="120" id="SSO-zl-k78"/>
                                     <constraint firstItem="nUJ-if-fmR" firstAttribute="top" secondItem="jc8-gy-m3b" secondAttribute="bottom" constant="-15" id="W5k-ic-43u"/>
-                                    <constraint firstItem="cWl-z6-O4d" firstAttribute="centerY" secondItem="feJ-rD-VxR" secondAttribute="centerY" id="WJG-Qe-g6c"/>
                                     <constraint firstAttribute="trailing" secondItem="jc8-gy-m3b" secondAttribute="trailing" constant="24" id="ZTN-Se-3Ru"/>
                                     <constraint firstItem="jc8-gy-m3b" firstAttribute="top" secondItem="7lR-WR-4YW" secondAttribute="bottom" constant="18" id="dm3-5p-NAx"/>
                                     <constraint firstItem="7lR-WR-4YW" firstAttribute="top" secondItem="feJ-rD-VxR" secondAttribute="top" id="fX2-Li-Xxo"/>
@@ -2559,7 +2546,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playtime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EG6-Tk-bMc">
-                                        <rect key="frame" x="107" y="75" width="130" height="17"/>
+                                        <rect key="frame" x="107" y="75.5" width="130" height="16.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="EAl-Vh-WWk"/>
                                         </constraints>
@@ -2655,7 +2642,6 @@
                         <outlet property="playerCPWins" destination="at4-BW-PqW" id="3QY-3c-jJj"/>
                         <outlet property="playerLevel" destination="6yL-9N-02w" id="8T9-Wy-0WJ"/>
                         <outlet property="playerLevelImg" destination="jc8-gy-m3b" id="nm1-79-pwa"/>
-                        <outlet property="playerName" destination="cWl-z6-O4d" id="lRo-JA-oPc"/>
                         <outlet property="playerQPTime" destination="LkG-UZ-ufR" id="Lmv-7H-eWJ"/>
                         <outlet property="playerQPWins" destination="DVK-tr-zqO" id="Rhr-ao-pKr"/>
                         <outlet property="playerRank" destination="L2m-Oc-klD" id="MXV-ih-d2O"/>

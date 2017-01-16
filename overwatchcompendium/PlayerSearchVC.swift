@@ -26,7 +26,6 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
         super.viewDidLoad()
         repeatBackground()
         
-        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -39,6 +38,8 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBAction func searchBtnPushed(_ sender: Any) {
         startAnimating(message: "Loading...")
+        let name = battleTagTxt.text!.replacingOccurrences(of: "#", with: "-")
+        print(name)
         
         switch regionSegment.selectedSegmentIndex {
         case 0:
@@ -69,14 +70,14 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
         // https://toracross.com/api/v3/u/\(name)/blob?platform=\(platformTxt)
         
         //Save Player Name
-        defaults.set(battleTagTxt.text!, forKey: "playerName")
+        defaults.set(name, forKey: "playerName")
         defaults.set(regionTxt!, forKey: "playerRegion")
         defaults.set(platformTxt!, forKey: "playerPlatform")
         
         //Check player inputted data.
         func checkStatusCode(completed: @escaping DownloadComplete) {
             let responseCode = 404
-            let url = "https://toracross.com/api/v3/u/\(battleTagTxt.text!)/blob?platform=\(platformTxt!)"
+            let url = "https://toracross.com/api/v3/u/\(name)/blob?platform=\(platformTxt!)"
             print(url)
             
             Alamofire.request(url).responseJSON { response in
@@ -103,7 +104,7 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
         checkStatusCode { DownloadComplete in
             if self.battleTagTxt.text != "" {
                 //Wait 4s, perform segue.
-                sleep(4)
+                sleep(5)
                 self.performSegue(withIdentifier: "playerDataSegue", sender: nil)
             } else {
                 print("Name was left blank.")
@@ -137,7 +138,7 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
     //Cycle through saved images for wallpaper.
     func backgroundTransition() {
         let rolls = arc4random_uniform(27) + 1
-        let toImage = UIImage(named:"\(rolls)")
+        let toImage = UIImage(named:"wp\(rolls)")
         
         UIView.transition(with: dynamicBG,
                           duration: 1.5,

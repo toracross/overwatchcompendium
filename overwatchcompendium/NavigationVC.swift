@@ -15,18 +15,19 @@ class NavigationVC: UIViewController {
     
     weak var timer: Timer?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         repeatBackground()
     }
 
     @IBAction func heroBtnPushed(_ sender: Any) {
-        self.performSegue(withIdentifier: "heroSegue", sender: nil)
+        self.performSegue(withIdentifier: "heroSegue", sender: self)
     }
     
     
     @IBAction func playerBtnPushed(_ sender: Any) {
-        self.performSegue(withIdentifier: "playerSearchSegue", sender: nil)
+        self.performSegue(withIdentifier: "playerSearchSegue", sender: self)
     }
     
     //Put background on a timer, cycle to next every x seconds.
@@ -40,7 +41,7 @@ class NavigationVC: UIViewController {
     //Cycle through saved images for wallpaper.
     func backgroundTransition() {
         let rolls = arc4random_uniform(27) + 1
-        let toImage = UIImage(named:"\(rolls)")
+        let toImage = UIImage(named:"wp\(rolls)")
         
         UIView.transition(with: dynamicBG,
                           duration: 1.5,
