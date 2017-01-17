@@ -21,6 +21,7 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
     var regionTxt: String!
     var platformTxt: String!
     var defaults = UserDefaults.standard
+    var validProfile = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,84 +33,105 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
     
     override func viewWillAppear(_ animated: Bool) {
         stopAnimating()
+        self.validProfile = false
     }
     
     
     
     @IBAction func searchBtnPushed(_ sender: Any) {
+        
         startAnimating(message: "Loading...")
         let name = battleTagTxt.text!.replacingOccurrences(of: "#", with: "-")
-        print(name)
         
-        switch regionSegment.selectedSegmentIndex {
-        case 0:
-            regionTxt = "us"
-        case 1:
-            regionTxt = "eu"
-        case 2:
-            regionTxt = "kr"
-        default:
-            break
-        }
-        
-        switch platformSegment.selectedSegmentIndex {
-        case 0:
-            platformTxt = "pc"
-        case 1:
-            platformTxt = "psn"
-            regionTxt = "any"
-        case 2:
-            platformTxt = "xbl"
-            regionTxt = "any"
-        default:
-            break
-        }
-        
-        
-        //Download URL:
-        // https://toracross.com/api/v3/u/\(name)/blob?platform=\(platformTxt)
-        
-        //Save Player Name
-        defaults.set(name, forKey: "playerName")
-        defaults.set(regionTxt!, forKey: "playerRegion")
-        defaults.set(platformTxt!, forKey: "playerPlatform")
-        
-        //Check player inputted data.
-        func checkStatusCode(completed: @escaping DownloadComplete) {
-            let responseCode = 404
-            let url = "https://toracross.com/api/v3/u/\(name)/blob?platform=\(platformTxt!)"
-            print(url)
+        if name.isEmpty != true {
+            switch regionSegment.selectedSegmentIndex {
+            case 0:
+                regionTxt = "us"
+            case 1:
+                regionTxt = "eu"
+            case 2:
+                regionTxt = "kr"
+            default:
+                break
+            }
             
-            Alamofire.request(url).responseJSON { response in
-                let httpResponse = response.result
-                print(httpResponse)
-                if let errorCode = httpResponse.value as? Dictionary<String, AnyObject> {
-                    if let statusCode = errorCode ["error"] as? Int {
-                        print(statusCode)
-                        if statusCode != responseCode {
-                            print("Not called. Ever.")
-                        } else if statusCode == 429 {
-                            print("Rate limited, slow down.")
-                        } else {
-                            print("This 404'd.")
-                            self.stopAnimating()
-                            self.alertFailMessage()
+            switch platformSegment.selectedSegmentIndex {
+            case 0:
+                platformTxt = "pc"
+            case 1:
+                platformTxt = "psn"
+                regionTxt = "any"
+            case 2:
+                platformTxt = "xbl"
+                regionTxt = "any"
+            default:
+                break
+            }
+            
+            //Download URL:
+            // https://toracross.com/api/v3/u/\(name)/blob?platform=\(platformTxt)
+            
+            //Save Player Name
+            defaults.set(name, forKey: "playerName")
+            defaults.set(regionTxt!, forKey: "playerRegion")
+            defaults.set(platformTxt!, forKey: "playerPlatform")
+            
+            //Check player inputted data.
+            func checkStatusCode(completed: @escaping DownloadComplete) {
+                let url = "https://toracross.com/api/v3/u/\(name)/blob?platform=\(platformTxt!)"
+                
+                Alamofire.request(url).responseJSON { response in
+                    let data = response.response?.statusCode
+                    let download = response.result.value
+                    
+                    print(data!)
+                    if data != 404 {
+                        if let JSON = download as? Dictionary<String, AnyObject> {
+                            if let region = JSON["\(self.regionTxt!)"] as? Dictionary<String, AnyObject> {
+                                if let stats = region["stats"] as? Dictionary<String, AnyObject> {
+                                    if let competitive = stats["competitive"] as? [String: AnyObject] {
+                                        print(competitive.count)
+                                        if competitive.count != 0 {
+                                            print("There's data here.")
+                                            self.validProfile = true
+                                        } else {
+                                            self.stopAnimating()
+                                            self.alertFailMessage()
+                                        }
+                                    }
+                                }
+                            }
                         }
+                    } else {
+                        print("404 error")
+                        self.stopAnimating()
+                        self.alertFailMessage()
                     }
+                    completed()
                 }
-                completed()
             }
-        }
-        
-        checkStatusCode { DownloadComplete in
-            if self.battleTagTxt.text != "" {
-                //Wait 4s, perform segue.
-                sleep(5)
-                self.performSegue(withIdentifier: "playerDataSegue", sender: nil)
-            } else {
-                print("Name was left blank.")
-                self.alertFailMessage()
+            
+            
+            checkStatusCode { DownloadComplete in
+                
+                if name.isEmpty != true {
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
+                        if self.validProfile != false {
+                            print("Data will be returned")
+                            self.performSegue(withIdentifier: "playerDataSegue", sender: nil)
+                        } else {
+                            print("No data to be had.")
+                        }
+                        
+                    }
+                } else {
+                    self.stopAnimating()
+                    self.alertFailMessage()
+                }
             }
+
+        } else {
+            alertFailMessage()
         }
     }
     

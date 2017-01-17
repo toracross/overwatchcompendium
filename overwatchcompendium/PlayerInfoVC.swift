@@ -108,6 +108,7 @@ class PlayerInfoVC: UIViewController {
         
         self.startAnimatingObjects()
         self.statsModel.downloadStatsData { DownloadComplete in
+            
             //Delay updating the image, it may return nil.
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
                 if self.statsModel.overallStatsCP.count != 0 {
@@ -116,7 +117,6 @@ class PlayerInfoVC: UIViewController {
                 }
                 self.updatePlayerUIQP()
                 self.stopAnimatingObjects()
-                print(self.statsModel.overallStatsCP)
             }
         }
     }
@@ -284,6 +284,15 @@ class PlayerInfoVC: UIViewController {
         self.playerHeroLoad.stopAnimating()
         self.playerTierLoad.stopAnimating()
 
+    }
+    
+    func alertFailMessage() {
+        let alert = UIAlertController(title: "No data found.",
+                                      message: "No Overwatch data was found with your battle tag, returning to previous menu.",
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "CLOSE", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
