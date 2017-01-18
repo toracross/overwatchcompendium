@@ -103,7 +103,6 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
                             }
                         }
                     } else {
-                        print("404 error")
                         self.stopAnimating()
                         self.alertFailMessage()
                     }
@@ -115,14 +114,11 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
             checkStatusCode { DownloadComplete in
                 
                 if name.isEmpty != true {
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
-                        if self.validProfile != false {
-                            print("Data will be returned")
-                            self.performSegue(withIdentifier: "playerDataSegue", sender: nil)
-                        } else {
-                            print("No data to be had.")
-                        }
-                        
+                    if self.validProfile != false {
+                        print("Data will be returned")
+                        self.performSegue(withIdentifier: "playerDataSegue", sender: nil)
+                    } else {
+                        print("No data to be had.")
                     }
                 } else {
                     self.stopAnimating()

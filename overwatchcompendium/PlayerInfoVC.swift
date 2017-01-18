@@ -13,7 +13,6 @@ class PlayerInfoVC: UIViewController {
     //Title
     @IBOutlet weak var playerName: CustomLblTitle!
     @IBOutlet weak var gameType: UILabel!
-    
     //Player Data
     @IBOutlet weak var playerDataControl: UISegmentedControl!
     @IBOutlet weak var playerAvatarImg: UIImageView!
@@ -22,10 +21,8 @@ class PlayerInfoVC: UIViewController {
     @IBOutlet weak var playerHeroLoad: NVActivityIndicatorView!
     @IBOutlet weak var playerTierImg: UIImageView!
     @IBOutlet weak var playerTierLoad: NVActivityIndicatorView!
-    
     //Quickplay
     @IBOutlet weak var playerWinsQP: UILabel!
-    
     //Competitive
     @IBOutlet weak var playerTiesCP: UILabel!
     @IBOutlet weak var playerCompRank: UILabel!
@@ -33,7 +30,7 @@ class PlayerInfoVC: UIViewController {
     @IBOutlet weak var playerLossesCP: UILabel!
     @IBOutlet weak var playerGames: UILabel!
     @IBOutlet weak var playerLevelCP: UILabel!
-    
+    @IBOutlet weak var playerLevelFrame: UIImageView!
     //Stats
     @IBOutlet weak var playerStatsControl: UISegmentedControl!
     //Combat
@@ -105,19 +102,17 @@ class PlayerInfoVC: UIViewController {
         super.viewDidLoad()
         statsModel = PlayerModel()
         playerName.text = savedPlayerName!.replacingOccurrences(of: "-", with: "#")
-        
         self.startAnimatingObjects()
+        
         self.statsModel.downloadStatsData { DownloadComplete in
             
-            //Delay updating the image, it may return nil.
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-                if self.statsModel.overallStatsCP.count != 0 {
-                    self.playerDataControl.isHidden = false
-                    self.playerStatsControl.isHidden = false
-                }
-                self.updatePlayerUIQP()
-                self.stopAnimatingObjects()
+            if self.statsModel.overallStatsCP.count != 0 {
+                self.playerDataControl.isHidden = false
+                self.playerStatsControl.isHidden = false
             }
+            self.updatePlayerUIQP()
+            self.updateStatsUIQP()
+            self.stopAnimatingObjects()
         }
     }
     
@@ -152,7 +147,9 @@ class PlayerInfoVC: UIViewController {
     func updatePlayerUIQP() {
         let heroesPlaytimeQP: [Dictionary<String, Double>] = [statsModel.playtimeQP]
         let sortedHeroesQP = heroesPlaytimeQP.flatMap({$0}).sorted { $0.0.1 > $0.1.1}
-
+        let prestige = self.statsModel.overallStatsQP["prestige"]! as! Int
+        let level = self.statsModel.overallStatsQP["level"]!
+        
         //Player Data
         let playerRankImg = "\(statsModel.overallStatsQP["tier"]!)"
         let playerLevel = "\(statsModel.overallStatsQP["level"]!)"
@@ -178,9 +175,17 @@ class PlayerInfoVC: UIViewController {
         if playerRankImg != "<null>" {
             self.playerTierImg.image = UIImage(named: "\(playerRankImg)")
         } else {
-            print("No Rank.")
             self.playerTierImg.image = UIImage(named: "false")
         }
+        
+        //player Rank Frame
+        
+        if prestige != 0 {
+            self.playerLevelFrame.image = UIImage(named: "\(prestige)\(level)")
+        } else if prestige == 0 {
+            self.playerLevelFrame.image = UIImage(named: "\(level)")
+        }
+        
         
         self.playerLevelCP.text = "\(playerLevel)"
         self.playerCompRank.text = "\(playerRank)"
@@ -217,9 +222,16 @@ class PlayerInfoVC: UIViewController {
         //Combat
         self.meleeFinalBlows.text = "\(statsModel.gameStatsQP["melee_final_blows"]!)"
         self.soloKills.text = "\(statsModel.gameStatsQP["solo_kills"]!)"
-        
+        self.objectiveKills.text = "\(statsModel.gameStatsQP["objective_kills"]!)"
+        self.finalBlows.text = "\(statsModel.gameStatsQP["final_blows"]!)"
+        self.damageDone.text = "\(statsModel.gameStatsQP["damage_done"]!)"
+        self.eliminations.text = "\(statsModel.gameStatsQP["eliminations"]!)"
+        self.environmentalKills.text = "\(statsModel.gameStatsQP["environmental_kills"]!)"
+        self.multiKills.text = "\(statsModel.gameStatsQP["multikills"]!)"
         //Assists
-        
+        self.reconAssists.text = "\(statsModel.gameStatsQP["recon_assists"]!)"
+        self.healingDone.text = "\(statsModel.gameStatsQP["healing_done"]!)"
+        self.teleporterPadsDestroyed.text = "\(statsModel.gameStatsQP["teleporter_pads_destroyed"]!)"
         //Average
         self.meleeFinalBlowsAverage.text = "\(statsModel.averageStatsQP["final_blows_avg"]!)"
         self.timeSpentOnFireAverage.text = "\(statsModel.averageStatsQP["time_spent_on_fire_avg"]!)"
@@ -230,25 +242,60 @@ class PlayerInfoVC: UIViewController {
         self.finalBlowsAverage.text = "\(statsModel.averageStatsQP["final_blows_avg"]!)"
         self.deathsAverage.text = "\(statsModel.averageStatsQP["deaths_avg"]!)"
         self.damageDoneAverage.text = "\(statsModel.averageStatsQP["damage_done_avg"]!)"
-        self.eliminationsAverage.text = "\(statsModel.averageStatsQP["eliminations_avg"])"
+        self.eliminationsAverage.text = "\(statsModel.averageStatsQP["eliminations_avg"]!)"
         //Misc
-        
+        self.meleeFinalBlowsMostInGame.text = "\(statsModel.gameStatsQP["melee_final_blows_most_in_game"]!)"
+        self.reconAssistsAverage.text = "\(statsModel.averageStatsQP["recon_assists_avg"]!)"
+        self.defensiveAssists.text = "\(statsModel.gameStatsQP["defensive_assists"]!)"
+        self.defensiveAssistsAverage.text = "\(statsModel.averageStatsQP["defensive_assists_avg"]!)"
+        self.offensiveAssists.text = "\(statsModel.gameStatsQP["offensive_assists"]!)"
+        self.offensiveAssistsAverage.text = "\(statsModel.averageStatsQP["offensive_assists_avg"]!)"
         //Best
-        
+        self.eliminationsMost.text = "\(statsModel.gameStatsQP["eliminations_most_in_game"]!)"
+        self.finalBlowsMost.text = "\(statsModel.gameStatsQP["final_blows_most_in_game"]!)"
+        self.damageDoneMost.text = "\(statsModel.gameStatsQP["damage_done_most_in_game"]!)"
+        self.healingDoneMost.text = "\(statsModel.gameStatsQP["healing_done_most_in_game"]!)"
+        self.defensiveAssistsMost.text = "\(statsModel.gameStatsQP["defensive_assists_most_in_game"]!)"
+        self.offensiveAssistsMost.text = "\(statsModel.gameStatsQP["offensive_assists_most_in_game"]!)"
+        self.objectiveKillsMost.text = "\(statsModel.gameStatsQP["objective_kills_most_in_game"]!)"
+        self.objectiveTimeMost.text = "\(statsModel.gameStatsQP["objective_time_most_in_game"]!) HRS"
+        self.multiKillBest.text = "\(statsModel.gameStatsQP["multikill_best"]!)"
+        self.soloKillsMost.text = "\(statsModel.gameStatsQP["solo_kills_most_in_game"]!)"
+        let timeSpentOnFireMost = "\(statsModel.gameStatsQP["time_spent_on_fire_most_in_game"]!)"
+        self.timeSpentOnFireMost.text = "\(String(timeSpentOnFireMost.characters.prefix(4))) HRS"
         //Match Awards
-        
+        self.cards.text = "\(statsModel.gameStatsQP["cards"]!)"
+        self.medals.text = "\(statsModel.gameStatsQP["medals"]!)"
+        self.medalsGold.text = "\(statsModel.gameStatsQP["medals_gold"]!)"
+        self.medalsSilver.text = "\(statsModel.gameStatsQP["medals_silver"]!)"
+        self.medalsBronze.text = "\(statsModel.gameStatsQP["medals_bronze"]!)"
         //Game
-        
+        self.gamesWon.text = "\(statsModel.gameStatsQP["games_won"]!)"
+        let timeSpentOnFire = "\(statsModel.gameStatsQP["time_spent_on_fire"]!)"
+        self.timeSpentOnFire.text = "\(String(timeSpentOnFire.characters.prefix(4))) HRS"
+        let objectiveTime = "\(statsModel.gameStatsQP["objective_time"]!)"
+        self.objectiveTime.text = "\(String(objectiveTime.characters.prefix(4))) HRS"
+        self.timePlayed.text = "\(statsModel.gameStatsQP["time_played"]!) HRS"
         //Deaths
-        self.deaths.text = "\(statsModel.gameStatsQP["deaths"])"
+        self.deaths.text = "\(statsModel.gameStatsQP["deaths"]!)"
+        self.environmentalDeaths.text = "\(statsModel.gameStatsQP["environmental_deaths"]!)"
         
     }
     
     func updateStatsUICP() {
         //Combat
-        
+        self.meleeFinalBlows.text = "\(statsModel.gameStatsCP["melee_final_blows"]!)"
+        self.soloKills.text = "\(statsModel.gameStatsCP["solo_kills"]!)"
+        self.objectiveKills.text = "\(statsModel.gameStatsCP["objective_kills"]!)"
+        self.finalBlows.text = "\(statsModel.gameStatsCP["final_blows"]!)"
+        self.damageDone.text = "\(statsModel.gameStatsCP["damage_done"]!)"
+        self.eliminations.text = "\(statsModel.gameStatsCP["eliminations"]!)"
+        self.environmentalKills.text = "\(statsModel.gameStatsCP["environmental_kills"]!)"
+        self.multiKills.text = "\(statsModel.gameStatsCP["multikills"]!)"
         //Assists
-        
+        self.reconAssists.text = "\(statsModel.gameStatsCP["recon_assists"]!)"
+        self.healingDone.text = "\(statsModel.gameStatsCP["healing_done"]!)"
+        self.teleporterPadsDestroyed.text = " -- "
         //Average
         self.meleeFinalBlowsAverage.text = "\(statsModel.averageStatsCP["final_blows_avg"]!)"
         self.timeSpentOnFireAverage.text = "\(statsModel.averageStatsCP["time_spent_on_fire_avg"]!)"
@@ -260,16 +307,42 @@ class PlayerInfoVC: UIViewController {
         self.deathsAverage.text = "\(statsModel.averageStatsCP["deaths_avg"]!)"
         self.damageDoneAverage.text = "\(statsModel.averageStatsCP["damage_done_avg"]!)"
         self.eliminationsAverage.text = "\(statsModel.averageStatsCP["eliminations_avg"]!)"
-        
         //Misc
-        
+        self.meleeFinalBlowsMostInGame.text = "\(statsModel.gameStatsCP["melee_final_blows_most_in_game"]!)"
+        self.reconAssistsAverage.text = "\(statsModel.averageStatsCP["recon_assists_avg"]!)"
+        self.defensiveAssists.text = "\(statsModel.gameStatsCP["defensive_assists"]!)"
+        self.defensiveAssistsAverage.text = "\(statsModel.averageStatsCP["defensive_assists_avg"]!)"
+        self.offensiveAssists.text = "\(statsModel.gameStatsCP["offensive_assists"]!)"
+        self.offensiveAssistsAverage.text = "\(statsModel.averageStatsCP["offensive_assists_avg"]!)"
         //Best
-        
+        self.eliminationsMost.text = "\(statsModel.gameStatsCP["eliminations_most_in_game"]!)"
+        self.finalBlowsMost.text = "\(statsModel.gameStatsCP["final_blows_most_in_game"]!)"
+        self.damageDoneMost.text = "\(statsModel.gameStatsCP["damage_done_most_in_game"]!)"
+        self.healingDoneMost.text = "\(statsModel.gameStatsCP["healing_done_most_in_game"]!)"
+        self.defensiveAssistsMost.text = "\(statsModel.gameStatsCP["defensive_assists_most_in_game"]!)"
+        self.offensiveAssistsMost.text = "\(statsModel.gameStatsCP["offensive_assists_most_in_game"]!)"
+        self.objectiveKillsMost.text = "\(statsModel.gameStatsCP["objective_kills_most_in_game"]!)"
+        self.objectiveTimeMost.text = "\(statsModel.gameStatsCP["objective_time_most_in_game"]!) HRS"
+        self.multiKillBest.text = "\(statsModel.gameStatsCP["multikill_best"]!)"
+        self.soloKillsMost.text = "\(statsModel.gameStatsCP["solo_kills_most_in_game"]!)"
+        let timeSpentOnFireMost = "\(statsModel.gameStatsCP["time_spent_on_fire_most_in_game"]!)"
+        self.timeSpentOnFireMost.text = "\(String(timeSpentOnFireMost.characters.prefix(4))) HRS"
         //Match Awards
-        
+        self.cards.text = "\(statsModel.gameStatsCP["cards"]!)"
+        self.medals.text = "\(statsModel.gameStatsCP["medals"]!)"
+        self.medalsGold.text = "\(statsModel.gameStatsCP["medals_gold"]!)"
+        self.medalsSilver.text = "\(statsModel.gameStatsCP["medals_silver"]!)"
+        self.medalsBronze.text = "\(statsModel.gameStatsCP["medals_bronze"]!)"
         //Game
-        
+        self.gamesWon.text = "\(statsModel.gameStatsCP["games_won"]!)"
+        let timeSpentOnFire = "\(statsModel.gameStatsCP["time_spent_on_fire"]!)"
+        self.timeSpentOnFire.text = "\(String(timeSpentOnFire.characters.prefix(4))) HRS"
+        let objectiveTime = "\(statsModel.gameStatsCP["objective_time"]!)"
+        self.objectiveTime.text = "\(String(objectiveTime.characters.prefix(4))) HRS"
+        self.timePlayed.text = "\(statsModel.gameStatsCP["time_played"]!) HRS"
         //Deaths
+        self.deaths.text = "\(statsModel.gameStatsCP["deaths"]!)"
+        self.environmentalDeaths.text = "\(statsModel.gameStatsCP["environmental_deaths"]!)"
     }
     
     func startAnimatingObjects() {
