@@ -149,18 +149,21 @@ class PlayerInfoVC: UIViewController {
         let sortedHeroesQP = heroesPlaytimeQP.flatMap({$0}).sorted { $0.0.1 > $0.1.1}
         let prestige = self.statsModel.overallStatsQP["prestige"]! as! Int
         let level = self.statsModel.overallStatsQP["level"]!
-        
-        //Player Data
         let playerRankImg = "\(statsModel.overallStatsQP["tier"]!)"
         let playerLevel = "\(statsModel.overallStatsQP["level"]!)"
         let playerRank = "\(statsModel.overallStatsQP["comprank"]!)"
-        //Quickplay
         let playerWinsQP = "\(statsModel.overallStatsQP["wins"]!)"
         
-        //Pixel Portrait
+        self.playerLevelCP.text = "\(playerLevel)"
+        self.playerCompRank.text = "\(playerRank)"
+        self.playerWinsQP.text = "\(playerWinsQP)"
+        self.playerGames.text = "--"
+        self.playerTiesCP.text = "--"
+        self.playerLossesCP.text = "--"
+        self.playerWinRateCP.text = "--"
+        self.gameType.text = "Quickplay"
         self.playerHeroImg.image = UIImage(named: "pixel\(sortedHeroesQP[0].key)")
         
-        //Player Avatar Image
         if let avatarUrl = URL(string: "\(statsModel.overallStatsQP["avatar"]!)") {
             do {
                 let avatarData = try Data(contentsOf: avatarUrl)
@@ -171,30 +174,17 @@ class PlayerInfoVC: UIViewController {
             }
         }
         
-        //Player Rank Image
         if playerRankImg != "<null>" {
             self.playerTierImg.image = UIImage(named: "\(playerRankImg)")
         } else {
             self.playerTierImg.image = UIImage(named: "false")
         }
         
-        //player Rank Frame
-        
         if prestige != 0 {
             self.playerLevelFrame.image = UIImage(named: "\(prestige)\(level)")
         } else if prestige == 0 {
             self.playerLevelFrame.image = UIImage(named: "\(level)")
         }
-        
-        
-        self.playerLevelCP.text = "\(playerLevel)"
-        self.playerCompRank.text = "\(playerRank)"
-        self.playerWinsQP.text = "\(playerWinsQP)"
-        self.playerGames.text = "--"
-        self.playerTiesCP.text = "--"
-        self.playerLossesCP.text = "--"
-        self.playerWinRateCP.text = "--"
-        self.gameType.text = "Quickplay"
     }
     
     //Update Player Data to Competitive Data
@@ -219,131 +209,230 @@ class PlayerInfoVC: UIViewController {
     }
     
     func updateStatsUIQP() {
+        //There's always the possibility of code returning nil due to getters, if else takes care of that.
         //Combat
-        self.meleeFinalBlows.text = "\(statsModel.gameStatsQP["melee_final_blows"]!)"
-        self.soloKills.text = "\(statsModel.gameStatsQP["solo_kills"]!)"
-        self.objectiveKills.text = "\(statsModel.gameStatsQP["objective_kills"]!)"
-        self.finalBlows.text = "\(statsModel.gameStatsQP["final_blows"]!)"
-        self.damageDone.text = "\(statsModel.gameStatsQP["damage_done"]!)"
-        self.eliminations.text = "\(statsModel.gameStatsQP["eliminations"]!)"
-        self.environmentalKills.text = "\(statsModel.gameStatsQP["environmental_kills"]!)"
-        self.multiKills.text = "\(statsModel.gameStatsQP["multikills"]!)"
+        if statsModel.gameStatsQP["melee_final_blows"] != nil { self.meleeFinalBlows.text = "\(statsModel.gameStatsQP["melee_final_blows"]!)" }
+        if statsModel.gameStatsQP["solo_kills"] != nil { self.soloKills.text = "\(statsModel.gameStatsQP["solo_kills"]!)" }
+        if statsModel.gameStatsQP["objective_kills"] != nil { self.objectiveKills.text = "\(statsModel.gameStatsQP["objective_kills"]!)" }
+        if statsModel.gameStatsQP["final_blows"] != nil { self.finalBlows.text = "\(statsModel.gameStatsQP["final_blows"]!)" }
+        if statsModel.gameStatsQP["damage_done"] != nil { self.damageDone.text = "\(statsModel.gameStatsQP["damage_done"]!)" }
+        if statsModel.gameStatsQP["eliminations"] != nil { self.eliminations.text = "\(statsModel.gameStatsQP["eliminations"]!)" }
+        if statsModel.gameStatsQP["environmental_kills"] != nil { self.environmentalKills.text = "\(statsModel.gameStatsQP["environmental_kills"]!)" }
+        if statsModel.gameStatsQP["multikills"] != nil { self.multiKills.text = "\(statsModel.gameStatsQP["multikills"]!)" }
         //Assists
-        self.reconAssists.text = "\(statsModel.gameStatsQP["recon_assists"]!)"
-        self.healingDone.text = "\(statsModel.gameStatsQP["healing_done"]!)"
-        self.teleporterPadsDestroyed.text = "\(statsModel.gameStatsQP["teleporter_pads_destroyed"]!)"
+        if statsModel.gameStatsQP["recon_assists"] != nil { self.reconAssists.text = "\(statsModel.gameStatsQP["recon_assists"]!)" }
+        if statsModel.gameStatsQP["healing_done"] != nil { self.healingDone.text = "\(statsModel.gameStatsQP["healing_done"]!)" }
+        if statsModel.gameStatsQP["teleporter_pads_destroyed"] != nil { self.teleporterPadsDestroyed.text = "\(statsModel.gameStatsQP["teleporter_pads_destroyed"]!)" }
         //Average
-        self.meleeFinalBlowsAverage.text = "\(statsModel.averageStatsQP["final_blows_avg"]!)"
-        self.timeSpentOnFireAverage.text = "\(statsModel.averageStatsQP["time_spent_on_fire_avg"]!)"
-        self.soloKillsAverage.text = "\(statsModel.averageStatsQP["solo_kills_avg"]!)"
-        self.objectiveTimeAverage.text = "\(statsModel.averageStatsQP["objective_kills_avg"]!)"
-        self.objectiveKillsAverage.text = "\(statsModel.averageStatsQP["objective_kills_avg"]!)"
-        self.healingDoneAverage.text = "\(statsModel.averageStatsQP["healing_done_avg"]!)"
-        self.finalBlowsAverage.text = "\(statsModel.averageStatsQP["final_blows_avg"]!)"
-        self.deathsAverage.text = "\(statsModel.averageStatsQP["deaths_avg"]!)"
-        self.damageDoneAverage.text = "\(statsModel.averageStatsQP["damage_done_avg"]!)"
-        self.eliminationsAverage.text = "\(statsModel.averageStatsQP["eliminations_avg"]!)"
+        if statsModel.averageStatsQP["final_blows_avg"] != nil {
+            let meleeFinalBlowsAverage = "\(statsModel.averageStatsQP["final_blows_avg"]!)"
+            self.meleeFinalBlowsAverage.text = "\(String(meleeFinalBlowsAverage.characters.prefix(4)))"
+            
+        }
+        if statsModel.averageStatsQP["time_spent_on_fire_avg"] != nil {
+            let timeSpentOnFireAverage = "\(statsModel.averageStatsQP["time_spent_on_fire_avg"]!)"
+            self.timeSpentOnFireAverage.text = "\(String(timeSpentOnFireAverage.characters.prefix(4))) HRS"
+            
+        }
+        if statsModel.averageStatsQP["solo_kills_avg"] != nil {
+            let soloKillsAverage = "\(statsModel.averageStatsQP["solo_kills_avg"]!)"
+            self.soloKillsAverage.text = "\(String(soloKillsAverage.characters.prefix(4)))"
+            
+        }
+        if statsModel.averageStatsQP["objective_time_avg"] != nil {
+            let objectiveTimeAverage = "\(statsModel.averageStatsQP["objective_time_avg"]!)"
+            self.objectiveTimeAverage.text = "\(String(objectiveTimeAverage.characters.prefix(4))) HRS"
+            
+        }
+        if statsModel.averageStatsQP["objective_kills_avg"] != nil {
+            let objectiveKillsAverage = "\(statsModel.averageStatsQP["objective_kills_avg"]!)"
+            self.objectiveKillsAverage.text = "\(String(objectiveKillsAverage.characters.prefix(4)))"
+            
+        }
+        if statsModel.averageStatsQP["healing_done_avg"] != nil {
+            let healingDoneAverage = "\(statsModel.averageStatsQP["healing_done_avg"]!)"
+            self.healingDoneAverage.text = "\(String(healingDoneAverage.characters.prefix(4)))"
+            
+        }
+        if statsModel.averageStatsQP["final_blows_avg"] != nil {
+            let finalBlowsAverage = "\(statsModel.averageStatsQP["final_blows_avg"]!)"
+            self.finalBlowsAverage.text = "\(String(finalBlowsAverage.characters.prefix(4)))"
+            
+        }
+        if statsModel.averageStatsQP["deaths_avg"] != nil {
+            let deathsAverage =  "\(statsModel.averageStatsQP["deaths_avg"]!)"
+            self.deathsAverage.text = "\(String(deathsAverage.characters.prefix(4)))"
+            
+        }
+        if statsModel.averageStatsQP["damage_done_avg"] != nil {
+            let damageDoneAverage = "\(statsModel.averageStatsQP["damage_done_avg"]!)"
+            self.damageDoneAverage.text = "\(String(damageDoneAverage.characters.prefix(4)))"
+            
+        }
+        if statsModel.averageStatsQP["eliminations_avg"] != nil {
+            let eliminationsAverage = "\(statsModel.averageStatsQP["eliminations_avg"]!)"
+            self.eliminationsAverage.text = "\(String(eliminationsAverage.characters.prefix(4)))"
+            
+        }
         //Misc
-        self.meleeFinalBlowsMostInGame.text = "\(statsModel.gameStatsQP["melee_final_blows_most_in_game"]!)"
-        self.reconAssistsAverage.text = "\(statsModel.averageStatsQP["recon_assists_avg"]!)"
-        self.defensiveAssists.text = "\(statsModel.gameStatsQP["defensive_assists"]!)"
-        self.defensiveAssistsAverage.text = "\(statsModel.averageStatsQP["defensive_assists_avg"]!)"
-        self.offensiveAssists.text = "\(statsModel.gameStatsQP["offensive_assists"]!)"
-        self.offensiveAssistsAverage.text = "\(statsModel.averageStatsQP["offensive_assists_avg"]!)"
+        if statsModel.gameStatsQP["melee_final_blows_most_in_game"] != nil { self.meleeFinalBlowsMostInGame.text = "\(statsModel.gameStatsQP["melee_final_blows_most_in_game"]!)" }
+        if statsModel.averageStatsQP["recon_assists_avg"] != nil { self.reconAssistsAverage.text = "\(statsModel.averageStatsQP["recon_assists_avg"]!)" }
+        if statsModel.gameStatsQP["defensive_assists"] != nil { self.defensiveAssists.text = "\(statsModel.gameStatsQP["defensive_assists"]!)" }
+        if statsModel.averageStatsQP["defensive_assists_avg"] != nil { self.defensiveAssistsAverage.text = "\(statsModel.averageStatsQP["defensive_assists_avg"]!)" }
+        if statsModel.gameStatsQP["offensive_assists"] != nil { self.offensiveAssists.text = "\(statsModel.gameStatsQP["offensive_assists"]!)" }
+        if statsModel.averageStatsQP["offensive_assists_avg"] != nil { self.offensiveAssistsAverage.text = "\(statsModel.averageStatsQP["offensive_assists_avg"]!)" }
         //Best
-        self.eliminationsMost.text = "\(statsModel.gameStatsQP["eliminations_most_in_game"]!)"
-        self.finalBlowsMost.text = "\(statsModel.gameStatsQP["final_blows_most_in_game"]!)"
-        self.damageDoneMost.text = "\(statsModel.gameStatsQP["damage_done_most_in_game"]!)"
-        self.healingDoneMost.text = "\(statsModel.gameStatsQP["healing_done_most_in_game"]!)"
-        self.defensiveAssistsMost.text = "\(statsModel.gameStatsQP["defensive_assists_most_in_game"]!)"
-        self.offensiveAssistsMost.text = "\(statsModel.gameStatsQP["offensive_assists_most_in_game"]!)"
-        self.objectiveKillsMost.text = "\(statsModel.gameStatsQP["objective_kills_most_in_game"]!)"
-        self.objectiveTimeMost.text = "\(statsModel.gameStatsQP["objective_time_most_in_game"]!) HRS"
-        self.multiKillBest.text = "\(statsModel.gameStatsQP["multikill_best"]!)"
-        self.soloKillsMost.text = "\(statsModel.gameStatsQP["solo_kills_most_in_game"]!)"
-        let timeSpentOnFireMost = "\(statsModel.gameStatsQP["time_spent_on_fire_most_in_game"]!)"
-        self.timeSpentOnFireMost.text = "\(String(timeSpentOnFireMost.characters.prefix(4))) HRS"
+        if statsModel.gameStatsQP["eliminations_most_in_game"] != nil { self.eliminationsMost.text = "\(statsModel.gameStatsQP["eliminations_most_in_game"]!)" }
+        if statsModel.gameStatsQP["final_blows_most_in_game"] != nil { self.finalBlowsMost.text = "\(statsModel.gameStatsQP["final_blows_most_in_game"]!)" }
+        if statsModel.gameStatsQP["damage_done_most_in_game"] != nil { self.damageDoneMost.text = "\(statsModel.gameStatsQP["damage_done_most_in_game"]!)" }
+        if statsModel.gameStatsQP["healing_done_most_in_game"] != nil { self.healingDoneMost.text = "\(statsModel.gameStatsQP["healing_done_most_in_game"]!)" }
+        if statsModel.gameStatsQP["defensive_assists_most_in_game"] != nil { self.defensiveAssistsMost.text = "\(statsModel.gameStatsQP["defensive_assists_most_in_game"]!)" }
+        if statsModel.gameStatsQP["offensive_assists_most_in_game"] != nil { self.offensiveAssistsMost.text = "\(statsModel.gameStatsQP["offensive_assists_most_in_game"]!)" }
+        if statsModel.gameStatsQP["objective_kills_most_in_game"] != nil { self.objectiveKillsMost.text = "\(statsModel.gameStatsQP["objective_kills_most_in_game"]!)" }
+        if statsModel.gameStatsQP["objective_time_most_in_game"] != nil { self.objectiveTimeMost.text = "\(statsModel.gameStatsQP["objective_time_most_in_game"]!) HRS" }
+        if statsModel.gameStatsQP["multikill_best"] != nil { self.multiKillBest.text = "\(statsModel.gameStatsQP["multikill_best"]!)" }
+        if statsModel.gameStatsQP["solo_kills_most_in_game"] != nil { self.soloKillsMost.text = "\(statsModel.gameStatsQP["solo_kills_most_in_game"]!)" }
+        if statsModel.gameStatsQP["time_spent_on_fire_most_in_game"] != nil {
+            let timeSpentOnFireMost = "\(statsModel.gameStatsQP["time_spent_on_fire_most_in_game"]!)"
+            self.timeSpentOnFireMost.text = "\(String(timeSpentOnFireMost.characters.prefix(4))) HRS"
+        }
         //Match Awards
-        self.cards.text = "\(statsModel.gameStatsQP["cards"]!)"
-        self.medals.text = "\(statsModel.gameStatsQP["medals"]!)"
-        self.medalsGold.text = "\(statsModel.gameStatsQP["medals_gold"]!)"
-        self.medalsSilver.text = "\(statsModel.gameStatsQP["medals_silver"]!)"
-        self.medalsBronze.text = "\(statsModel.gameStatsQP["medals_bronze"]!)"
+        if statsModel.gameStatsQP["cards"] != nil { self.cards.text = "\(statsModel.gameStatsQP["cards"]!)" }
+        if statsModel.gameStatsQP["medals"] != nil { self.medals.text = "\(statsModel.gameStatsQP["medals"]!)" }
+        if statsModel.gameStatsQP["medals_gold"] != nil { self.medalsGold.text = "\(statsModel.gameStatsQP["medals_gold"]!)" }
+        if statsModel.gameStatsQP["medals_silver"] != nil { self.medalsSilver.text = "\(statsModel.gameStatsQP["medals_silver"]!)" }
+        if statsModel.gameStatsQP["medals_bronze"] != nil { self.medalsBronze.text = "\(statsModel.gameStatsQP["medals_bronze"]!)" }
         //Game
-        self.gamesWon.text = "\(statsModel.gameStatsQP["games_won"]!)"
-        let timeSpentOnFire = "\(statsModel.gameStatsQP["time_spent_on_fire"]!)"
-        self.timeSpentOnFire.text = "\(String(timeSpentOnFire.characters.prefix(4))) HRS"
-        let objectiveTime = "\(statsModel.gameStatsQP["objective_time"]!)"
-        self.objectiveTime.text = "\(String(objectiveTime.characters.prefix(4))) HRS"
-        self.timePlayed.text = "\(statsModel.gameStatsQP["time_played"]!) HRS"
+        if statsModel.gameStatsQP["games_won"] != nil { self.gamesWon.text = "\(statsModel.gameStatsQP["games_won"]!)" }
+        if statsModel.gameStatsQP["time_spent_on_fire"] != nil {
+            let timeSpentOnFire = "\(statsModel.gameStatsQP["time_spent_on_fire"]!)"
+            self.timeSpentOnFire.text = "\(String(timeSpentOnFire.characters.prefix(4))) HRS"
+        }
+        if statsModel.gameStatsQP["objective_time"] != nil {
+            let objectiveTime = "\(statsModel.gameStatsQP["objective_time"]!)"
+            self.objectiveTime.text = "\(String(objectiveTime.characters.prefix(4))) HRS"
+        }
+        if statsModel.gameStatsQP["time_played"] != nil { self.timePlayed.text = "\(statsModel.gameStatsQP["time_played"]!) HRS" }
         //Deaths
-        self.deaths.text = "\(statsModel.gameStatsQP["deaths"]!)"
-        self.environmentalDeaths.text = "\(statsModel.gameStatsQP["environmental_deaths"]!)"
-        
+        if statsModel.gameStatsQP["deaths"] != nil { self.deaths.text = "\(statsModel.gameStatsQP["deaths"]!)" }
+        if statsModel.gameStatsQP["environmental_deaths"] != nil { self.environmentalDeaths.text = "\(statsModel.gameStatsQP["environmental_deaths"]!)" }
     }
     
     func updateStatsUICP() {
+        //There's always the possibility of code returning nil due to getters, if else takes care of that.
         //Combat
-        self.meleeFinalBlows.text = "\(statsModel.gameStatsCP["melee_final_blows"]!)"
-        self.soloKills.text = "\(statsModel.gameStatsCP["solo_kills"]!)"
-        self.objectiveKills.text = "\(statsModel.gameStatsCP["objective_kills"]!)"
-        self.finalBlows.text = "\(statsModel.gameStatsCP["final_blows"]!)"
-        self.damageDone.text = "\(statsModel.gameStatsCP["damage_done"]!)"
-        self.eliminations.text = "\(statsModel.gameStatsCP["eliminations"]!)"
-        self.environmentalKills.text = "\(statsModel.gameStatsCP["environmental_kills"]!)"
-        self.multiKills.text = "\(statsModel.gameStatsCP["multikills"]!)"
+        if statsModel.gameStatsCP["melee_final_blows"] != nil { self.meleeFinalBlows.text = "\(statsModel.gameStatsCP["melee_final_blows"]!)" }
+        if statsModel.gameStatsCP["solo_kills"] != nil { self.soloKills.text = "\(statsModel.gameStatsCP["solo_kills"]!)" }
+        if statsModel.gameStatsCP["objective_kills"] != nil { self.objectiveKills.text = "\(statsModel.gameStatsCP["objective_kills"]!)" }
+        if statsModel.gameStatsCP["final_blows"] != nil { self.finalBlows.text = "\(statsModel.gameStatsCP["final_blows"]!)" }
+        if statsModel.gameStatsCP["damage_done"] != nil { self.damageDone.text = "\(statsModel.gameStatsCP["damage_done"]!)" }
+        if statsModel.gameStatsCP["eliminations"] != nil { self.eliminations.text = "\(statsModel.gameStatsCP["eliminations"]!)" }
+        if statsModel.gameStatsCP["environmental_kills"] != nil { self.environmentalKills.text = "\(statsModel.gameStatsCP["environmental_kills"]!)" }
+        if statsModel.gameStatsCP["multikills"] != nil { self.multiKills.text = "\(statsModel.gameStatsCP["multikills"]!)" }
         //Assists
-        self.reconAssists.text = "\(statsModel.gameStatsCP["recon_assists"]!)"
-        self.healingDone.text = "\(statsModel.gameStatsCP["healing_done"]!)"
-        self.teleporterPadsDestroyed.text = " -- "
+        if statsModel.gameStatsCP["recon_assists"] != nil { self.reconAssists.text = "\(statsModel.gameStatsCP["recon_assists"]!)" }
+        if statsModel.gameStatsCP["healing_done"] != nil { self.healingDone.text = "\(statsModel.gameStatsCP["healing_done"]!)" }
+        if statsModel.gameStatsCP["teleporter_pads_destroyed"] != nil { self.teleporterPadsDestroyed.text = "\(statsModel.gameStatsCP["teleporter_pads_destroyed"]!)" }
         //Average
-        self.meleeFinalBlowsAverage.text = "\(statsModel.averageStatsCP["final_blows_avg"]!)"
-        self.timeSpentOnFireAverage.text = "\(statsModel.averageStatsCP["time_spent_on_fire_avg"]!)"
-        self.soloKillsAverage.text = "\(statsModel.averageStatsCP["solo_kills_avg"]!)"
-        self.objectiveTimeAverage.text = "\(statsModel.averageStatsCP["objective_kills_avg"]!)"
-        self.objectiveKillsAverage.text = "\(statsModel.averageStatsCP["objective_kills_avg"]!)"
-        self.healingDoneAverage.text = "\(statsModel.averageStatsCP["healing_done_avg"]!)"
-        self.finalBlowsAverage.text = "\(statsModel.averageStatsCP["final_blows_avg"]!)"
-        self.deathsAverage.text = "\(statsModel.averageStatsCP["deaths_avg"]!)"
-        self.damageDoneAverage.text = "\(statsModel.averageStatsCP["damage_done_avg"]!)"
-        self.eliminationsAverage.text = "\(statsModel.averageStatsCP["eliminations_avg"]!)"
+        if statsModel.averageStatsCP["final_blows_avg"] != nil {
+            let meleeFinalBlowsAverage = "\(statsModel.averageStatsCP["final_blows_avg"]!)"
+            self.meleeFinalBlowsAverage.text = "\(String(meleeFinalBlowsAverage.characters.prefix(4)))"
+        
+        }
+        if statsModel.averageStatsCP["time_spent_on_fire_avg"] != nil {
+            let timeSpentOnFireAverage = "\(statsModel.averageStatsCP["time_spent_on_fire_avg"]!)"
+            self.timeSpentOnFireAverage.text = "\(String(timeSpentOnFireAverage.characters.prefix(4))) HRS"
+        
+        }
+        if statsModel.averageStatsCP["solo_kills_avg"] != nil {
+            let soloKillsAverage = "\(statsModel.averageStatsCP["solo_kills_avg"]!)"
+            self.soloKillsAverage.text = "\(String(soloKillsAverage.characters.prefix(4)))"
+        
+        }
+        if statsModel.averageStatsCP["objective_time_avg"] != nil {
+            let objectiveTimeAverage = "\(statsModel.averageStatsCP["objective_time_avg"]!)"
+            self.objectiveTimeAverage.text = "\(String(objectiveTimeAverage.characters.prefix(4))) HRS"
+        
+        }
+        if statsModel.averageStatsCP["objective_kills_avg"] != nil {
+            let objectiveKillsAverage = "\(statsModel.averageStatsCP["objective_kills_avg"]!)"
+            self.objectiveKillsAverage.text = "\(String(objectiveKillsAverage.characters.prefix(4)))"
+        
+        }
+        if statsModel.averageStatsCP["healing_done_avg"] != nil {
+            let healingDoneAverage = "\(statsModel.averageStatsCP["healing_done_avg"]!)"
+            self.healingDoneAverage.text = "\(String(healingDoneAverage.characters.prefix(4)))"
+        
+        }
+        if statsModel.averageStatsCP["final_blows_avg"] != nil {
+            let finalBlowsAverage = "\(statsModel.averageStatsCP["final_blows_avg"]!)"
+            self.finalBlowsAverage.text = "\(String(finalBlowsAverage.characters.prefix(4)))"
+        
+        }
+        if statsModel.averageStatsCP["deaths_avg"] != nil {
+            let deathsAverage =  "\(statsModel.averageStatsCP["deaths_avg"]!)"
+            self.deathsAverage.text = "\(String(deathsAverage.characters.prefix(4)))"
+        
+        }
+        if statsModel.averageStatsCP["damage_done_avg"] != nil {
+            let damageDoneAverage = "\(statsModel.averageStatsCP["damage_done_avg"]!)"
+            self.damageDoneAverage.text = "\(String(damageDoneAverage.characters.prefix(4)))"
+        
+        }
+        if statsModel.averageStatsCP["eliminations_avg"] != nil {
+            let eliminationsAverage = "\(statsModel.averageStatsCP["eliminations_avg"]!)"
+            self.eliminationsAverage.text = "\(String(eliminationsAverage.characters.prefix(4)))"
+        
+        }
         //Misc
-        self.meleeFinalBlowsMostInGame.text = "\(statsModel.gameStatsCP["melee_final_blows_most_in_game"]!)"
-        self.reconAssistsAverage.text = "\(statsModel.averageStatsCP["recon_assists_avg"]!)"
-        self.defensiveAssists.text = "\(statsModel.gameStatsCP["defensive_assists"]!)"
-        self.defensiveAssistsAverage.text = "\(statsModel.averageStatsCP["defensive_assists_avg"]!)"
-        self.offensiveAssists.text = "\(statsModel.gameStatsCP["offensive_assists"]!)"
-        self.offensiveAssistsAverage.text = "\(statsModel.averageStatsCP["offensive_assists_avg"]!)"
+        if statsModel.gameStatsCP["melee_final_blows_most_in_game"] != nil { self.meleeFinalBlowsMostInGame.text = "\(statsModel.gameStatsCP["melee_final_blows_most_in_game"]!)" }
+        if statsModel.averageStatsCP["recon_assists_avg"] != nil { self.reconAssistsAverage.text = "\(statsModel.averageStatsCP["recon_assists_avg"]!)" }
+        if statsModel.gameStatsCP["defensive_assists"] != nil { self.defensiveAssists.text = "\(statsModel.gameStatsCP["defensive_assists"]!)" }
+        if statsModel.averageStatsCP["defensive_assists_avg"] != nil { self.defensiveAssistsAverage.text = "\(statsModel.averageStatsCP["defensive_assists_avg"]!)" }
+        if statsModel.gameStatsCP["offensive_assists"] != nil { self.offensiveAssists.text = "\(statsModel.gameStatsCP["offensive_assists"]!)" }
+        if statsModel.averageStatsCP["offensive_assists_avg"] != nil { self.offensiveAssistsAverage.text = "\(statsModel.averageStatsCP["offensive_assists_avg"]!)" }
         //Best
-        self.eliminationsMost.text = "\(statsModel.gameStatsCP["eliminations_most_in_game"]!)"
-        self.finalBlowsMost.text = "\(statsModel.gameStatsCP["final_blows_most_in_game"]!)"
-        self.damageDoneMost.text = "\(statsModel.gameStatsCP["damage_done_most_in_game"]!)"
-        self.healingDoneMost.text = "\(statsModel.gameStatsCP["healing_done_most_in_game"]!)"
-        self.defensiveAssistsMost.text = "\(statsModel.gameStatsCP["defensive_assists_most_in_game"]!)"
-        self.offensiveAssistsMost.text = "\(statsModel.gameStatsCP["offensive_assists_most_in_game"]!)"
-        self.objectiveKillsMost.text = "\(statsModel.gameStatsCP["objective_kills_most_in_game"]!)"
-        self.objectiveTimeMost.text = "\(statsModel.gameStatsCP["objective_time_most_in_game"]!) HRS"
-        self.multiKillBest.text = "\(statsModel.gameStatsCP["multikill_best"]!)"
-        self.soloKillsMost.text = "\(statsModel.gameStatsCP["solo_kills_most_in_game"]!)"
-        let timeSpentOnFireMost = "\(statsModel.gameStatsCP["time_spent_on_fire_most_in_game"]!)"
-        self.timeSpentOnFireMost.text = "\(String(timeSpentOnFireMost.characters.prefix(4))) HRS"
+        if statsModel.gameStatsCP["eliminations_most_in_game"] != nil { self.eliminationsMost.text = "\(statsModel.gameStatsCP["eliminations_most_in_game"]!)" }
+        if statsModel.gameStatsCP["final_blows_most_in_game"] != nil { self.finalBlowsMost.text = "\(statsModel.gameStatsCP["final_blows_most_in_game"]!)" }
+        if statsModel.gameStatsCP["damage_done_most_in_game"] != nil { self.damageDoneMost.text = "\(statsModel.gameStatsCP["damage_done_most_in_game"]!)" }
+        if statsModel.gameStatsCP["healing_done_most_in_game"] != nil { self.healingDoneMost.text = "\(statsModel.gameStatsCP["healing_done_most_in_game"]!)" }
+        if statsModel.gameStatsCP["defensive_assists_most_in_game"] != nil { self.defensiveAssistsMost.text = "\(statsModel.gameStatsCP["defensive_assists_most_in_game"]!)" }
+        if statsModel.gameStatsCP["offensive_assists_most_in_game"] != nil { self.offensiveAssistsMost.text = "\(statsModel.gameStatsCP["offensive_assists_most_in_game"]!)" }
+        if statsModel.gameStatsCP["objective_kills_most_in_game"] != nil { self.objectiveKillsMost.text = "\(statsModel.gameStatsCP["objective_kills_most_in_game"]!)" }
+        if statsModel.gameStatsCP["objective_time_most_in_game"] != nil {
+            let objectiveTimeMost = "\(statsModel.gameStatsCP["objective_time_most_in_game"]!)"
+            self.objectiveTimeMost.text = "\(String(objectiveTimeMost.characters.prefix(4))) HRS"
+        
+        }
+        if statsModel.gameStatsCP["multikill_best"] != nil { self.multiKillBest.text = "\(statsModel.gameStatsCP["multikill_best"]!)" }
+        if statsModel.gameStatsCP["solo_kills_most_in_game"] != nil { self.soloKillsMost.text = "\(statsModel.gameStatsCP["solo_kills_most_in_game"]!)" }
+        if statsModel.gameStatsCP["time_spent_on_fire_most_in_game"] != nil {
+            let timeSpentOnFireMost = "\(statsModel.gameStatsCP["time_spent_on_fire_most_in_game"]!)"
+            self.timeSpentOnFireMost.text = "\(String(timeSpentOnFireMost.characters.prefix(4))) HRS"
+        }
         //Match Awards
-        self.cards.text = "\(statsModel.gameStatsCP["cards"]!)"
-        self.medals.text = "\(statsModel.gameStatsCP["medals"]!)"
-        self.medalsGold.text = "\(statsModel.gameStatsCP["medals_gold"]!)"
-        self.medalsSilver.text = "\(statsModel.gameStatsCP["medals_silver"]!)"
-        self.medalsBronze.text = "\(statsModel.gameStatsCP["medals_bronze"]!)"
+        if statsModel.gameStatsCP["cards"] != nil { self.cards.text = "\(statsModel.gameStatsCP["cards"]!)" }
+        if statsModel.gameStatsCP["medals"] != nil { self.medals.text = "\(statsModel.gameStatsCP["medals"]!)" }
+        if statsModel.gameStatsCP["medals_gold"] != nil { self.medalsGold.text = "\(statsModel.gameStatsCP["medals_gold"]!)" }
+        if statsModel.gameStatsCP["medals_silver"] != nil { self.medalsSilver.text = "\(statsModel.gameStatsCP["medals_silver"]!)" }
+        if statsModel.gameStatsCP["medals_bronze"] != nil { self.medalsBronze.text = "\(statsModel.gameStatsCP["medals_bronze"]!)" }
         //Game
-        self.gamesWon.text = "\(statsModel.gameStatsCP["games_won"]!)"
-        let timeSpentOnFire = "\(statsModel.gameStatsCP["time_spent_on_fire"]!)"
-        self.timeSpentOnFire.text = "\(String(timeSpentOnFire.characters.prefix(4))) HRS"
-        let objectiveTime = "\(statsModel.gameStatsCP["objective_time"]!)"
-        self.objectiveTime.text = "\(String(objectiveTime.characters.prefix(4))) HRS"
-        self.timePlayed.text = "\(statsModel.gameStatsCP["time_played"]!) HRS"
+        if statsModel.gameStatsCP["games_won"] != nil { self.gamesWon.text = "\(statsModel.gameStatsCP["games_won"]!)" }
+        if statsModel.gameStatsCP["time_spent_on_fire"] != nil {
+            let timeSpentOnFire = "\(statsModel.gameStatsCP["time_spent_on_fire"]!)"
+            self.timeSpentOnFire.text = "\(String(timeSpentOnFire.characters.prefix(4))) HRS"
+        }
+        if statsModel.gameStatsCP["objective_time"] != nil {
+            let objectiveTime = "\(statsModel.gameStatsCP["objective_time"]!)"
+            self.objectiveTime.text = "\(String(objectiveTime.characters.prefix(4))) HRS"
+        }
+        if statsModel.gameStatsCP["time_played"] != nil { self.timePlayed.text = "\(statsModel.gameStatsCP["time_played"]!) HRS" }
         //Deaths
-        self.deaths.text = "\(statsModel.gameStatsCP["deaths"]!)"
-        self.environmentalDeaths.text = "\(statsModel.gameStatsCP["environmental_deaths"]!)"
+        if statsModel.gameStatsCP["deaths"] != nil { self.deaths.text = "\(statsModel.gameStatsCP["deaths"]!)" }
+        if statsModel.gameStatsCP["environmental_deaths"] != nil { self.environmentalDeaths.text = "\(statsModel.gameStatsCP["environmental_deaths"]!)" }
     }
+    
+    
     
     func startAnimatingObjects() {
         self.playerAvatarLoad.startAnimating()

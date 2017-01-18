@@ -89,9 +89,9 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
                         if let JSON = download as? Dictionary<String, AnyObject> {
                             if let region = JSON["\(self.regionTxt!)"] as? Dictionary<String, AnyObject> {
                                 if let stats = region["stats"] as? Dictionary<String, AnyObject> {
-                                    if let competitive = stats["competitive"] as? [String: AnyObject] {
-                                        print(competitive.count)
-                                        if competitive.count != 0 {
+                                    if let quickplay = stats["quickplay"] as? [String: AnyObject] {
+                                        print(quickplay.count)
+                                        if quickplay.count != 0 {
                                             print("There's data here.")
                                             self.validProfile = true
                                         } else {
