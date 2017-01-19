@@ -8,8 +8,12 @@
 import UIKit
 import NVActivityIndicatorView
 
-class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var statsModel: PlayerModel!
+    var savedPlayerName = UserDefaults.standard.string(forKey: "playerName")
+    
+    
     //Title
     @IBOutlet weak var playerName: CustomLblTitle!
     @IBOutlet weak var gameType: UILabel!
@@ -94,12 +98,8 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     //Heroes
     @IBOutlet weak var tableView: UITableView!
     
-    
     //Achievements
-    
-    var statsModel: PlayerModel!
-    var savedPlayerName = UserDefaults.standard.string(forKey: "playerName")
-    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,9 +115,15 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             self.updatePlayerUIQP()
             self.updateStatsUIQP()
             self.stopAnimatingObjects()
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+            self.collectionView.delegate = self
+            self.collectionView.dataSource = self
+            
+            self.tableView.reloadData()
+            self.collectionView.reloadData()
         }
-        tableView.delegate = self
-        tableView.dataSource = self
+        
         
     }
     
@@ -144,19 +150,40 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
     }
     
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return statsModel.playtimeQP.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "heroTVCell") as! HeroTVCell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "heroTVCell", for: indexPath) as! HeroTVCell
+        
         let heroesPlaytimeQP: [Dictionary<String, Double>] = [statsModel.playtimeQP]
         let sortedHeroesQP = heroesPlaytimeQP.flatMap({$0}).sorted { $0.0.1 > $0.1.1}
-        let heroImg = "\(statsModel.playtimeQP.keys)"
+        let heroesIndexPath = sortedHeroesQP[indexPath.item].value
         
-        cell?.heroImg.image = UIImage(named: "\(heroImg)")
         
-        return cell!
+        cell.heroName.text = "\(sortedHeroesQP[indexPath.item].key)"
+        cell.heroImg.image = UIImage(named: "\(sortedHeroesQP[indexPath.item].key)")
+        cell.heroPercentage.progressImage = UIImage(named: "\(sortedHeroesQP[indexPath.item].key)-progress")
+        cell.heroPercentage.progress = Float(heroesIndexPath) / 10
+        cell.heroPlaytime.text = "\(Float(heroesIndexPath)) HRS"
+        
+        
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return statsModel.special.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementCell
+        
+        return cell
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {
@@ -167,6 +194,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     func updatePlayerUIQP() {
         let heroesPlaytimeQP: [Dictionary<String, Double>] = [statsModel.playtimeQP]
         let sortedHeroesQP = heroesPlaytimeQP.flatMap({$0}).sorted { $0.0.1 > $0.1.1}
+        
         let prestige = self.statsModel.overallStatsQP["prestige"]! as! Int
         let level = self.statsModel.overallStatsQP["level"]!
         let playerRankImg = "\(statsModel.overallStatsQP["tier"]!)"

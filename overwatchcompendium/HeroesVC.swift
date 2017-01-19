@@ -16,11 +16,11 @@ class HeroesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     weak var timer: Timer?
     let defaults = UserDefaults.standard
-    var allHeroNames = ["Genji", "McCree", "Pharah", "Reaper", "Soldier 76", "Sombra", "Tracer", "Bastion", "Hanzo", "Junkrat", "Mei", "Torbjorn", "Widowmaker", "D.Va", "Reinhardt", "Roadhog", "Winston", "Zarya", "Ana", "Lucio", "Mercy", "Symmetra", "Zenyatta"]
-    var offenseHeroNames = ["Genji", "McCree", "Pharah", "Reaper", "Soldier 76", "Sombra", "Tracer"]
-    var defenseHeroNames = ["Bastion", "Hanzo", "Junkrat", "Mei", "Torbjorn", "Widowmaker"]
-    var tankHeroNames = ["D.Va", "Reinhardt", "Roadhog", "Winston", "Zarya"]
-    var supportHeroNames = ["Ana", "Lucio", "Mercy", "Symmetra", "Zenyatta"]
+    var allHeroNames = ["genji", "mccree", "pharah", "reaper", "soldier76", "sombra", "tracer", "bastion", "hanzo", "junkrat", "mei", "torbjorn", "widowmaker", "dva", "reinhardt", "roadhog", "winston", "zarya", "ana", "lucio", "mercy", "symmetra", "zenyatta"]
+    var offenseHeroNames = ["genji", "mccree", "pharah", "reaper", "soldier76", "sombra", "tracer"]
+    var defenseHeroNames = ["bastion", "hanzo", "junkrat", "mei", "torbjorn", "widowmaker"]
+    var tankHeroNames = ["dva", "reinhardt", "roadhog", "winston", "zarya"]
+    var supportHeroNames = ["ana", "lucio", "mercy", "symmetra", "zenyatta"]
     
     
     override func viewDidLoad() {

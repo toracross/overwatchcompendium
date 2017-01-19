@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B8k-6b-BNZ">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B8k-6b-BNZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -238,10 +238,10 @@
             </objects>
             <point key="canvasLocation" x="71" y="-584"/>
         </scene>
-        <!--Player SearchVC-->
+        <!--PlayerSearchVC-->
         <scene sceneID="HQV-rW-0Vq">
             <objects>
-                <viewController id="rGJ-6M-Ayq" customClass="PlayerSearchVC" customModule="overwatchcompendium" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="PlayerSearchVC" id="rGJ-6M-Ayq" customClass="PlayerSearchVC" customModule="overwatchcompendium" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E6f-iv-d4Z"/>
                         <viewControllerLayoutGuide type="bottom" id="zTg-oX-ybB"/>
@@ -483,11 +483,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xa9-Bj-6i0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Rhf-Lf-FEI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wp19" translatesAutoresizingMaskIntoConstraints="NO" id="MsV-Zq-pyP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="3000"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2700"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N0r-5F-4JF" customClass="CustomLblTitle" customModule="overwatchcompendium" customModuleProvider="target">
                                 <rect key="frame" x="16" y="28" width="343" height="70"/>
@@ -507,10 +507,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8n4-pF-Mtd" userLabel="OverallView">
-                                <rect key="frame" x="16" y="106" width="343" height="2886"/>
+                                <rect key="frame" x="16" y="106" width="343" height="2586"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84n-9v-KhL">
-                                        <rect key="frame" x="2" y="2" width="339" height="2882"/>
+                                        <rect key="frame" x="2" y="2" width="339" height="2582"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p73-ii-GfE">
                                                 <rect key="frame" x="8" y="8" width="323" height="2866"/>
@@ -966,25 +966,25 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Krp-Ra-rbp">
                                                                 <rect key="frame" x="82.5" y="35" width="60" height="82"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-18-uAa">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-18-uAa">
                                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="13"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-u2-Gvx">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-u2-Gvx">
                                                                         <rect key="frame" x="0.0" y="23" width="60" height="13"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7K-Sj-oax">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7K-Sj-oax">
                                                                         <rect key="frame" x="0.0" y="46" width="60" height="13"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-WB-AkS">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-WB-AkS">
                                                                         <rect key="frame" x="0.0" y="69" width="60" height="13"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -2176,7 +2176,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ai-Gv-Gdx" customClass="RoundedCorner" customModule="overwatchcompendium" customModuleProvider="target">
-                                                        <rect key="frame" x="111" y="2808" width="100" height="50"/>
+                                                        <rect key="frame" x="111" y="2461" width="100" height="50"/>
                                                         <color key="backgroundColor" red="0.73333333329999995" green="0.51372549020000002" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="foO-r5-Kgg"/>
@@ -2207,23 +2207,23 @@
                                                         </connections>
                                                     </segmentedControl>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwv-yp-uBo">
-                                                        <rect key="frame" x="8" y="1505" width="307" height="500"/>
+                                                        <rect key="frame" x="8" y="1563" width="307" height="400"/>
                                                         <subviews>
-                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SuN-jF-4sI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="307" height="500"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SuN-jF-4sI" customClass="UITableViewOutline" customModule="overwatchcompendium" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="307" height="400"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <prototypes>
                                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="heroTVCell" rowHeight="100" id="cTC-t4-k0j" customClass="HeroTVCell" customModule="overwatchcompendium" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="28" width="307" height="100"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cTC-t4-k0j" id="c8V-3B-Bqe">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="307" height="99"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="307" height="100"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6W-Mq-RNC" customClass="UIViewOutline" customModule="overwatchcompendium" customModuleProvider="target">
-                                                                                    <rect key="frame" x="0.0" y="10" width="307" height="80"/>
+                                                                                    <rect key="frame" x="0.0" y="10.5" width="307" height="80"/>
                                                                                     <subviews>
-                                                                                        <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="wuA-aY-nav" customClass="ColorProgressView" customModule="overwatchcompendium" customModuleProvider="target">
+                                                                                        <progressView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="wuA-aY-nav" customClass="ColorProgressView" customModule="overwatchcompendium" customModuleProvider="target">
                                                                                             <rect key="frame" x="80" y="0.0" width="227" height="80"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="height" constant="80" id="yXU-pm-1kk"/>
@@ -2299,23 +2299,121 @@
                                                             <constraint firstItem="SuN-jF-4sI" firstAttribute="top" secondItem="Uwv-yp-uBo" secondAttribute="top" id="Rii-aI-HKo"/>
                                                             <constraint firstItem="SuN-jF-4sI" firstAttribute="leading" secondItem="Uwv-yp-uBo" secondAttribute="leading" id="VKt-xQ-EHc"/>
                                                             <constraint firstAttribute="bottom" secondItem="SuN-jF-4sI" secondAttribute="bottom" id="epa-Z6-Loj"/>
-                                                            <constraint firstAttribute="height" constant="500" id="iu5-MH-aii"/>
+                                                            <constraint firstAttribute="height" constant="400" id="iu5-MH-aii"/>
                                                             <constraint firstAttribute="trailing" secondItem="SuN-jF-4sI" secondAttribute="trailing" id="nIg-DH-tNr"/>
                                                         </constraints>
                                                     </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jF7-Pc-AJF" customClass="CustomLblTitle" customModule="overwatchcompendium" customModuleProvider="target">
+                                                        <rect key="frame" x="70.5" y="1993" width="182.5" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="QRl-uL-bgk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="BigNoodleTitling-Oblique" family="BigNoodleTitling" pointSize="45"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl hidden="YES" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kZK-mw-QEz" userLabel="Region Control">
+                                                        <rect key="frame" x="61" y="1505" width="200" height="29"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="LUJ-zd-Y1V"/>
+                                                            <constraint firstAttribute="height" constant="28" id="x6a-ti-q4h"/>
+                                                        </constraints>
+                                                        <segments>
+                                                            <segment title="Quickplay"/>
+                                                            <segment title="Competitive"/>
+                                                        </segments>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </segmentedControl>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z2s-ca-XKI">
+                                                        <rect key="frame" x="8" y="2041" width="307" height="400"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="400" id="pEb-rf-JZi"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n5g-sm-e4v">
+                                                            <size key="itemSize" width="90" height="90"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="achievementCell" id="aEI-gZ-8cw" customClass="AchievementCell" customModule="overwatchcompendium" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aaf-qp-Tmi">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                                        </imageView>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KtR-GA-qy0">
+                                                                            <rect key="frame" x="0.0" y="70" width="90" height="20"/>
+                                                                            <color key="backgroundColor" red="0.77647058820000003" green="0.79607843140000001" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="20" id="107-CH-Cse"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U20-hm-F8d">
+                                                                            <rect key="frame" x="0.0" y="70" width="90" height="20"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="20" id="v3A-UJ-6ng"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
+                                                                            <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zos-0M-kGH">
+                                                                            <rect key="frame" x="70" y="0.0" width="20" height="20"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="20" id="ae1-Gu-c1u"/>
+                                                                                <constraint firstAttribute="height" constant="20" id="hED-60-TQQ"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                </view>
+                                                                <constraints>
+                                                                    <constraint firstItem="U20-hm-F8d" firstAttribute="leading" secondItem="aEI-gZ-8cw" secondAttribute="leading" id="8iv-8V-Oge"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="zos-0M-kGH" secondAttribute="trailing" id="A7r-3l-6Pk"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="KtR-GA-qy0" secondAttribute="trailing" id="IGo-hs-sp9"/>
+                                                                    <constraint firstItem="KtR-GA-qy0" firstAttribute="leading" secondItem="aEI-gZ-8cw" secondAttribute="leading" id="JUw-Bf-DYP"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="U20-hm-F8d" secondAttribute="trailing" id="Ubz-Ep-DHd"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="aaf-qp-Tmi" secondAttribute="trailing" id="WII-xN-NE1"/>
+                                                                    <constraint firstItem="aaf-qp-Tmi" firstAttribute="leading" secondItem="aEI-gZ-8cw" secondAttribute="leading" id="XeO-YL-z04"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="KtR-GA-qy0" secondAttribute="bottom" id="dJS-ox-Yod"/>
+                                                                    <constraint firstItem="aaf-qp-Tmi" firstAttribute="top" secondItem="aEI-gZ-8cw" secondAttribute="top" id="gIl-8W-oLk"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="U20-hm-F8d" secondAttribute="bottom" id="kSe-3I-OCX"/>
+                                                                    <constraint firstItem="zos-0M-kGH" firstAttribute="top" secondItem="aEI-gZ-8cw" secondAttribute="top" id="onV-lw-uqc"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="aaf-qp-Tmi" secondAttribute="bottom" id="qAq-el-agj"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <outlet property="achievementEarned" destination="zos-0M-kGH" id="nkJ-dd-xnl"/>
+                                                                    <outlet property="achievementImg" destination="aaf-qp-Tmi" id="oNW-C8-CeO"/>
+                                                                    <outlet property="achievementName" destination="U20-hm-F8d" id="7kA-IS-Hgq"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="lQn-dn-GA9" firstAttribute="centerX" secondItem="p73-ii-GfE" secondAttribute="centerX" id="34e-9H-28f"/>
                                                     <constraint firstItem="McQ-6g-Dp0" firstAttribute="top" secondItem="kWR-hb-R57" secondAttribute="bottom" constant="8" id="5i8-Cl-XFu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="z2s-ca-XKI" secondAttribute="trailing" constant="8" id="8iP-9A-cnt"/>
                                                     <constraint firstItem="Vsu-JY-Yix" firstAttribute="top" secondItem="McQ-6g-Dp0" secondAttribute="bottom" constant="8" id="9zr-yi-DIl"/>
                                                     <constraint firstItem="7V2-P0-MRu" firstAttribute="top" secondItem="lQn-dn-GA9" secondAttribute="bottom" constant="10" id="B0l-ww-409"/>
                                                     <constraint firstAttribute="trailing" secondItem="Vsu-JY-Yix" secondAttribute="trailing" constant="12" id="B48-em-LT9"/>
-                                                    <constraint firstItem="Uwv-yp-uBo" firstAttribute="top" secondItem="4ar-9z-ZGN" secondAttribute="bottom" constant="8" id="Baz-2C-Leq"/>
+                                                    <constraint firstItem="kZK-mw-QEz" firstAttribute="top" secondItem="4ar-9z-ZGN" secondAttribute="bottom" constant="8" id="BSJ-eR-K10"/>
+                                                    <constraint firstItem="kZK-mw-QEz" firstAttribute="centerX" secondItem="p73-ii-GfE" secondAttribute="centerX" id="BSf-0w-rYG"/>
                                                     <constraint firstAttribute="trailing" secondItem="McQ-6g-Dp0" secondAttribute="trailing" constant="12" id="BgN-ov-eal"/>
-                                                    <constraint firstAttribute="bottom" secondItem="3ai-Gv-Gdx" secondAttribute="bottom" constant="8" id="EYt-Pk-OYV"/>
+                                                    <constraint firstItem="jF7-Pc-AJF" firstAttribute="top" secondItem="Uwv-yp-uBo" secondAttribute="bottom" constant="30" id="DUE-If-Ybc"/>
                                                     <constraint firstItem="zZ1-CM-nTy" firstAttribute="centerX" secondItem="p73-ii-GfE" secondAttribute="centerX" id="F4b-ne-EAs"/>
                                                     <constraint firstItem="4ar-9z-ZGN" firstAttribute="top" secondItem="mvh-Vq-noo" secondAttribute="bottom" constant="30" id="G9F-mG-4LI"/>
+                                                    <constraint firstItem="z2s-ca-XKI" firstAttribute="top" secondItem="jF7-Pc-AJF" secondAttribute="bottom" constant="8" id="H2C-Gw-IK9"/>
+                                                    <constraint firstItem="3ai-Gv-Gdx" firstAttribute="top" secondItem="z2s-ca-XKI" secondAttribute="bottom" constant="20" id="IBI-ea-zOk"/>
+                                                    <constraint firstItem="Uwv-yp-uBo" firstAttribute="top" secondItem="kZK-mw-QEz" secondAttribute="bottom" constant="30" id="IF4-VG-KbZ"/>
                                                     <constraint firstItem="8E2-aM-0kL" firstAttribute="leading" secondItem="p73-ii-GfE" secondAttribute="leading" constant="11" id="JKl-6g-13c"/>
                                                     <constraint firstItem="8E2-aM-0kL" firstAttribute="centerX" secondItem="p73-ii-GfE" secondAttribute="centerX" id="KUO-rj-Zwc"/>
                                                     <constraint firstAttribute="trailing" secondItem="Uwv-yp-uBo" secondAttribute="trailing" constant="8" id="Khv-o0-nyt"/>
@@ -2334,6 +2432,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="kWR-hb-R57" secondAttribute="trailing" constant="12" id="bwz-78-W6K"/>
                                                     <constraint firstItem="lQn-dn-GA9" firstAttribute="top" secondItem="Y7p-Pi-6Qk" secondAttribute="bottom" constant="25" id="enr-30-0K5"/>
                                                     <constraint firstItem="zZ1-CM-nTy" firstAttribute="top" secondItem="yvu-rX-LBa" secondAttribute="bottom" constant="8" id="fWa-hJ-TE6"/>
+                                                    <constraint firstItem="z2s-ca-XKI" firstAttribute="leading" secondItem="p73-ii-GfE" secondAttribute="leading" constant="8" id="gHz-Gt-Vu0"/>
                                                     <constraint firstItem="mvh-Vq-noo" firstAttribute="leading" secondItem="p73-ii-GfE" secondAttribute="leading" constant="11" id="k7j-ij-U1c"/>
                                                     <constraint firstAttribute="trailing" secondItem="Y7p-Pi-6Qk" secondAttribute="trailing" constant="12" id="nGV-Ys-dcS"/>
                                                     <constraint firstItem="Y7p-Pi-6Qk" firstAttribute="top" secondItem="zZ1-CM-nTy" secondAttribute="bottom" constant="8" id="noI-ic-Hu0"/>
@@ -2343,6 +2442,7 @@
                                                     <constraint firstItem="7V2-P0-MRu" firstAttribute="centerX" secondItem="p73-ii-GfE" secondAttribute="centerX" id="sjv-Yv-j6P"/>
                                                     <constraint firstItem="yvu-rX-LBa" firstAttribute="top" secondItem="p73-ii-GfE" secondAttribute="top" constant="8" id="ssf-tv-5B5"/>
                                                     <constraint firstItem="kWR-hb-R57" firstAttribute="top" secondItem="8E2-aM-0kL" secondAttribute="bottom" constant="8" id="wEV-QY-WS5"/>
+                                                    <constraint firstItem="jF7-Pc-AJF" firstAttribute="centerX" secondItem="p73-ii-GfE" secondAttribute="centerX" id="xFI-0O-htR"/>
                                                     <constraint firstItem="mvh-Vq-noo" firstAttribute="top" secondItem="v0Z-vN-7hj" secondAttribute="bottom" constant="8" id="xiE-Sy-edF"/>
                                                     <constraint firstItem="Y7p-Pi-6Qk" firstAttribute="centerX" secondItem="p73-ii-GfE" secondAttribute="centerX" id="y2B-hT-bFf"/>
                                                     <constraint firstItem="Uwv-yp-uBo" firstAttribute="leading" secondItem="p73-ii-GfE" secondAttribute="leading" constant="8" id="z27-DF-yuo"/>
@@ -2350,7 +2450,7 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="2882" id="Nav-JK-eYB"/>
+                                            <constraint firstAttribute="height" constant="2582" id="Nav-JK-eYB"/>
                                             <constraint firstItem="p73-ii-GfE" firstAttribute="top" secondItem="84n-9v-KhL" secondAttribute="top" constant="8" id="ccQ-En-CIa"/>
                                             <constraint firstAttribute="width" constant="339" id="gUr-Ta-KqN"/>
                                             <constraint firstAttribute="bottom" secondItem="p73-ii-GfE" secondAttribute="bottom" constant="8" id="lJI-Yk-juy"/>
@@ -2388,9 +2488,10 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="3000"/>
+                    <size key="freeformSize" width="375" height="2700"/>
                     <connections>
                         <outlet property="cards" destination="Eau-J1-Z6W" id="V2r-n0-DKo"/>
+                        <outlet property="collectionView" destination="z2s-ca-XKI" id="mLn-Qw-jD2"/>
                         <outlet property="damageDone" destination="VPX-w5-Ict" id="eDy-jP-TkT"/>
                         <outlet property="damageDoneAverage" destination="rqm-0b-n43" id="ve3-BH-Eor"/>
                         <outlet property="damageDoneMost" destination="D1z-RO-Pze" id="oeV-xl-KWn"/>
@@ -2462,7 +2563,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qw-TN-L3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904.8" y="1285.4572713643179"/>
+            <point key="canvasLocation" x="1905" y="1033"/>
         </scene>
         <!--HeroesVC-->
         <scene sceneID="W4C-Rx-Km2">
@@ -2531,7 +2632,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Genji" translatesAutoresizingMaskIntoConstraints="NO" id="txh-n0-jPC" customClass="UIImageRounded" customModule="overwatchcompendium" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="genji" translatesAutoresizingMaskIntoConstraints="NO" id="txh-n0-jPC" customClass="UIImageRounded" customModule="overwatchcompendium" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="103"/>
                                                 </imageView>
                                                 <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7D-jh-Npa" customClass="UIViewOutline" customModule="overwatchcompendium" customModuleProvider="target">
@@ -2695,7 +2796,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Genji" width="112" height="100"/>
         <image name="assists" width="25" height="25"/>
         <image name="average" width="25" height="25"/>
         <image name="awards" width="25" height="25"/>
@@ -2703,6 +2803,7 @@
         <image name="combat" width="25" height="25"/>
         <image name="deaths" width="25" height="25"/>
         <image name="game" width="25" height="25"/>
+        <image name="genji" width="112" height="100"/>
         <image name="misc" width="25" height="25"/>
         <image name="wp" width="1080" height="1920"/>
         <image name="wp16" width="1920" height="1100"/>
