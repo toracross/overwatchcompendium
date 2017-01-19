@@ -8,7 +8,7 @@
 import UIKit
 import NVActivityIndicatorView
 
-class PlayerInfoVC: UIViewController {
+class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     //Title
     @IBOutlet weak var playerName: CustomLblTitle!
@@ -92,7 +92,10 @@ class PlayerInfoVC: UIViewController {
     @IBOutlet weak var environmentalDeaths: UILabel!
     
     //Heroes
+    @IBOutlet weak var tableView: UITableView!
     
+    
+    //Achievements
     
     var statsModel: PlayerModel!
     var savedPlayerName = UserDefaults.standard.string(forKey: "playerName")
@@ -105,7 +108,6 @@ class PlayerInfoVC: UIViewController {
         self.startAnimatingObjects()
         
         self.statsModel.downloadStatsData { DownloadComplete in
-            
             if self.statsModel.overallStatsCP.count != 0 {
                 self.playerDataControl.isHidden = false
                 self.playerStatsControl.isHidden = false
@@ -114,6 +116,9 @@ class PlayerInfoVC: UIViewController {
             self.updateStatsUIQP()
             self.stopAnimatingObjects()
         }
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
     
     @IBAction func playerDataSegmentPushed(_ sender: Any) {
@@ -137,6 +142,21 @@ class PlayerInfoVC: UIViewController {
         default:
             break
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "heroTVCell") as! HeroTVCell!
+        let heroesPlaytimeQP: [Dictionary<String, Double>] = [statsModel.playtimeQP]
+        let sortedHeroesQP = heroesPlaytimeQP.flatMap({$0}).sorted { $0.0.1 > $0.1.1}
+        let heroImg = "\(statsModel.playtimeQP.keys)"
+        
+        cell?.heroImg.image = UIImage(named: "\(heroImg)")
+        
+        return cell!
     }
     
     @IBAction func backBtnPressed(_ sender: Any) {

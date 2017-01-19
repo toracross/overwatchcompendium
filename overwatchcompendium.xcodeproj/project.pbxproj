@@ -47,6 +47,7 @@
 		5BC36987D478BA96EE5775A8 /* Pods_overwatchcompendium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */; };
 		7B77D4941E2860D100C11594 /* HeroDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B77D4931E2860D100C11594 /* HeroDetailVC.swift */; };
 		7B7BA0DE1E304F6B005779AB /* CheckConnectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA0DD1E304F6B005779AB /* CheckConnectionVC.swift */; };
+		7B7BA0E01E30660F005779AB /* HeroTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA0DF1E30660F005779AB /* HeroTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		303568DC1E2954B300170F48 /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		7B77D4931E2860D100C11594 /* HeroDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailVC.swift; sourceTree = "<group>"; };
 		7B7BA0DD1E304F6B005779AB /* CheckConnectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckConnectionVC.swift; sourceTree = "<group>"; };
+		7B7BA0DF1E30660F005779AB /* HeroTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTVCell.swift; sourceTree = "<group>"; };
 		CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatchcompendium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -319,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				303568CC1E27DD0B00170F48 /* HeroesCell.swift */,
+				7B7BA0DF1E30660F005779AB /* HeroTVCell.swift */,
 			);
 			name = CollectionCell;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				303568D51E29493300170F48 /* PlayerSearchVC.swift in Sources */,
 				108ADD471E038843007C7878 /* PlayerProfileData.swift in Sources */,
 				108ADD4D1E09063B007C7878 /* ImageBlur.swift in Sources */,
+				7B7BA0E01E30660F005779AB /* HeroTVCell.swift in Sources */,
 				106C9EC21DFDC58200F078C6 /* AchievementsVC.swift in Sources */,
 				303568C91E27D9B700170F48 /* HeroesVC.swift in Sources */,
 				10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */,
