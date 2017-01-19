@@ -433,7 +433,6 @@ class PlayerInfoVC: UIViewController {
     }
     
     
-    
     func startAnimatingObjects() {
         self.playerAvatarLoad.startAnimating()
         self.playerHeroLoad.startAnimating()

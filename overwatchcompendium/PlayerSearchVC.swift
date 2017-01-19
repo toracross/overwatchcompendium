@@ -16,17 +16,20 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
     @IBOutlet weak var battleTagTxt: UITextField!
     @IBOutlet weak var platformSegment: UISegmentedControl!
     @IBOutlet weak var regionSegment: UISegmentedControl!
+    @IBOutlet weak var backBtn: RoundedCorner!
     
     weak var timer: Timer?
     var regionTxt: String!
     var platformTxt: String!
     var defaults = UserDefaults.standard
     var validProfile = false
+    let downloadDefaults = UserDefaults.standard.bool(forKey: "apiKey")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         repeatBackground()
         
+        self.backBtn.isHidden = downloadDefaults
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -113,20 +116,14 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
             
             checkStatusCode { DownloadComplete in
                 
-                if name.isEmpty != true {
-                    if self.validProfile != false {
-                        print("Data will be returned")
-                        self.performSegue(withIdentifier: "playerDataSegue", sender: nil)
-                    } else {
-                        print("No data to be had.")
-                    }
-                } else {
-                    self.stopAnimating()
-                    self.alertFailMessage()
-                }
+                if self.validProfile != false {
+                    print("Data will be returned")
+                    self.performSegue(withIdentifier: "playerDataSegue", sender: nil)
+                } 
             }
 
         } else {
+            self.stopAnimating()
             alertFailMessage()
         }
     }

@@ -15,7 +15,6 @@ class NavigationVC: UIViewController {
     
     weak var timer: Timer?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         repeatBackground()
