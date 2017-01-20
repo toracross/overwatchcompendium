@@ -10,8 +10,11 @@ import UIKit
 
 class AchievementCell: UICollectionViewCell {
     
+    var statsModel = PlayerModel()
+    
     @IBOutlet weak var achievementName: UILabel!
     @IBOutlet weak var achievementImg: UIImageView!
     @IBOutlet weak var achievementEarned: UIImageView!
     
+
 }

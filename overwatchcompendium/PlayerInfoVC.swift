@@ -97,9 +97,11 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     //Heroes
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var playerHeroControl: UISegmentedControl!
     
     //Achievements
     @IBOutlet weak var collectionView: UICollectionView!
+    var allAchievements: [String: AnyObject] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,10 +113,18 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             if self.statsModel.overallStatsCP.count != 0 {
                 self.playerDataControl.isHidden = false
                 self.playerStatsControl.isHidden = false
+                self.playerHeroControl.isHidden = false
             }
             self.updatePlayerUIQP()
             self.updateStatsUIQP()
             self.stopAnimatingObjects()
+            
+            
+            let general = self.statsModel.general; let maps = self.statsModel.maps; let offense = self.statsModel.offense;
+            let defense = self.statsModel.defense; let tank = self.statsModel.tank; let support = self.statsModel.support; let special = self.statsModel.special
+            self.allAchievements.update(other: general); self.allAchievements.update(other: maps); self.allAchievements.update(other: offense);
+            self.allAchievements.update(other: defense); self.allAchievements.update(other: tank); self.allAchievements.update(other: support); self.allAchievements.update(other: special)
+            
             self.tableView.delegate = self
             self.tableView.dataSource = self
             self.collectionView.delegate = self
@@ -123,7 +133,6 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             self.tableView.reloadData()
             self.collectionView.reloadData()
         }
-        
         
     }
     
@@ -150,38 +159,58 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         }
     }
     
-    
-    
+    @IBAction func playerHeroSegmentPushed(_ sender: Any) {
+        self.tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statsModel.playtimeQP.count
+        switch playerHeroControl.selectedSegmentIndex {
+        case 0: return statsModel.playtimeQP.count
+        case 1: return statsModel.playtimeCP.count
+        default:
+            break
+        }
+        return playerHeroControl.selectedSegmentIndex
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "heroTVCell", for: indexPath) as! HeroTVCell
         
-        let heroesPlaytimeQP: [Dictionary<String, Double>] = [statsModel.playtimeQP]
-        let sortedHeroesQP = heroesPlaytimeQP.flatMap({$0}).sorted { $0.0.1 > $0.1.1}
-        let heroesIndexPath = sortedHeroesQP[indexPath.item].value
-        
-        
-        cell.heroName.text = "\(sortedHeroesQP[indexPath.item].key)"
-        cell.heroImg.image = UIImage(named: "\(sortedHeroesQP[indexPath.item].key)")
-        cell.heroPercentage.progressImage = UIImage(named: "\(sortedHeroesQP[indexPath.item].key)-progress")
-        cell.heroPercentage.progress = Float(heroesIndexPath) / 10
-        cell.heroPlaytime.text = "\(Float(heroesIndexPath)) HRS"
-        
-        
+        switch playerHeroControl.selectedSegmentIndex {
+        case 0:
+            let heroesPlaytimeQP: [Dictionary<String, Double>] = [statsModel.playtimeQP]
+            let sortedHeroesQP = heroesPlaytimeQP.flatMap({$0}).sorted { $0.0.1 > $0.1.1}
+            let heroesIndexPath = sortedHeroesQP[indexPath.item].value
+            
+            cell.heroName.text = "\(sortedHeroesQP[indexPath.item].key)"
+            cell.heroImg.image = UIImage(named: "\(sortedHeroesQP[indexPath.item].key)")
+            cell.heroPercentage.progressImage = UIImage(named: "\(sortedHeroesQP[indexPath.item].key)-progress")
+            cell.heroPercentage.progress = Float(heroesIndexPath) / Float(sortedHeroesQP[0].value)
+            cell.heroPlaytime.text = "\(Double(round(100 * heroesIndexPath) / 100)) HRS"
+        case 1:
+            let heroesPlaytimeCP: [Dictionary<String, Double>] = [statsModel.playtimeCP]
+            let sortedHeroesCP = heroesPlaytimeCP.flatMap({$0}).sorted { $0.0.1 > $0.1.1}
+            let heroesIndexPath = sortedHeroesCP[indexPath.item].value
+            
+            cell.heroName.text = "\(sortedHeroesCP[indexPath.item].key)"
+            cell.heroImg.image = UIImage(named: "\(sortedHeroesCP[indexPath.item].key)")
+            cell.heroPercentage.progressImage = UIImage(named: "\(sortedHeroesCP[indexPath.item].key)-progress")
+            cell.heroPercentage.progress = Float(heroesIndexPath) / Float(sortedHeroesCP[0].value)
+            cell.heroPlaytime.text = "\(Double(round(100 * heroesIndexPath) / 100)) HRS"
+        default:
+            break
+        }
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return statsModel.special.count
+        return allAchievements.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementCell
+        
         
         return cell
     }
@@ -481,6 +510,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     
+    
     func startAnimatingObjects() {
         self.playerAvatarLoad.startAnimating()
         self.playerHeroLoad.startAnimating()
@@ -504,4 +534,12 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         self.present(alert, animated: true, completion: nil)
     }
 
+}
+
+extension Dictionary {
+    mutating func update(other: Dictionary) {
+        for (key, value) in other {
+            self.updateValue(value, forKey: key)
+        }
+    }
 }

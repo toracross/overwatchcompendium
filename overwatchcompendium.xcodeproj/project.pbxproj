@@ -24,13 +24,12 @@
 		303568D71E294D5400170F48 /* PlayerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568D61E294D5400170F48 /* PlayerInfoVC.swift */; };
 		303568DD1E2954B300170F48 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568DC1E2954B300170F48 /* PlayerModel.swift */; };
 		30B7D9401E3117260019CAC3 /* UITableViewOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B7D93F1E3117260019CAC3 /* UITableViewOutline.swift */; };
-		30F565941E313901007AD109 /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F565931E313901007AD109 /* RoundedCornerButton.swift */; };
-		30F5659E1E313B0A007AD109 /* ColorProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F565991E313B0A007AD109 /* ColorProgressView.swift */; };
-		30F5659F1E313B0A007AD109 /* CustomLblTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5659A1E313B0A007AD109 /* CustomLblTitle.swift */; };
-		30F565A01E313B0A007AD109 /* CustomTxtField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5659B1E313B0A007AD109 /* CustomTxtField.swift */; };
-		30F565A21E313B0A007AD109 /* UIViewRoundedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5659D1E313B0A007AD109 /* UIViewRoundedEdge.swift */; };
 		30F565A41E313C61007AD109 /* AchievementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F565A31E313C61007AD109 /* AchievementCell.swift */; };
 		5BC36987D478BA96EE5775A8 /* Pods_overwatchcompendium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */; };
+		7B3EB3AF1E3196FA0013657A /* ColorProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3EB3AE1E3196FA0013657A /* ColorProgressView.swift */; };
+		7B3EB3B11E31972C0013657A /* CustomLblTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3EB3B01E31972C0013657A /* CustomLblTitle.swift */; };
+		7B3EB3B31E3197870013657A /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3EB3B21E3197870013657A /* RoundedCorner.swift */; };
+		7B3EB3B51E3199C70013657A /* UIViewRoundedEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3EB3B41E3199C70013657A /* UIViewRoundedEdge.swift */; };
 		7B77D4941E2860D100C11594 /* HeroDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B77D4931E2860D100C11594 /* HeroDetailVC.swift */; };
 		7B7BA0DE1E304F6B005779AB /* CheckConnectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA0DD1E304F6B005779AB /* CheckConnectionVC.swift */; };
 		7B7BA0E01E30660F005779AB /* HeroTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA0DF1E30660F005779AB /* HeroTVCell.swift */; };
@@ -58,12 +57,11 @@
 		303568D61E294D5400170F48 /* PlayerInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerInfoVC.swift; sourceTree = "<group>"; };
 		303568DC1E2954B300170F48 /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		30B7D93F1E3117260019CAC3 /* UITableViewOutline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewOutline.swift; sourceTree = "<group>"; };
-		30F565931E313901007AD109 /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedCornerButton.swift; path = ../../../../.Trash/RoundedCornerButton.swift; sourceTree = "<group>"; };
-		30F565991E313B0A007AD109 /* ColorProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorProgressView.swift; path = ../../../../.Trash/ColorProgressView.swift; sourceTree = "<group>"; };
-		30F5659A1E313B0A007AD109 /* CustomLblTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomLblTitle.swift; path = ../../../../.Trash/CustomLblTitle.swift; sourceTree = "<group>"; };
-		30F5659B1E313B0A007AD109 /* CustomTxtField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTxtField.swift; path = ../../../../.Trash/CustomTxtField.swift; sourceTree = "<group>"; };
-		30F5659D1E313B0A007AD109 /* UIViewRoundedEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewRoundedEdge.swift; path = ../../../../.Trash/UIViewRoundedEdge.swift; sourceTree = "<group>"; };
 		30F565A31E313C61007AD109 /* AchievementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCell.swift; sourceTree = "<group>"; };
+		7B3EB3AE1E3196FA0013657A /* ColorProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorProgressView.swift; sourceTree = "<group>"; };
+		7B3EB3B01E31972C0013657A /* CustomLblTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLblTitle.swift; sourceTree = "<group>"; };
+		7B3EB3B21E3197870013657A /* RoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		7B3EB3B41E3199C70013657A /* UIViewRoundedEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewRoundedEdge.swift; sourceTree = "<group>"; };
 		7B77D4931E2860D100C11594 /* HeroDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailVC.swift; sourceTree = "<group>"; };
 		7B7BA0DD1E304F6B005779AB /* CheckConnectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckConnectionVC.swift; sourceTree = "<group>"; };
 		7B7BA0DF1E30660F005779AB /* HeroTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTVCell.swift; sourceTree = "<group>"; };
@@ -194,13 +192,12 @@
 			isa = PBXGroup;
 			children = (
 				108ADD4E1E0999D4007C7878 /* UIViewOutline.swift */,
-				30F565991E313B0A007AD109 /* ColorProgressView.swift */,
-				30F5659A1E313B0A007AD109 /* CustomLblTitle.swift */,
-				30F5659B1E313B0A007AD109 /* CustomTxtField.swift */,
-				30F5659D1E313B0A007AD109 /* UIViewRoundedEdge.swift */,
-				30F565931E313901007AD109 /* RoundedCornerButton.swift */,
 				108B1A521E0A56680011B43B /* UIImageRounded.swift */,
 				30B7D93F1E3117260019CAC3 /* UITableViewOutline.swift */,
+				7B3EB3AE1E3196FA0013657A /* ColorProgressView.swift */,
+				7B3EB3B01E31972C0013657A /* CustomLblTitle.swift */,
+				7B3EB3B21E3197870013657A /* RoundedCorner.swift */,
+				7B3EB3B41E3199C70013657A /* UIViewRoundedEdge.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -349,8 +346,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30F5659E1E313B0A007AD109 /* ColorProgressView.swift in Sources */,
 				303568CD1E27DD0B00170F48 /* HeroesCell.swift in Sources */,
+				7B3EB3AF1E3196FA0013657A /* ColorProgressView.swift in Sources */,
 				303568C71E268D6900170F48 /* NavigationVC.swift in Sources */,
 				108B1A531E0A56680011B43B /* UIImageRounded.swift in Sources */,
 				106C9EBA1DFDB0D000F078C6 /* API.swift in Sources */,
@@ -358,17 +355,16 @@
 				30B7D9401E3117260019CAC3 /* UITableViewOutline.swift in Sources */,
 				303568D51E29493300170F48 /* PlayerSearchVC.swift in Sources */,
 				7B7BA0E01E30660F005779AB /* HeroTVCell.swift in Sources */,
-				30F565A01E313B0A007AD109 /* CustomTxtField.swift in Sources */,
+				7B3EB3B51E3199C70013657A /* UIViewRoundedEdge.swift in Sources */,
 				303568C91E27D9B700170F48 /* HeroesVC.swift in Sources */,
+				7B3EB3B11E31972C0013657A /* CustomLblTitle.swift in Sources */,
 				10CE86861DFB070100DB6374 /* AppDelegate.swift in Sources */,
 				7B77D4941E2860D100C11594 /* HeroDetailVC.swift in Sources */,
 				30F565A41E313C61007AD109 /* AchievementCell.swift in Sources */,
-				30F565A21E313B0A007AD109 /* UIViewRoundedEdge.swift in Sources */,
 				7B7BA0DE1E304F6B005779AB /* CheckConnectionVC.swift in Sources */,
-				30F5659F1E313B0A007AD109 /* CustomLblTitle.swift in Sources */,
 				106C9EE21DFDE9FB00F078C6 /* Constants.swift in Sources */,
 				303568D71E294D5400170F48 /* PlayerInfoVC.swift in Sources */,
-				30F565941E313901007AD109 /* RoundedCornerButton.swift in Sources */,
+				7B3EB3B31E3197870013657A /* RoundedCorner.swift in Sources */,
 				303568DD1E2954B300170F48 /* PlayerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
