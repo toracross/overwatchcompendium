@@ -101,7 +101,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     //Achievements
     @IBOutlet weak var collectionView: UICollectionView!
-    var allAchievements: [String: AnyObject] = [:]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,13 +118,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             self.updatePlayerUIQP()
             self.updateStatsUIQP()
             self.stopAnimatingObjects()
-            
-            
-            let general = self.statsModel.general; let maps = self.statsModel.maps; let offense = self.statsModel.offense;
-            let defense = self.statsModel.defense; let tank = self.statsModel.tank; let support = self.statsModel.support; let special = self.statsModel.special
-            self.allAchievements.update(other: general); self.allAchievements.update(other: maps); self.allAchievements.update(other: offense);
-            self.allAchievements.update(other: defense); self.allAchievements.update(other: tank); self.allAchievements.update(other: support); self.allAchievements.update(other: special)
-            
+
             self.tableView.delegate = self
             self.tableView.dataSource = self
             self.collectionView.delegate = self
@@ -205,7 +199,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allAchievements.count
+        return 67
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -536,10 +530,3 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 
 }
 
-extension Dictionary {
-    mutating func update(other: Dictionary) {
-        for (key, value) in other {
-            self.updateValue(value, forKey: key)
-        }
-    }
-}
