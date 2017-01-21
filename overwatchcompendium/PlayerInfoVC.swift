@@ -101,6 +101,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     //Achievements
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var playerAchievementControl: UISegmentedControl!
     
     
     override func viewDidLoad() {
@@ -157,6 +158,11 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         self.tableView.reloadData()
     }
     
+    @IBAction func playerAchievementSegmentPushed(_ sender: Any) {
+        self.collectionView.reloadData()
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch playerHeroControl.selectedSegmentIndex {
         case 0: return statsModel.playtimeQP.count
@@ -199,12 +205,78 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 67
+        
+        switch playerAchievementControl.selectedSegmentIndex {
+        case 0: return statsModel.general.count
+        case 1: return statsModel.maps.count
+        case 2: return statsModel.offense.count
+        case 3: return statsModel.defense.count
+        case 4: return statsModel.tank.count
+        case 5: return statsModel.support.count
+        case 6: return statsModel.special.count
+        default:
+            break
+        }
+        
+        return playerAchievementControl.selectedSegmentIndex
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "achievementCell", for: indexPath) as! AchievementCell
         
+        switch playerAchievementControl.selectedSegmentIndex {
+        case 0:
+            let achievements = Array(statsModel.general)
+            let name = "\(achievements[indexPath.item].key)"
+            let earned: Bool = achievements[indexPath.item].value as! Bool
+            cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
+            cell.achievementImg.image = UIImage(named: "\(name)")
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+        case 1:
+            let achievements = Array(statsModel.maps)
+            let name = "\(achievements[indexPath.item].key)"
+            let earned: Bool = achievements[indexPath.item].value as! Bool
+            cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
+            cell.achievementImg.image = UIImage(named: "\(name)")
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+        case 2:
+            let achievements = Array(statsModel.offense)
+            let name = "\(achievements[indexPath.item].key)"
+            let earned: Bool = achievements[indexPath.item].value as! Bool
+            cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
+            cell.achievementImg.image = UIImage(named: "\(name)")
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+        case 3:
+            let achievements = Array(statsModel.defense)
+            let name = "\(achievements[indexPath.item].key)"
+            let earned: Bool = achievements[indexPath.item].value as! Bool
+            cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
+            cell.achievementImg.image = UIImage(named: "\(name)")
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+        case 4:
+            let achievements = Array(statsModel.tank)
+            let name = "\(achievements[indexPath.item].key)"
+            let earned: Bool = achievements[indexPath.item].value as! Bool
+            cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
+            cell.achievementImg.image = UIImage(named: "\(name)")
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+        case 5:
+            let achievements = Array(statsModel.support)
+            let name = "\(achievements[indexPath.item].key)"
+            let earned: Bool = achievements[indexPath.item].value as! Bool
+            cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
+            cell.achievementImg.image = UIImage(named: "\(name)")
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+        case 6:
+            let achievements = Array(statsModel.special)
+            let name = "\(achievements[indexPath.item].key)"
+            let earned: Bool = achievements[indexPath.item].value as! Bool
+            cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
+            cell.achievementImg.image = UIImage(named: "\(name)")
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+        default:
+            break
+        }
         
         return cell
     }

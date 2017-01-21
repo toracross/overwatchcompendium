@@ -207,8 +207,8 @@ class PlayerModel {
                             self._support = support
                         }
                         //Tank
-                        if let defense = achievements["defense"] as? [String: AnyObject] {
-                            self._defense = defense
+                        if let tank = achievements["tank"] as? [String: AnyObject] {
+                            self._tank = tank
                         }
                     }
                     
