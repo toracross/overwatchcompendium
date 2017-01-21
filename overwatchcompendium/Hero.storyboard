@@ -902,7 +902,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="al1-1X-7eu">
-                                                                <rect key="frame" x="151" y="32" width="80" height="89"/>
+                                                                <rect key="frame" x="150.5" y="32" width="80" height="89"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Damage Done" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htw-Az-ufJ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
@@ -935,28 +935,28 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-j1-jGF">
-                                                                <rect key="frame" x="8" y="35" width="67" height="82"/>
+                                                                <rect key="frame" x="8" y="35" width="66.5" height="82"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melee Final Blows" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scD-ee-zdh">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="13"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66.5" height="13"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solo Kills" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXE-Ee-KKe">
-                                                                        <rect key="frame" x="0.0" y="23" width="38" height="13"/>
+                                                                        <rect key="frame" x="0.0" y="23" width="37.5" height="13"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective Kills" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IV-Ur-gqT">
-                                                                        <rect key="frame" x="0.0" y="46" width="55" height="13"/>
+                                                                        <rect key="frame" x="0.0" y="46" width="54.5" height="13"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final Blows" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPb-Dr-bil">
-                                                                        <rect key="frame" x="0.0" y="69" width="45" height="13"/>
+                                                                        <rect key="frame" x="0.0" y="69" width="44.5" height="13"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -964,7 +964,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Krp-Ra-rbp">
-                                                                <rect key="frame" x="83" y="35" width="60" height="82"/>
+                                                                <rect key="frame" x="82.5" y="35" width="60" height="82"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-18-uAa">
                                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="13"/>
@@ -1199,25 +1199,25 @@
                                                                 <rect key="frame" x="97" y="38" width="40" height="400"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwK-kT-4jS">
-                                                                        <rect key="frame" x="18" y="0.0" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="0.0" width="5" height="36.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CI-0r-GcH">
-                                                                        <rect key="frame" x="18" y="36" width="5" height="37"/>
+                                                                        <rect key="frame" x="17.5" y="36.5" width="5" height="36"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1z-RO-Pze">
-                                                                        <rect key="frame" x="18" y="73" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="72.5" width="5" height="36.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74R-Hf-vhz">
-                                                                        <rect key="frame" x="18" y="109" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="109" width="5" height="36.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="uRp-aF-M8k"/>
                                                                         </constraints>
@@ -1231,43 +1231,43 @@
                                                                         </variation>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jay-ha-0wF">
-                                                                        <rect key="frame" x="18" y="145" width="5" height="37"/>
+                                                                        <rect key="frame" x="17.5" y="145.5" width="5" height="36.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJh-PM-I6h">
-                                                                        <rect key="frame" x="18" y="182" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="182" width="5" height="36"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="388-fK-l3k">
-                                                                        <rect key="frame" x="18" y="218" width="5" height="37"/>
+                                                                        <rect key="frame" x="17.5" y="218" width="5" height="36.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbR-Ia-4MJ">
-                                                                        <rect key="frame" x="18" y="255" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="254.5" width="5" height="36.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1E-lS-bWP">
-                                                                        <rect key="frame" x="18" y="291" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="291" width="5" height="36.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx3-dg-13R">
-                                                                        <rect key="frame" x="18" y="327" width="5" height="37"/>
+                                                                        <rect key="frame" x="17.5" y="327.5" width="5" height="36"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-ke-NIy">
-                                                                        <rect key="frame" x="18" y="364" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="363.5" width="5" height="36.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -1354,13 +1354,13 @@
                                                                 <rect key="frame" x="97" y="38" width="40" height="48"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbH-sG-LAF">
-                                                                        <rect key="frame" x="18" y="0.0" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="0.0" width="5" height="24"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXG-6H-Cyk">
-                                                                        <rect key="frame" x="18" y="24" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="24" width="5" height="24"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -1401,7 +1401,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="match awards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBY-e6-oNy">
-                                                                        <rect key="frame" x="36" y="5" width="91" height="20"/>
+                                                                        <rect key="frame" x="36" y="5" width="90.5" height="20"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1477,13 +1477,13 @@
                                                                 <rect key="frame" x="97" y="38" width="40" height="120"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eau-J1-Z6W">
-                                                                        <rect key="frame" x="18" y="0.0" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="0.0" width="5" height="24"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwL-Xb-HeX">
-                                                                        <rect key="frame" x="18" y="24" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="24" width="5" height="24"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="htG-MJ-ree"/>
                                                                         </constraints>
@@ -1497,19 +1497,19 @@
                                                                         </variation>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thq-Tf-PSo">
-                                                                        <rect key="frame" x="18" y="48" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="48" width="5" height="24"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyR-5d-Ui7">
-                                                                        <rect key="frame" x="18" y="72" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="72" width="5" height="24"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wq0-cO-vQU">
-                                                                        <rect key="frame" x="18" y="96" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="96" width="5" height="24"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -1616,25 +1616,25 @@
                                                                 <rect key="frame" x="96" y="38" width="40" height="95"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlm-7S-vWz">
-                                                                        <rect key="frame" x="18" y="0.0" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="0.0" width="5" height="24"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aan-oE-oj2">
-                                                                        <rect key="frame" x="18" y="24" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="24" width="5" height="23.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uv-7t-lpo">
-                                                                        <rect key="frame" x="18" y="48" width="5" height="23"/>
+                                                                        <rect key="frame" x="17.5" y="47.5" width="5" height="24"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4U7-4Z-hPg">
-                                                                        <rect key="frame" x="18" y="71" width="5" height="24"/>
+                                                                        <rect key="frame" x="17.5" y="71.5" width="5" height="23.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -1784,7 +1784,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlw-nC-wNc">
-                                                                        <rect key="frame" x="36" y="5" width="50" height="20"/>
+                                                                        <rect key="frame" x="36" y="5" width="49.5" height="20"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1910,19 +1910,19 @@
                                                                 <rect key="frame" x="97" y="38" width="40" height="422"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGC-z6-RFu">
-                                                                        <rect key="frame" x="18" y="0.0" width="5" height="42"/>
+                                                                        <rect key="frame" x="17.5" y="0.0" width="5" height="42"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eho-1y-MvW">
-                                                                        <rect key="frame" x="18" y="42" width="5" height="42"/>
+                                                                        <rect key="frame" x="17.5" y="42" width="5" height="42.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3s-ch-i64">
-                                                                        <rect key="frame" x="18" y="84" width="5" height="43"/>
+                                                                        <rect key="frame" x="17.5" y="84.5" width="5" height="42"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="PF6-sh-kAL"/>
                                                                         </constraints>
@@ -1936,43 +1936,43 @@
                                                                         </variation>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBK-0P-FQc">
-                                                                        <rect key="frame" x="18" y="127" width="5" height="42"/>
+                                                                        <rect key="frame" x="17.5" y="126.5" width="5" height="42.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV2-fT-a0M">
-                                                                        <rect key="frame" x="18" y="169" width="5" height="42"/>
+                                                                        <rect key="frame" x="17.5" y="169" width="5" height="42"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MH7-vs-viN">
-                                                                        <rect key="frame" x="18" y="211" width="5" height="42"/>
+                                                                        <rect key="frame" x="17.5" y="211" width="5" height="42"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqK-X7-XbA">
-                                                                        <rect key="frame" x="18" y="253" width="5" height="42"/>
+                                                                        <rect key="frame" x="17.5" y="253" width="5" height="42.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPf-zc-sZz">
-                                                                        <rect key="frame" x="18" y="295" width="5" height="43"/>
+                                                                        <rect key="frame" x="17.5" y="295.5" width="5" height="42"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqm-0b-n43">
-                                                                        <rect key="frame" x="18" y="338" width="5" height="42"/>
+                                                                        <rect key="frame" x="17.5" y="337.5" width="5" height="42.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDl-MI-tHj">
-                                                                        <rect key="frame" x="18" y="380" width="5" height="42"/>
+                                                                        <rect key="frame" x="17.5" y="380" width="5" height="42"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2099,13 +2099,13 @@
                                                                 <rect key="frame" x="97" y="38" width="40" height="215"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faA-lV-hcP">
-                                                                        <rect key="frame" x="18" y="0.0" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="0.0" width="5" height="36"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPw-ri-5Zs">
-                                                                        <rect key="frame" x="18" y="36" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="36" width="5" height="35.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="20" id="8a6-NQ-nvD"/>
                                                                         </constraints>
@@ -2119,25 +2119,25 @@
                                                                         </variation>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elx-ki-uSQ">
-                                                                        <rect key="frame" x="18" y="72" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="71.5" width="5" height="36"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUM-ta-qZF">
-                                                                        <rect key="frame" x="18" y="108" width="5" height="35"/>
+                                                                        <rect key="frame" x="17.5" y="107.5" width="5" height="36"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkS-Go-f8F">
-                                                                        <rect key="frame" x="18" y="143" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="143.5" width="5" height="35.5"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adc-9c-CEF">
-                                                                        <rect key="frame" x="18" y="179" width="5" height="36"/>
+                                                                        <rect key="frame" x="17.5" y="179" width="5" height="36"/>
                                                                         <fontDescription key="fontDescription" name="BigNoodleTitling" family="BigNoodleTitling" pointSize="12"/>
                                                                         <color key="textColor" red="0.1058823529" green="0.4549019608" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2175,8 +2175,8 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ai-Gv-Gdx" customClass="RoundedCorner" customModule="overwatchcompendium" customModuleProvider="target">
-                                                        <rect key="frame" x="111" y="2488" width="100" height="50"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ai-Gv-Gdx" customClass="RoundedCorner" customModule="overwatchcompendium" customModuleProvider="target">
+                                                        <rect key="frame" x="111" y="2492" width="100" height="50"/>
                                                         <color key="backgroundColor" red="0.73333333329999995" green="0.51372549020000002" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="foO-r5-Kgg"/>
@@ -2304,7 +2304,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jF7-Pc-AJF" customClass="CustomLblTitle" customModule="overwatchcompendium" customModuleProvider="target">
-                                                        <rect key="frame" x="70" y="1968" width="183" height="40"/>
+                                                        <rect key="frame" x="71" y="1968" width="182.5" height="40"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="QRl-uL-bgk"/>
@@ -2436,7 +2436,7 @@
                                                     <constraint firstItem="zZ1-CM-nTy" firstAttribute="centerX" secondItem="p73-ii-GfE" secondAttribute="centerX" id="F4b-ne-EAs"/>
                                                     <constraint firstAttribute="trailing" secondItem="TGC-hb-bG0" secondAttribute="trailing" id="FzJ-Hf-3yT"/>
                                                     <constraint firstItem="4ar-9z-ZGN" firstAttribute="top" secondItem="mvh-Vq-noo" secondAttribute="bottom" constant="20" id="G9F-mG-4LI"/>
-                                                    <constraint firstItem="3ai-Gv-Gdx" firstAttribute="top" secondItem="z2s-ca-XKI" secondAttribute="bottom" constant="10" id="IBI-ea-zOk"/>
+                                                    <constraint firstItem="3ai-Gv-Gdx" firstAttribute="top" secondItem="z2s-ca-XKI" secondAttribute="bottom" constant="30" id="IBI-ea-zOk"/>
                                                     <constraint firstItem="Uwv-yp-uBo" firstAttribute="top" secondItem="kZK-mw-QEz" secondAttribute="bottom" constant="30" id="IF4-VG-KbZ"/>
                                                     <constraint firstItem="8E2-aM-0kL" firstAttribute="leading" secondItem="p73-ii-GfE" secondAttribute="leading" constant="11" id="JKl-6g-13c"/>
                                                     <constraint firstItem="8E2-aM-0kL" firstAttribute="centerX" secondItem="p73-ii-GfE" secondAttribute="centerX" id="KUO-rj-Zwc"/>
@@ -2525,6 +2525,7 @@
                         <outlet property="defensiveAssists" destination="Elx-ki-uSQ" id="ysJ-gD-AJB"/>
                         <outlet property="defensiveAssistsAverage" destination="ZUM-ta-qZF" id="StN-R0-qOd"/>
                         <outlet property="defensiveAssistsMost" destination="jay-ha-0wF" id="qtU-iw-3cZ"/>
+                        <outlet property="dynamicBG" destination="MsV-Zq-pyP" id="BTN-OV-41O"/>
                         <outlet property="eliminations" destination="ngg-ID-UQD" id="qz4-dr-Zzc"/>
                         <outlet property="eliminationsAverage" destination="oDl-MI-tHj" id="YQ9-jm-oSy"/>
                         <outlet property="eliminationsMost" destination="PwK-kT-4jS" id="Q1t-F6-MVo"/>

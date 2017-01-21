@@ -12,7 +12,8 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     var statsModel: PlayerModel!
     var savedPlayerName = UserDefaults.standard.string(forKey: "playerName")
-    
+    @IBOutlet weak var dynamicBG: UIImageView!
+    weak var timer: Timer?
     
     //Title
     @IBOutlet weak var playerName: CustomLblTitle!
@@ -106,6 +107,8 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        repeatBackground()
+        
         statsModel = PlayerModel()
         playerName.text = savedPlayerName!.replacingOccurrences(of: "-", with: "#")
         self.startAnimatingObjects()
@@ -231,49 +234,49 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
         case 1:
             let achievements = Array(statsModel.maps)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
         case 2:
             let achievements = Array(statsModel.offense)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
         case 3:
             let achievements = Array(statsModel.defense)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
         case 4:
             let achievements = Array(statsModel.tank)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
         case 5:
             let achievements = Array(statsModel.support)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
         case 6:
             let achievements = Array(statsModel.special)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.3 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
         default:
             break
         }
@@ -591,13 +594,25 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 
     }
     
-    func alertFailMessage() {
-        let alert = UIAlertController(title: "No data found.",
-                                      message: "No Overwatch data was found with your battle tag, returning to previous menu.",
-                                      preferredStyle: UIAlertControllerStyle.alert)
+    
+    //Put background on a timer, cycle to next every x seconds.
+    func repeatBackground() {
         
-        alert.addAction(UIAlertAction(title: "CLOSE", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        timer = Timer.scheduledTimer(withTimeInterval: 6, repeats: true) { [weak self] _ in
+            self?.backgroundTransition()
+        }
+    }
+    
+    //Cycle through saved images for wallpaper.
+    func backgroundTransition() {
+        let rolls = arc4random_uniform(27) + 1
+        let toImage = UIImage(named:"wp\(rolls)")
+        
+        UIView.transition(with: dynamicBG,
+                          duration: 1.5,
+                          options: [.transitionCrossDissolve],
+                          animations: { self.dynamicBG.image = toImage },
+                          completion: nil)
     }
 
 }
