@@ -110,7 +110,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         repeatBackground()
         
         statsModel = PlayerModel()
-        playerName.text = savedPlayerName!.replacingOccurrences(of: "-", with: "#")
+        playerName.text = savedPlayerName!
         self.startAnimatingObjects()
         
         self.statsModel.downloadStatsData { DownloadComplete in
