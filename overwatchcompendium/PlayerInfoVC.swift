@@ -234,49 +234,49 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.4 }
         case 1:
             let achievements = Array(statsModel.maps)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.4 }
         case 2:
             let achievements = Array(statsModel.offense)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.4 }
         case 3:
             let achievements = Array(statsModel.defense)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.4 }
         case 4:
             let achievements = Array(statsModel.tank)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.4 }
         case 5:
             let achievements = Array(statsModel.support)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.4 }
         case 6:
             let achievements = Array(statsModel.special)
             let name = "\(achievements[indexPath.item].key)"
             let earned: Bool = achievements[indexPath.item].value as! Bool
             cell.achievementName.text = name.replacingOccurrences(of: "_", with: " ")
             cell.achievementImg.image = UIImage(named: "\(name)")
-            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.5 }
+            if earned == true { cell.alpha = 1 } else { cell.alpha = 0.4 }
         default:
             break
         }

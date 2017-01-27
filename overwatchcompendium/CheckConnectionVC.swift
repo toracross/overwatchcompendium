@@ -13,7 +13,7 @@ class CheckConnectionVC: UIViewController {
     
     @IBOutlet weak var staticBg: UIImageView!
     
-    var avgcost: Bool = false
+    var avgcost: Bool = true
     let url = "https://toracross.com/api/v1/foodtruck"
     let downloadDefaults = UserDefaults.standard
     
@@ -44,8 +44,9 @@ class CheckConnectionVC: UIViewController {
     func checkCostAndSegue() {
         if avgcost == false {
             performSegue(withIdentifier: "fullSegue", sender: nil)
-        } else {
+        } else if avgcost == true {
             performSegue(withIdentifier: "partialSegue", sender: nil)
+        } else  {
             
         }
     }

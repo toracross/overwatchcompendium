@@ -43,6 +43,7 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
     
     @IBAction func searchBtnPushed(_ sender: Any) {
         
+        view.endEditing(true)
         startAnimating(message: "Loading...")
         let name = battleTagTxt.text!.replacingOccurrences(of: "#", with: "-")
         
@@ -86,8 +87,6 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
                 Alamofire.request(url).responseJSON { response in
                     let data = response.response?.statusCode
                     let download = response.result.value
-                    
-                    print(data!)
                     if data != 404 {
                         if let JSON = download as? Dictionary<String, AnyObject> {
                             if let region = JSON["\(self.regionTxt!)"] as? Dictionary<String, AnyObject> {
