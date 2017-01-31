@@ -33,6 +33,7 @@
 		7B77D4941E2860D100C11594 /* HeroDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B77D4931E2860D100C11594 /* HeroDetailVC.swift */; };
 		7B7BA0DE1E304F6B005779AB /* CheckConnectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA0DD1E304F6B005779AB /* CheckConnectionVC.swift */; };
 		7B7BA0E01E30660F005779AB /* HeroTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA0DF1E30660F005779AB /* HeroTVCell.swift */; };
+		7BB78B3E1E4020A20075484E /* SoundboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB78B3D1E4020A20075484E /* SoundboardVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		7B77D4931E2860D100C11594 /* HeroDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailVC.swift; sourceTree = "<group>"; };
 		7B7BA0DD1E304F6B005779AB /* CheckConnectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckConnectionVC.swift; sourceTree = "<group>"; };
 		7B7BA0DF1E30660F005779AB /* HeroTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTVCell.swift; sourceTree = "<group>"; };
+		7BB78B3D1E4020A20075484E /* SoundboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundboardVC.swift; sourceTree = "<group>"; };
 		CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatchcompendium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 			children = (
 				7B7BA0DD1E304F6B005779AB /* CheckConnectionVC.swift */,
 				303568C61E268D6900170F48 /* NavigationVC.swift */,
+				7BB78B3C1E40208C0075484E /* Soundboard */,
 				303568D31E29491100170F48 /* Search */,
 				303568D21E29490000170F48 /* Hero */,
 			);
@@ -218,6 +221,14 @@
 				303568D61E294D5400170F48 /* PlayerInfoVC.swift */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		7BB78B3C1E40208C0075484E /* Soundboard */ = {
+			isa = PBXGroup;
+			children = (
+				7BB78B3D1E4020A20075484E /* SoundboardVC.swift */,
+			);
+			name = Soundboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 				303568C71E268D6900170F48 /* NavigationVC.swift in Sources */,
 				108B1A531E0A56680011B43B /* UIImageRounded.swift in Sources */,
 				106C9EBA1DFDB0D000F078C6 /* API.swift in Sources */,
+				7BB78B3E1E4020A20075484E /* SoundboardVC.swift in Sources */,
 				108ADD4F1E0999D4007C7878 /* UIViewOutline.swift in Sources */,
 				30B7D9401E3117260019CAC3 /* UITableViewOutline.swift in Sources */,
 				303568D51E29493300170F48 /* PlayerSearchVC.swift in Sources */,

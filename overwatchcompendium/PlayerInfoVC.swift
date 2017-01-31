@@ -12,8 +12,9 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     var statsModel: PlayerModel!
     var savedPlayerName = UserDefaults.standard.string(forKey: "playerName")
-    @IBOutlet weak var dynamicBG: UIImageView!
     weak var timer: Timer?
+    
+    @IBOutlet weak var dynamicBG: UIImageView!
     
     //Title
     @IBOutlet weak var playerName: CustomLblTitle!

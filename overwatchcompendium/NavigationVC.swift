@@ -19,10 +19,11 @@ class NavigationVC: UIViewController {
         super.viewDidLoad()
         repeatBackground()
     }
-
-    @IBAction func heroBtnPushed(_ sender: Any) {
-        self.performSegue(withIdentifier: "heroSegue", sender: self)
+    
+    @IBAction func soundBtnPushed(_ sender: Any) {
+        self.performSegue(withIdentifier: "soundboardSegue", sender: self)
     }
+    
     
     
     @IBAction func playerBtnPushed(_ sender: Any) {
