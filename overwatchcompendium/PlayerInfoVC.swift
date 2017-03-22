@@ -11,6 +11,7 @@ import NVActivityIndicatorView
 class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var statsModel: PlayerModel!
+    var savedOriginalName = UserDefaults.standard.string(forKey: "originalPlayerName")
     var savedPlayerName = UserDefaults.standard.string(forKey: "playerName")
     @IBOutlet weak var dynamicBG: UIImageView!
     weak var timer: Timer?
@@ -110,7 +111,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         repeatBackground()
         
         statsModel = PlayerModel()
-        playerName.text = savedPlayerName!
+        playerName.text = savedOriginalName!
         self.startAnimatingObjects()
         
         self.statsModel.downloadStatsData { DownloadComplete in

@@ -45,6 +45,7 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
         
         view.endEditing(true)
         startAnimating(message: "Loading...")
+        let originalName = battleTagTxt.text!
         let name = battleTagTxt.text!.replacingOccurrences(of: "#", with: "-")
         
         if name.isEmpty != true {
@@ -77,6 +78,7 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
             
             //Save Player Name
             defaults.set(name, forKey: "playerName")
+            defaults.set(originalName, forKey: "originalPlayerName")
             defaults.set(regionTxt!, forKey: "playerRegion")
             defaults.set(platformTxt!, forKey: "playerPlatform")
             

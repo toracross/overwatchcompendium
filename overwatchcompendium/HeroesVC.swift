@@ -16,10 +16,10 @@ class HeroesVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     weak var timer: Timer?
     let defaults = UserDefaults.standard
-    var allHeroNames = ["genji", "mccree", "pharah", "reaper", "soldier76", "sombra", "tracer", "bastion", "hanzo", "junkrat", "mei", "torbjorn", "widowmaker", "dva", "reinhardt", "roadhog", "winston", "zarya", "ana", "lucio", "mercy", "symmetra", "zenyatta"]
+    var allHeroNames = ["genji", "mccree", "pharah", "reaper", "soldier76", "sombra", "tracer", "bastion", "hanzo", "junkrat", "mei", "torbjorn", "widowmaker", "dva", "orisa", "reinhardt", "roadhog", "winston", "zarya", "ana", "lucio", "mercy", "symmetra", "zenyatta"]
     var offenseHeroNames = ["genji", "mccree", "pharah", "reaper", "soldier76", "sombra", "tracer"]
     var defenseHeroNames = ["bastion", "hanzo", "junkrat", "mei", "torbjorn", "widowmaker"]
-    var tankHeroNames = ["dva", "reinhardt", "roadhog", "winston", "zarya"]
+    var tankHeroNames = ["dva", "orisa", "reinhardt", "roadhog", "winston", "zarya"]
     var supportHeroNames = ["ana", "lucio", "mercy", "symmetra", "zenyatta"]
     
     

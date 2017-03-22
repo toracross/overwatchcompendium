@@ -16,7 +16,6 @@
 		10CE86901DFB070100DB6374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10CE868E1DFB070100DB6374 /* LaunchScreen.storyboard */; };
 		10CE869E1DFB2C0F00DB6374 /* bnt_oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10CE869C1DFB2C0F00DB6374 /* bnt_oblique.ttf */; };
 		10CE869F1DFB2C0F00DB6374 /* bnt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10CE869D1DFB2C0F00DB6374 /* bnt.ttf */; };
-		303568C51E268C7A00170F48 /* Hero.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303568C41E268C7A00170F48 /* Hero.storyboard */; };
 		303568C71E268D6900170F48 /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568C61E268D6900170F48 /* NavigationVC.swift */; };
 		303568C91E27D9B700170F48 /* HeroesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568C81E27D9B700170F48 /* HeroesVC.swift */; };
 		303568CD1E27DD0B00170F48 /* HeroesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303568CC1E27DD0B00170F48 /* HeroesCell.swift */; };
@@ -33,6 +32,7 @@
 		7B77D4941E2860D100C11594 /* HeroDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B77D4931E2860D100C11594 /* HeroDetailVC.swift */; };
 		7B7BA0DE1E304F6B005779AB /* CheckConnectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA0DD1E304F6B005779AB /* CheckConnectionVC.swift */; };
 		7B7BA0E01E30660F005779AB /* HeroTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA0DF1E30660F005779AB /* HeroTVCell.swift */; };
+		95F940ED1E7B824300B93E19 /* Hero.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F940EC1E7B824300B93E19 /* Hero.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,6 @@
 		10CE869D1DFB2C0F00DB6374 /* bnt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bnt.ttf; sourceTree = "<group>"; };
 		257752219083B29BA3762B30 /* Pods-overwatchcompendium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatchcompendium.debug.xcconfig"; path = "Pods/Target Support Files/Pods-overwatchcompendium/Pods-overwatchcompendium.debug.xcconfig"; sourceTree = "<group>"; };
 		2AAC6A17046383804FC359C4 /* Pods-overwatchcompendium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-overwatchcompendium.release.xcconfig"; path = "Pods/Target Support Files/Pods-overwatchcompendium/Pods-overwatchcompendium.release.xcconfig"; sourceTree = "<group>"; };
-		303568C41E268C7A00170F48 /* Hero.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hero.storyboard; sourceTree = "<group>"; };
 		303568C61E268D6900170F48 /* NavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
 		303568C81E27D9B700170F48 /* HeroesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesVC.swift; sourceTree = "<group>"; };
 		303568CC1E27DD0B00170F48 /* HeroesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesCell.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		7B77D4931E2860D100C11594 /* HeroDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailVC.swift; sourceTree = "<group>"; };
 		7B7BA0DD1E304F6B005779AB /* CheckConnectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckConnectionVC.swift; sourceTree = "<group>"; };
 		7B7BA0DF1E30660F005779AB /* HeroTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTVCell.swift; sourceTree = "<group>"; };
+		95F940EC1E7B824300B93E19 /* Hero.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hero.storyboard; sourceTree = "<group>"; };
 		CD78001302387A3FF15C8AF2 /* Pods_overwatchcompendium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_overwatchcompendium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,7 +109,7 @@
 				10CE86851DFB070100DB6374 /* AppDelegate.swift */,
 				10CE86911DFB070100DB6374 /* Info.plist */,
 				10CE868C1DFB070100DB6374 /* Assets.xcassets */,
-				303568C41E268C7A00170F48 /* Hero.storyboard */,
+				95F940EC1E7B824300B93E19 /* Hero.storyboard */,
 				10CE868E1DFB070100DB6374 /* LaunchScreen.storyboard */,
 			);
 			path = overwatchcompendium;
@@ -284,8 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				10CE86901DFB070100DB6374 /* LaunchScreen.storyboard in Resources */,
-				303568C51E268C7A00170F48 /* Hero.storyboard in Resources */,
 				10CE869F1DFB2C0F00DB6374 /* bnt.ttf in Resources */,
+				95F940ED1E7B824300B93E19 /* Hero.storyboard in Resources */,
 				10CE868D1DFB070100DB6374 /* Assets.xcassets in Resources */,
 				10CE869E1DFB2C0F00DB6374 /* bnt_oblique.ttf in Resources */,
 			);
@@ -489,6 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.toracross.overwatchcompendium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -505,6 +506,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.toracross.overwatchcompendium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
