@@ -39,7 +39,7 @@ class NavigationVC: UIViewController {
     
     //Cycle through saved images for wallpaper.
     func backgroundTransition() {
-        let rolls = arc4random_uniform(27) + 1
+        let rolls = Int.random(in: 1...27)
         let toImage = UIImage(named:"wp\(rolls)")
         
         UIView.transition(with: dynamicBG,

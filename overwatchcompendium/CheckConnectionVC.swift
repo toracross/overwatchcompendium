@@ -20,7 +20,7 @@ class CheckConnectionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        checkResourceForSegue { DownloadComplete in
+        checkResourceForSegue {
             print("Accessing my API.")
             
             self.checkCostAndSegue()

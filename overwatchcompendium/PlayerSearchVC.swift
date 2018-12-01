@@ -48,7 +48,7 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
         let originalName = battleTagTxt.text!
         let name = battleTagTxt.text!.replacingOccurrences(of: "#", with: "-")
         
-        if name.isEmpty != true {
+        if !name.isEmpty {
             switch regionSegment.selectedSegmentIndex {
             case 0:
                 regionTxt = "us"
@@ -115,7 +115,7 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
             }
             
             
-            checkStatusCode { DownloadComplete in
+            checkStatusCode {
                 
                 if self.validProfile != false {
                     print("Data will be returned")
@@ -172,7 +172,7 @@ class PlayerSearchVC: UIViewController, NVActivityIndicatorViewable {
     func alertFailMessage() {
         let alert = UIAlertController(title: "Profile not found.",
                                       message: "No data was returned for this battle tag, please make sure the player name is valid and try again.",
-                                      preferredStyle: UIAlertControllerStyle.alert)
+                                      preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "CLOSE", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)

@@ -114,7 +114,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         playerName.text = savedOriginalName!
         self.startAnimatingObjects()
         
-        self.statsModel.downloadStatsData { DownloadComplete in
+        self.statsModel.downloadStatsData {
             if self.statsModel.overallStatsCP.count != 0 {
                 self.playerDataControl.isHidden = false
                 self.playerStatsControl.isHidden = false
@@ -183,7 +183,7 @@ class PlayerInfoVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         switch playerHeroControl.selectedSegmentIndex {
         case 0:
             let heroesPlaytimeQP: [Dictionary<String, Double>] = [statsModel.playtimeQP]
-            let sortedHeroesQP = heroesPlaytimeQP.flatMap({$0}).sorted { $0.0.1 > $0.1.1}
+            let sortedHeroesQP = heroesPlaytimeQP.flatMap({$0}).sorted {,<#arg#>  $0.0.1 > $0.1.1}
             let heroesIndexPath = sortedHeroesQP[indexPath.item].value
             
             cell.heroName.text = "\(sortedHeroesQP[indexPath.item].key)"
